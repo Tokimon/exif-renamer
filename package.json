@@ -1,5 +1,5 @@
 {
-  "name": "picture-renamer",
+  "name": "photo-renamer",
   "dependencies": {
     "babel-core": "^6.5.2",
     "babel-polyfill": "^6.5.0",
