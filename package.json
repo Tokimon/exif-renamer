@@ -5,16 +5,18 @@
     "exif-rename": "./rename.js"
   },
   "dependencies": {
-    "babel-core": "^6.5.2",
-    "babel-polyfill": "^6.5.0",
-    "babel-preset-node5": "^11.1.0",
-    "babel-register": "^6.5.2",
+    "babel-core": "^6.23.1",
+    "babel-plugin-syntax-trailing-function-commas": "^6.22.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.23.0",
     "co": "^4.6.0",
     "dist-exiftool": "^10.25.0",
-    "globby": "^6.0.0",
+    "fs-promise": "^2.0.0",
+    "glob": "^7.1.1",
+    "glob-promise": "^3.1.0",
     "lodash": "^3.9.3",
     "moment": "^2.11.2",
     "node-exiftool": "^2.0.0",
+    "rollup": "^0.41.4",
     "yargs": "^6.3.0"
   }
 }
