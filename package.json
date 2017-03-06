@@ -2,7 +2,8 @@
   "name": "photo-renamer",
   "version": "0.0.1",
   "bin": {
-    "exif-rename": "./rename.js"
+    "exif-rename": "./bin/rename.js",
+    "exif-duplets": "./bin/remove.js"
   },
   "dependencies": {
     "babel-core": "^6.23.1",
