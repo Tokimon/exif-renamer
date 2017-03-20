@@ -1,23 +1,19 @@
 {
-  "name": "photo-renamer",
+  "name": "exif-renamer",
   "version": "0.0.1",
   "bin": {
     "exif-rename": "./bin/rename.js",
-    "exif-duplets": "./bin/remove.js"
+    "exif-dublets": "./bin/remove.js"
   },
   "dependencies": {
-    "babel-core": "^6.23.1",
-    "babel-plugin-syntax-trailing-function-commas": "^6.22.0",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.23.0",
     "co": "^4.6.0",
-    "dist-exiftool": "^10.25.0",
+    "dist-exiftool": "^10.33.1",
     "fs-promise": "^2.0.0",
     "glob": "^7.1.1",
     "glob-promise": "^3.1.0",
-    "lodash": "^3.9.3",
-    "moment": "^2.11.2",
-    "node-exiftool": "^2.0.0",
-    "rollup": "^0.41.4",
-    "yargs": "^6.3.0"
+    "md5-file": "^3.1.1",
+    "moment": "^2.18.0",
+    "node-exiftool": "^2.1.1",
+    "yargs": "^7.0.2"
   }
 }
