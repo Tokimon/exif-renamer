@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 const co = require('co');
-const removeDuplets = require('../lib/removeDuplets');
+const removeDuplets = require('../lib/removeDublets');
 co(removeDuplets(process.cwd()))
-  .then(() => console.log('Duplets moved to "__duplets" folder'));
+  .then((files) => console.log(`${files.length} Duplets moved to "__duplets" folder`));
