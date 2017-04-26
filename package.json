@@ -1,6 +1,6 @@
 {
   "name": "exif-renamer",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "bin": {
     "exif-rename": "./bin/rename.js",
     "exif-dublets": "./bin/remove.js"
