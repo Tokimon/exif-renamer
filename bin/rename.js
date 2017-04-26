@@ -1,3 +1,4 @@
 #!/usr/bin/env node
+const co = require('co');
 const renamer = require('../lib/renamer');
-renamer(process.cwd());
+co(renamer(process.cwd()));
