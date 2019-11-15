@@ -1,21 +1,53 @@
 {
   "name": "exif-renamer",
   "version": "0.1.1",
-  "bin": {
-    "exif-rename": "./bin/rename.js",
-    "exif-dublets": "./bin/remove.js"
+  "main": "app.js",
+  "scripts": {
+    "build": "rollup -c",
+    "build:dev": "rollup -c -w",
+    "serve": "sirv public --single",
+    "serve:dev": "sirv public --single --dev",
+    "start": "electron .",
+    "lint": "eslint .",
+    "svgo": "svgo -f ./src -r --config=.svgo.yml"
   },
   "dependencies": {
-    "chalk": "^1.1.3",
-    "co": "^4.6.0",
-    "dist-exiftool": "^10.33.1",
-    "fs-promise": "^2.0.2",
-    "glob": "^7.1.1",
-    "glob-promise": "^3.1.0",
-    "md5-file": "^3.1.1",
-    "moment": "^2.18.0",
-    "node-exiftool": "^2.1.1",
-    "progress": "^2.0.0",
-    "yargs": "^7.0.2"
+    "date-fns": "^2.6.0",
+    "dist-exiftool": "^10.53.0",
+    "fs-promise": "^2.0.3",
+    "md5-file": "^4.0.0",
+    "node-exiftool": "^2.3.0",
+    "sirv-cli": "^0.4.5"
+  },
+  "devDependencies": {
+    "@rollup/plugin-json": "^4.0.0",
+    "electron": "^7.0.1",
+    "eslint": "^6.6.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^23.0.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-svelte3": "^2.7.3",
+    "globby": "^10.0.1",
+    "rollup": "^1.26.3",
+    "rollup-plugin-auto-external": "^2.0.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-copy": "^3.1.0",
+    "rollup-plugin-fill-html": "^1.1.0",
+    "rollup-plugin-generate-html-template": "^1.5.0",
+    "rollup-plugin-html-entry": "^0.2.0",
+    "rollup-plugin-image": "^1.0.2",
+    "rollup-plugin-livereload": "^1.0.4",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-svelte": "^5.1.0",
+    "rollup-plugin-svg": "^2.0.0",
+    "rollup-plugin-terser": "^5.1.2",
+    "rollup-plugin-url": "^3.0.0",
+    "stylus": "^0.54.7",
+    "svelte": "^3.12.1",
+    "svelte-preprocess": "^3.2.6",
+    "svgo": "^1.3.2"
   }
 }
