@@ -24,9 +24,7 @@
   }
 
   .input {
-    display: flex;
-    align-items: center;
-    height: 60px;
+    line-height: 40px;
     padding: 10px;
     border: 2px solid silver;
     border-radius: 10px;
@@ -59,7 +57,7 @@
 
 <div class='container folder-input'>
   <label class='input' title={folder}>
-    <div class='hider'><input type='file' webkitDirectory on:change={onChange} /></div>
+    <div class='hider'><input type='file' webkitDirectory on:change|passive={onChange} /></div>
     {folder || 'Select folder'}
   </label>
 
