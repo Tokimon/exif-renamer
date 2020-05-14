@@ -1,10 +1,11 @@
 <script>
-  export let count = 0;
-  export let total = 0;
-</script>
+  import { css } from 'emotion';
 
-<style>
-  .bar {
+  export let value = 0;
+  export let total = 0;
+  export let style;
+
+  const bar = css`
     position: absolute;
     top: 0;
     left: 0;
@@ -12,9 +13,14 @@
     background: rgba(40, 187, 174, 0.85);
     transition: width 0.2s linear;
     will-change: width;
-  }
+  `;
 
-  .loader {
+  const text = css`
+    position: relative;
+    z-index: 1;
+  `;
+
+  const container = css`
     position: relative;
     display: flex;
     align-items: center;
@@ -27,15 +33,10 @@
     text-shadow: 0 0 2px gray;
     padding: 0 10px;
     overflow: hidden;
-  }
+  `;
+</script>
 
-  .text {
-    position: relative;
-    z-index: 1;
-  }
-</style>
-
-<div class='loader loadbar'>
-  <div class='bar' style='width: {(count / total) * 100}%;'></div>
-  <div class='text'>{count} / {total}</div>
+<div class='loadbar {container}' style={style}>
+  <div class={bar} style='width: {(value / total) * 100}%;'></div>
+  <div class={text}>{value} / {total}</div>
 </div>
