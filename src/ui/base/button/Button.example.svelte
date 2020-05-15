@@ -6,9 +6,12 @@
 	const href = 'https://developer.mozilla.org/en-US/'
 </script>
 
-<Section title="Normal">
+<Section title="With click event">
   <Button on:click={onClick}>Normal</Button>
   <Button on:click={onClick} disabled>Disabled on click</Button>
+</Section>
+
+<Section title="With href">
 	<Button href={href} target='_blank'>Opens MDN</Button>
 	<Button href={href} disabled>Disabled href</Button>
 </Section>

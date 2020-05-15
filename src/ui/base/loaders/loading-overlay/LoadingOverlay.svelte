@@ -15,9 +15,10 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: ${pickColor(blacken('text', 60), 70)};
+    background: ${pickColor(blacken('text', 70), 85)};
     color: white;
     text-align: center;
+    box-sizing: border-box;
 
     svg {
       width: 70px;

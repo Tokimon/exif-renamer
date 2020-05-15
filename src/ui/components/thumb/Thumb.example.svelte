@@ -8,6 +8,6 @@
 
 <Section>
   <Thumb src={src} />
-  <Thumb src={src} count={88} />
+  <Thumb src={src} count={8} />
   <Thumb count={88} />
 </Section>

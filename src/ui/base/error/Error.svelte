@@ -4,7 +4,7 @@
   import { text } from 'ui/theme/text';
   import colors from 'ui/theme/colors';
 
-  import SvgIcon from 'ui/base/svg-icon/SvgIcon.svelte';
+  import SvgIcon from 'ui/utility/svg-icon/SvgIcon.svelte';
 
   import alertSvg from 'svg/icons/alert.svg';
 

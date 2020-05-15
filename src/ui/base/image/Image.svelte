@@ -1,7 +1,7 @@
 <script>
   import { css, cx } from 'emotion';
 
-	import SvgIcon from 'ui/base/svg-icon/SvgIcon.svelte';
+	import SvgIcon from 'ui/utility/svg-icon/SvgIcon.svelte';
   import { colors, whiten } from 'ui/theme/colors';
 
   import landscapeSvg from 'svg/icons/landscape.svg';
