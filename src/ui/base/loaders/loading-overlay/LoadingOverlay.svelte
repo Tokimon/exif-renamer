@@ -2,7 +2,8 @@
   import { css } from 'emotion';
 
   import gearSvg from 'svg/inline/animated/gear.svg';
-  import { text } from 'ui/base-css/text';
+  import { text } from 'ui/theme/text';
+  import { pickColor, blacken } from 'ui/theme/colors';
 
   export let style;
 
@@ -14,7 +15,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: rgba(56, 56, 56, 0.86);
+    background: ${pickColor(blacken('text', 60), 70)};
     color: white;
     text-align: center;
 

@@ -1,14 +1,16 @@
 <script>
   import { css } from 'emotion';
 
-  import { text } from 'ui/base-css/text';
-  import SvgIcon from 'ui/level0/svg-icon/SvgIcon.svelte';
+  import { text } from 'ui/theme/text';
+  import colors from 'ui/theme/colors';
+
+  import SvgIcon from 'ui/base/svg-icon/SvgIcon.svelte';
 
   import alertSvg from 'svg/icons/alert.svg';
 
   const className = css`
     ${text}
-    color: red;
+    color: ${colors.danger};
     display: flex;
     align-items: center;
 

@@ -1,7 +1,7 @@
 <script>
 	import Loadbar from './Loadbar.svelte';
 
-	$: value = 0;
+	$: value = 50;
 </script>
 
 <Loadbar value={value} total={100} style='margin-bottom: 10px;' />

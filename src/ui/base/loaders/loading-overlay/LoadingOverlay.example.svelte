@@ -8,5 +8,5 @@
 
 <Section>
   <LoadingOverlay style={style} />
-  <LoadingOverlay style={style}>Now with a message as well</LoadingOverlay>
+  <LoadingOverlay style={style}>Loading</LoadingOverlay>
 </Section>
