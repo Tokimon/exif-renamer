@@ -1,5 +1,5 @@
 <script>
-	import alertSvg from 'svg/icons/alert.svg';
+	import alertSvg from 'ui/svg/icons/alert.svg';
 	import SvgIcon from './SvgIcon.svelte';
 </script>
 

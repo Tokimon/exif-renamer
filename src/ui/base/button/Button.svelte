@@ -1,18 +1,14 @@
 <script>
-  import { createEventDispatcher } from 'svelte';
   import { css } from 'emotion';
 
   import { text } from 'ui/theme/text';
-  import { pickColor, blacken, whiten } from 'ui/theme/colors';
+  import { color as themeColor, blacken, whiten } from 'ui/theme/colors';
 
   export let disabled = false;
   export let href;
   export let color = 'primary';
 
   const { class: className, ...rest } = $$restProps;
-
-  const on = createEventDispatcher();
-  const handleClick = () => !disabled && on('click');
 
   const button = css`
     ${text}
@@ -32,7 +28,7 @@
 
     &:not(.disabled) {
       cursor: pointer;
-      background: ${pickColor(color)};
+      background: ${themeColor(color)};
 
       &:hover {
         background: ${blacken(color, 15)};
@@ -41,12 +37,17 @@
   `;
 </script>
 
-<a
-  href={!disabled ? href : undefined}
-  class={button}
-  class:disabled={disabled}
-  on:click={handleClick}
-  {...rest}
->
-  <slot />
-</a>
+{#if disabled}
+  <span class='button disabled {button}' {...rest}>
+    <slot />
+  </span>
+{:else}
+  <a
+    class='button {button}'
+    {href}
+    on:click
+    {...rest}
+  >
+    <slot />
+  </a>
+{/if}

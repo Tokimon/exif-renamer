@@ -4,7 +4,7 @@
 	import SvgIcon from 'ui/utility/svg-icon/SvgIcon.svelte';
   import { colors, whiten } from 'ui/theme/colors';
 
-  import landscapeSvg from 'svg/icons/landscape.svg';
+  import landscapeSvg from 'ui/svg/icons/landscape.svg';
 
   export let src;
   export let alt;

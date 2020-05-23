@@ -1,11 +1,11 @@
 <script>
   import { css } from 'emotion';
 
-  import gearSvg from 'svg/inline/animated/gear.svg';
+  import gearSvg from 'ui/svg/inline/animated/gear.svg';
   import { text } from 'ui/theme/text';
-  import { pickColor, blacken } from 'ui/theme/colors';
+  import { color, blacken } from 'ui/theme/colors';
 
-  export let style;
+  const { class: className, ...rest } = $$restProps;
 
   const container = css`
     ${text}
@@ -15,7 +15,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: ${pickColor(blacken('text', 70), 85)};
+    background: ${color(blacken('text', 70), 85)};
     color: white;
     text-align: center;
     box-sizing: border-box;
@@ -29,7 +29,7 @@
   `;
 </script>
 
-<div class='loading-overlay {container}' style={style}>
+<div class='loading-overlay {container} {className}' {...rest}>
   {@html gearSvg}
   <slot />
 </div>

@@ -1,4 +1,15 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, contextBridge } = require('electron');
+
+const handleExif = require('./src/electron/exifHandler.js');
+const handleFiles = require('./src/electron/fileHandler.js');
+
+contextBridge.exposeInMainWorld(
+  'electron',
+  {
+    exif: handleExif(),
+    files: handleFiles()
+  }
+);
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.

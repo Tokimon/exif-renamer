@@ -19,7 +19,7 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    transform: translate(5px, 5px);
+    transform: translate(-3px, -3px);
     z-index: 1;
   `;
 
@@ -36,6 +36,6 @@
 </script>
 
 <div class={container}>
-  <Image class={thumb} src={src} />
+  <Image class={thumb} {src} />
   {#if count > 1}<FocusDot class={dot}>{count}</FocusDot>{/if}
 </div>

@@ -6,7 +6,7 @@
 
   import SvgIcon from 'ui/utility/svg-icon/SvgIcon.svelte';
 
-  import alertSvg from 'svg/icons/alert.svg';
+  import alertSvg from 'ui/svg/icons/alert.svg';
 
   const className = css`
     ${text}

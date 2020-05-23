@@ -2,7 +2,7 @@
   "parserOptions": {
     "ecmaVersion": 2019,
     "sourceType": "module",
-    "allowImportExportEverywhere": false,
+    "allowImportExportEverywhere": true,
     "codeFrame": false
   },
   "env": {
@@ -20,7 +20,7 @@
   ],
   "overrides": [
     {
-      "files": ["**/*.svelte"],
+      "files": ["*.svelte"],
       "processor": "svelte3/svelte3"
     }
   ],
@@ -35,6 +35,7 @@
     "no-console": 1,
     "no-multiple-empty-lines": [2, { max: 3, maxBOF: 0, maxEOF: 1 }],
     "curly": [2, "all"],
+    "import/first": 0,
 
     "jest/no-disabled-tests": "warn",
     "jest/no-focused-tests": "error",
