@@ -1,7 +1,7 @@
-<script>
+<script lang="typescript">
   import { css } from 'emotion';
 
-  import Thumb from 'ui/components/thumb/Thumb.svelte';
+  import Thumb from '~/ui/components/thumb/Thumb.svelte';
 
   export let paths = [];
 

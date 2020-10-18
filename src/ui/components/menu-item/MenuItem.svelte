@@ -1,9 +1,9 @@
 <script context='module'>
   import { css } from 'emotion';
 
-  import { colors, color, blacken } from 'ui/theme/colors.js';
-  import { text } from 'ui/theme/text.js';
-  import SvgIcon from 'ui/utility/svg-icon/SvgIcon.svelte';
+  import { colors } from '~/ui/theme/colors.js';
+  import { text } from '~/ui/theme/text.js';
+  import SvgIcon from '~/ui/svg/svg-icon/SvgIcon.svelte';
 
   const container = css`
     ${text}
@@ -28,8 +28,8 @@
   `;
 </script>
 
-<script>
-  export let icon;
+<script lang="typescript">
+  export let icon: string;
 
   const { class: className, ...rest } = $$restProps;
 </script>

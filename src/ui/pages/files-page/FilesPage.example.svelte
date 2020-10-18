@@ -1,5 +1,5 @@
 <script context='module'>
-  import FileListingPage from './FileListingPage.svelte';
+  import FilesPage from './FilesPage.svelte';
 
   const types = ['animals', 'nature', 'arch', 'people', 'tech'];
 
@@ -15,4 +15,4 @@
   );
 </script>
 
-<FileListingPage paths={paths} />
+<FilesPage paths={paths} />

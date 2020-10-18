@@ -1,9 +1,9 @@
-<script>
+<script lang="typescript">
 	import Section from 'example-helpers/Section.svelte';
 	import Button from './Button.svelte';
 
 	const onClick = () => alert('clicked');
-	const href = 'https://developer.mozilla.org/en-US/'
+	const href = 'https://developer.mozilla.org/en-US/';
 </script>
 
 <Section title="With click event">

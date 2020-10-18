@@ -1,8 +1,8 @@
-<script>
+<script lang="typescript">
   import { css } from 'emotion';
 
-  import { text } from 'ui/theme/text';
-  import { color as themeColor, blacken, whiten } from 'ui/theme/colors';
+  import { text } from '~/ui/theme/text';
+  import { color as themeColor, blacken, whiten } from '~/ui/theme/colors';
 
   export let disabled = false;
   export let href;

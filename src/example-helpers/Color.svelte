@@ -1,7 +1,7 @@
-<script>
+<script lang="typescript">
   import { css } from 'emotion';
 
-  import { text } from 'ui/theme/text';
+  import { text } from '~/ui/theme/text';
 
   export let value = 'black';
 

@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   export let folder;
   export let onFolderSelect;
 

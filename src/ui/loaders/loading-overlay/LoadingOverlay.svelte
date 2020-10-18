@@ -1,9 +1,9 @@
-<script>
+<script lang="typescript">
   import { css } from 'emotion';
 
-  import gearSvg from 'ui/svg/inline/animated/gear.svg';
-  import { text } from 'ui/theme/text';
-  import { color, blacken } from 'ui/theme/colors';
+  import gearSvg from '~/ui/svg/inline/animated/gear.svg';
+  import { text } from '~/ui/theme/text';
+  import { color, blacken } from '~/ui/theme/colors';
 
   const { class: className, ...rest } = $$restProps;
 

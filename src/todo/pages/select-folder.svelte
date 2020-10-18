@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   import nPath from 'path';
 
   import { glob } from '../utils/glob.js';

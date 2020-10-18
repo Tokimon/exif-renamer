@@ -1,10 +1,8 @@
-<script>
+<script lang="typescript">
   import { css, cx } from 'emotion';
 
-	import SvgIcon from 'ui/utility/svg-icon/SvgIcon.svelte';
-  import { colors, whiten } from 'ui/theme/colors';
-
-  import landscapeSvg from 'ui/svg/icons/landscape.svg';
+  import SvgIcon from '~/ui/svg/svg-icon/SvgIcon.svelte';
+  import { whiten } from '~/ui/theme/colors';
 
   export let src;
   export let alt;
@@ -47,6 +45,6 @@
   />
 {:else}
   <div class={cx('no-img', icon, className)} {...rest}>
-    <SvgIcon svg={landscapeSvg} />
+    <SvgIcon svg='landscape' />
   </div>
 {/if}

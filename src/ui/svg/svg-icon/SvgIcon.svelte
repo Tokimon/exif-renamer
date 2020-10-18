@@ -1,5 +1,5 @@
-<script>
-  export let svg;
+<script lang="typescript">
+  export let svg: string;
 
   const { class: className, ...rest } = $$restProps;
 </script>
@@ -12,5 +12,5 @@
   focusable={false}
   {...rest}
 >
-  <use xlink:href={'#' + svg.id} />
+  <use xlink:href={'public/icons.svg#' + svg} />
 </svg>

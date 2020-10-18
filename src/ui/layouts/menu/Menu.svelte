@@ -1,9 +1,9 @@
 <script context='module'>
   import { css } from 'emotion';
 
-  import { whiten } from 'ui/theme/colors.js';
-  import MenuItem from 'ui/components/menu-item/MenuItem.svelte';
-  import searchFolderSvg from 'ui/svg/icons/folder-search.svg';
+  import { whiten } from '~/ui/theme/colors.js';
+  import MenuItem from '~/ui/components/menu-item/MenuItem.svelte';
+  import searchFolderSvg from '~/ui/svg/icons/folder-search.svg';
 
   const container = css`
     position: relative;
@@ -13,7 +13,7 @@
   `;
 </script>
 
-<script>
+<script lang="typescript">
   export let loadPath;
 </script>
 

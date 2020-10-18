@@ -1,8 +1,8 @@
-<script>
+<script lang="typescript">
   import { css } from 'emotion';
 
-  import Image from 'ui/base/image/Image.svelte';
-  import FocusDot from 'ui/base/focus-dot/FocusDot.svelte';
+  import Image from '~/ui/base/image/Image.svelte';
+  import FocusDot from '~/ui/base/focus-dot/FocusDot.svelte';
 
   export let src;
   export let count = 1;

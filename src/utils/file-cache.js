@@ -13,7 +13,7 @@ export const load = async (folder) => {
   try {
     const json = await fs.readFile(filename(folder));
     _cache = JSON.parse(json);
-  } catch (ex) {}
+  } catch (ex) { /* do nothing */ }
 
   return _cache;
 };

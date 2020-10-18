@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   import { css } from 'emotion';
 
   export let title;

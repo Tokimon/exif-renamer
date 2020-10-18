@@ -1,8 +1,8 @@
-<script>
+<script lang="typescript">
   import { css, cx } from 'emotion';
 
-  import { text } from 'ui/theme/text';
-  import colors from 'ui/theme/colors';
+  import { text } from '~/ui/theme/text';
+  import colors from '~/ui/theme/colors';
 
   const { class: className, ...rest } = $$restProps;
 

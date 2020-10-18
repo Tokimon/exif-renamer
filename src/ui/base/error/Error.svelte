@@ -1,12 +1,10 @@
-<script>
+<script lang="typescript">
   import { css } from 'emotion';
 
-  import { text } from 'ui/theme/text';
-  import colors from 'ui/theme/colors';
+  import { text } from '~/ui/theme/text';
+  import colors from '~/ui/theme/colors';
 
-  import SvgIcon from 'ui/utility/svg-icon/SvgIcon.svelte';
-
-  import alertSvg from 'ui/svg/icons/alert.svg';
+  import SvgIcon from '~/ui/svg/svg-icon/SvgIcon.svelte';
 
   const className = css`
     ${text}
@@ -23,6 +21,6 @@
 </script>
 
 <div class={className}>
-  <SvgIcon svg={alertSvg} />
+  <SvgIcon svg='alert' />
   <slot />
 </div>

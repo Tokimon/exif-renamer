@@ -1,5 +1,7 @@
-<script>
-  import dropSvg from '../svg/static/folder.svg'
+<script lang="typescript">
+  import DropSvg from '../svg/static/folder.svg'
+
+  const test = 0
 </script>
 
 <style lang='stylus'>

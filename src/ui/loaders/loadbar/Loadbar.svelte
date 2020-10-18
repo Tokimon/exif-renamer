@@ -1,7 +1,7 @@
-<script>
+<script lang="typescript">
   import { css } from 'emotion';
 
-  import { colors, whiten } from 'ui/theme/colors';
+  import { colors, whiten } from '~/ui/theme/colors';
 
   export let value = 0;
   export let total = 0;

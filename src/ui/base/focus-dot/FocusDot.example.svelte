@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
 	import FocusDot from './FocusDot.svelte';
 </script>
 

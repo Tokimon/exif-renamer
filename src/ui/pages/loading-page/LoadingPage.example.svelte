@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
 	import LoadingPage from './LoadingPage.svelte';
 </script>
 
