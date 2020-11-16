@@ -1,7 +1,7 @@
 <script context="module" lang="typescript">
-  import { cx } from "emotion";
+  import { cx } from 'emotion';
 
-  import { container } from "./FocusDot.style";
+  import { container } from './FocusDot.style';
 </script>
 
 <script lang="typescript">

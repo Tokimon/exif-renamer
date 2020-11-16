@@ -1,6 +1,6 @@
 <script context="module" lang="typescript">
-  import Section from "~/example-helpers/Section.svelte";
-  import Color from "~/example-helpers/Color.svelte";
+  import Section from "~/ui/example-helpers/Section.svelte";
+  import Color from "~/ui/example-helpers/Color.svelte";
 
   import colors from "./colors";
 </script>

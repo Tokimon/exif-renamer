@@ -1,13 +1,13 @@
 <script context="module" lang="typescript">
-  import { cx } from "emotion";
+  import { cx } from 'emotion';
 
-  import { button, buttonColor } from "./button.style";
+  import { button, buttonColor } from './button.style';
 </script>
 
 <script lang="typescript">
   export let disabled: boolean = false;
   export let href: string;
-  export let color: string = "primary";
+  export let color: string = 'primary';
 
   const { class: className, ...rest } = $$restProps;
 

@@ -1,9 +1,10 @@
 <script lang="typescript">
-	import Section from 'example-helpers/Section.svelte';
-	import Button from './Button.svelte';
+  import Section from '~/ui/example-helpers/Section.svelte';
 
-	const onClick = () => alert('clicked');
-	const href = 'https://developer.mozilla.org/en-US/';
+  import Button from './Button.svelte';
+
+  const onClick = () => alert('clicked');
+  const href = 'https://developer.mozilla.org/en-US/';
 </script>
 
 <Section title="With click event">
@@ -12,11 +13,11 @@
 </Section>
 
 <Section title="With href">
-	<Button href={href} target='_blank'>Opens MDN</Button>
-	<Button href={href} disabled>Disabled href</Button>
+  <Button {href} target="_blank">Opens MDN</Button>
+  <Button {href} disabled>Disabled href</Button>
 </Section>
 
 <Section title="Custom Color">
-  <Button on:click={onClick} color='secondary'>Customized</Button>
-  <Button on:click={onClick} color='secondary' disabled>Disabled</Button>
+  <Button on:click={onClick} color="secondary">Customized</Button>
+  <Button on:click={onClick} color="secondary" disabled>Disabled</Button>
 </Section>

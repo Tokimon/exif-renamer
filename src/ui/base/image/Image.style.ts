@@ -2,6 +2,8 @@ import { css } from 'emotion';
 
 import { whiten } from '~/ui/theme/colors';
 
+
+
 export const image = css`
   display: block;
   object-fit: ${fit};

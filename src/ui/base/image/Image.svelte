@@ -1,9 +1,9 @@
 <script context="module" lang="typescript">
-  import { cx } from "emotion";
+  import { cx } from 'emotion';
 
-  import SvgIcon from "~/ui/svg/svg-icon/SvgIcon.svelte";
+  import SvgIcon from '~/ui/svg/svg-icon/SvgIcon.svelte';
 
-  import { image, icon } from "./Image.style";
+  import { image, icon } from './Image.style';
 </script>
 
 <script lang="typescript">
