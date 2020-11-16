@@ -1,50 +1,33 @@
+<script context="module" lang="typescript">
+  import { cx } from "emotion";
+
+  import SvgIcon from "~/ui/svg/svg-icon/SvgIcon.svelte";
+
+  import { image, icon } from "./Image.style";
+</script>
+
 <script lang="typescript">
-  import { css, cx } from 'emotion';
-
-  import SvgIcon from '~/ui/svg/svg-icon/SvgIcon.svelte';
-  import { whiten } from '~/ui/theme/colors';
-
-  export let src;
-  export let alt;
-  export let fit = 'cover';
+  export let src: string;
+  export let alt: string;
 
   const { class: className, ...rest } = $$restProps;
 
   $: failed = !src;
 
-  const handleError = () => { failed = true; };
-
-  const image = css`
-    display: block;
-    object-fit: ${fit};
-    object-position: 50% 50%;
-  `;
-
-  const icon = css`
-    display: inline-flex;
-    background: ${whiten('text', 87)};
-
-    svg {
-      margin: auto;
-      fill: ${whiten('text', 30)};
-      max-width: 25px;
-      max-height: 25px;
-      width: 80%;
-      height: 80%;
-    }
-  `;
+  const handleError = () => {
+    failed = true;
+  };
 </script>
 
 {#if !failed}
   <img
     class={cx('img', image, className)}
-    src={src}
-    alt={alt}
+    {src}
+    {alt}
     on:error={handleError}
-    {...rest}
-  />
+    {...rest} />
 {:else}
   <div class={cx('no-img', icon, className)} {...rest}>
-    <SvgIcon svg='landscape' />
+    <SvgIcon svg="landscape" />
   </div>
 {/if}

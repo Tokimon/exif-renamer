@@ -3,5 +3,8 @@
   "include": ["src/**/*"],
   "exclude": ["node_modules/*", "public/*"],
   "strict": true,
-  "no-explicit-any": true
+  "no-explicit-any": true,
+  "paths": {
+    "~/*": ["src/*"]
+  }
 }

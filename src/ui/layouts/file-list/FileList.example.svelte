@@ -1,5 +1,5 @@
 <script context='module'>
-  import Files from './Files.svelte';
+  import FileList from './FileList.svelte';
 
   const types = ['animals', 'nature', 'arch', 'people', 'tech'];
   const paths = Array.from(Array(50), (_, i) => [
@@ -8,4 +8,4 @@
   ]);
 </script>
 
-<Files paths={paths} />
+<FileList paths={paths} />

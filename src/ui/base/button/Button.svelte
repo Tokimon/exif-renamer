@@ -1,53 +1,31 @@
+<script context="module" lang="typescript">
+  import { cx } from "emotion";
+
+  import { button, buttonColor } from "./button.style";
+</script>
+
 <script lang="typescript">
-  import { css } from 'emotion';
-
-  import { text } from '~/ui/theme/text';
-  import { color as themeColor, blacken, whiten } from '~/ui/theme/colors';
-
-  export let disabled = false;
-  export let href;
-  export let color = 'primary';
+  export let disabled: boolean = false;
+  export let href: string;
+  export let color: string = "primary";
 
   const { class: className, ...rest } = $$restProps;
 
-  const button = css`
-    ${text}
-    padding: 0 10px;
-    height: 30px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 6px;
-    cursor: default;
-    background: ${whiten(color, 60)};
-    color: white;
-    text-transform: uppercase;
-    transition: background-color 0.2s ease, opacity 0.2s ease;
-    will-change: background-color, opacity;
-    text-decoration: none;
+  const colors = buttonColor(color);
 
-    &:not(.disabled) {
-      cursor: pointer;
-      background: ${themeColor(color)};
-
-      &:hover {
-        background: ${blacken(color, 15)};
-      }
-    }
-  `;
+  const classNames = cx(button, colors, className);
 </script>
 
 {#if disabled}
-  <span class='button disabled {button}' {...rest}>
+  <span class={classNames} aria-disabled="true" {...rest}>
     <slot />
   </span>
-{:else}
-  <a
-    class='button {button}'
-    {href}
-    on:click
-    {...rest}
-  >
+{:else if href}
+  <a class={classNames} {href} on:click {...rest}>
     <slot />
   </a>
+{:else if href}
+  <button type="button" class={classNames} on:click {...rest}>
+    <slot />
+  </button>
 {/if}

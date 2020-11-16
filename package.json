@@ -21,7 +21,6 @@
     "lodash.debounce": "^4.0.8",
     "md5-file": "^5.0.0",
     "node-exiftool": "^2.3.0",
-    "rollup-plugin-html2": "^2.0.0",
     "sirv-cli": "^1.0.6",
     "vanillajs-helpers": "^2.0.2"
   },
@@ -35,11 +34,13 @@
     "@rollup/plugin-typescript": "^6.0.0",
     "@storybook/svelte": "^6.0.26",
     "@tsconfig/svelte": "^1.0.10",
-    "@typescript-eslint/parser": "^4.4.1",
+    "@typescript-eslint/eslint-plugin": "^4.6.0",
+    "@typescript-eslint/parser": "^4.6.0",
     "babel-loader": "^8.1.0",
     "electron": "^10.1.3",
-    "eslint": "^7.11.0",
+    "eslint": "^7.12.1",
     "eslint-config-standard": "^14.1.1",
+    "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-html": "^6.1.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jest": "^24.1.0",
@@ -56,6 +57,7 @@
     "rollup-plugin-copy": "^3.3.0",
     "rollup-plugin-generate-html-template": "^1.7.0",
     "rollup-plugin-html-entry": "^0.3.0",
+    "rollup-plugin-html2": "^2.0.0",
     "rollup-plugin-image": "^1.0.2",
     "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-serve": "^1.0.4",
@@ -71,7 +73,7 @@
     "svg-inline-loader": "^0.8.2",
     "svg-sprite-loader": "^5.0.0",
     "svgo": "^1.3.2",
-    "typescript": "^4.0.3",
+    "typescript": "^4.0.5",
     "webpack": "^5.1.0"
   }
 }

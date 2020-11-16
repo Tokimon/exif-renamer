@@ -1,26 +1,10 @@
-<script lang="typescript">
-  import { css } from 'emotion';
+<script context="module" lang="typescript">
+  import SvgIcon from "~/ui/svg/svg-icon/SvgIcon.svelte";
 
-  import { text } from '~/ui/theme/text';
-  import colors from '~/ui/theme/colors';
-
-  import SvgIcon from '~/ui/svg/svg-icon/SvgIcon.svelte';
-
-  const className = css`
-    ${text}
-    color: ${colors.danger};
-    display: flex;
-    align-items: center;
-
-    .svg-icon {
-      width: 1em;
-      height: 1em;
-      margin-right: 5px;
-    }
-  `;
+  import { error } from "./Error.style";
 </script>
 
-<div class={className}>
-  <SvgIcon svg='alert' />
+<div class={error}>
+  <SvgIcon svg="alert" />
   <slot />
 </div>

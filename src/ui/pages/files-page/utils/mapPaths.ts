@@ -1,4 +1,4 @@
-export default (paths) => {
+export default (paths: string[]): Array<[string, number]> => {
   const mapping = paths.reduce(
     (m, path) => {
       const root = path.replace(/_\d+$/, '');

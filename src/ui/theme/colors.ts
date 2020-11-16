@@ -9,7 +9,7 @@ export const colors = {
   text: '#666b6a'
 };
 
-export const color = (_color, alpha) => {
+export const color = (_color: string, alpha?: number): string => {
   const clr = colors[_color] || _color;
   if (!clr || !alpha) { return clr; }
 
@@ -19,13 +19,13 @@ export const color = (_color, alpha) => {
     .string();
 };
 
-export const whiten = (_color, pct) => {
+export const whiten = (_color: string, pct: number): string => {
   return Color(color(_color))
     .mix(Color('white'), pct / 100)
     .hex();
 };
 
-export const blacken = (_color, pct) => {
+export const blacken = (_color: string, pct: number): string => {
   return Color(color(_color))
     .mix(Color('black'), pct / 100)
     .hex();

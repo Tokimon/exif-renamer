@@ -7,7 +7,7 @@
 
   const paths = Array.from(
     Array(20000),
-    (_, i) => {
+    () => {
       const path = 'https://placeimg.com/150/150/' + types[Math.round(Math.random() * 4)];
       m[path] = (m[path] || 0) + 1;
       return path + (m[path] > 1 ? '_' + m[path] : '');

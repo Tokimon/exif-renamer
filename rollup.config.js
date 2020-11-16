@@ -1,5 +1,3 @@
-import nPath from 'path';
-
 import json from '@rollup/plugin-json';
 import html from '@rollup/plugin-html';
 import image from '@rollup/plugin-image';

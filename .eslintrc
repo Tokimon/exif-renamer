@@ -1,4 +1,5 @@
 {
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 2019,
     "sourceType": "module",
@@ -12,12 +13,24 @@
   },
   "extends": [
     "eslint:recommended",
-    "standard"
+    "standard",
+    "plugin:@typescript-eslint/recommended",
   ],
   "plugins": [
+    "@typescript-eslint",
     "svelte3",
     "jest"
   ],
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["~/", "./src/"]
+        ],
+        "extensions": [".ts", ".js", ".svelte"]
+      }
+    }
+  },
   "overrides": [
     {
       "files": ["*.svelte"],
