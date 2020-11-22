@@ -1,5 +1,5 @@
 <script context="module" lang="ts">
-  import { cx } from '@emotion/css';
+  import classnames from 'classnames';
 
   import { container } from './FocusDot.style';
 </script>
@@ -8,6 +8,6 @@
   const { class: className, ...rest } = $$restProps;
 </script>
 
-<div class={cx(container, className)} {...rest}>
+<div class={classnames(container, className)} {...rest}>
   <slot />
 </div>

@@ -1,5 +1,5 @@
 <script context="module" lang="ts">
-  import { cx } from '@emotion/css';
+  import classnames from 'classnames';
 
   import { button, buttonColor } from './button.style';
 </script>
@@ -15,7 +15,7 @@
 
   const props = {
     ...rest,
-    class: cx(button, colors, className),
+    class: classnames(button, colors, className),
   };
 </script>
 

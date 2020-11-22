@@ -1,9 +1,9 @@
 <script context="module" lang="ts">
-  import { cx } from '@emotion/css';
+  import classnames from 'classnames';
 
   import SvgIcon from '~/ui/svg/svg-icon/SvgIcon.svelte';
 
-  import { image, icon } from './Image.style';
+  import { image as imageCn, icon } from './Image.style';
 </script>
 
 <script lang="ts">
@@ -21,13 +21,13 @@
 
 {#if !failed}
   <img
-    class={cx('img', image, className)}
+    class={classnames('img', imageCn, className)}
     {src}
     {alt}
     on:error={handleError}
     {...rest} />
 {:else}
-  <div class={cx('no-img', icon, className)} {...rest}>
+  <div class={classnames('no-img', icon, className)} {...rest}>
     <SvgIcon svg="landscape" />
   </div>
 {/if}
