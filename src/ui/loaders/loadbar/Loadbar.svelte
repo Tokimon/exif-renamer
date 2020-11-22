@@ -1,10 +1,10 @@
-<script context="module" lang="typescript">
-  import { cx } from "emotion";
+<script context="module" lang="ts">
+  import classnames from 'classnames';
 
-  import { bar, pctText, pctTextReveal, loadbar } from "./Loadbar.style";
+  import { bar, pctText, pctTextReveal, loadbar } from './Loadbar.style';
 </script>
 
-<script lang="typescript">
+<script lang="ts">
   export let value = 0;
   export let total = 0;
 
@@ -13,7 +13,7 @@
   $: pct = (value / total) * 100;
 </script>
 
-<div class={cx(loadbar, className)} {...rest}>
+<div class={classnames(loadbar, className)} {...rest}>
   <div class={pctText}>{value} / {total}</div>
   <div class={bar} style="width: {pct}%;" />
   <div class={pctTextReveal} style="clip-path: inset(0 {100 - pct}% 0 0);">

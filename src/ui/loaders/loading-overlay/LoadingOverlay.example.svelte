@@ -1,9 +1,9 @@
-<script lang="typescript">
-  import { css } from "emotion";
+<script lang="ts">
+  import { css } from '@emotion/css';
 
-  import Section from "~/ui/example-helpers/Section.svelte";
+  import Section from '~/ui/story-helpers/Section.svelte';
 
-  import LoadingOverlay from "./LoadingOverlay.svelte";
+  import LoadingOverlay from './LoadingOverlay.svelte';
 
   const Ex = css`
     width: 200px;

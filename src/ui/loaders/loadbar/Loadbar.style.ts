@@ -1,4 +1,4 @@
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 
 import { colors, whiten } from '~/ui/theme/colors';
 

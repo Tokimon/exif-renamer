@@ -1,16 +1,16 @@
-<script context="module" lang="typescript">
-  import { cx } from "emotion";
+<script context="module" lang="ts">
+  import classnames from 'classnames';
 
-  import gearSvg from "~/ui/svg/inline/animated/gear.svg";
+  import gearSvg from '~/ui/svg/inline/animated/gear.svg';
 
-  import { loadingOverlay } from "./LoadingOverlay.style";
+  import { loadingOverlay } from './LoadingOverlay.style';
 </script>
 
-<script lang="typescript">
+<script lang="ts">
   const { class: className, ...rest } = $$restProps;
 </script>
 
-<div class={cx(loadingOverlay, className)} {...rest}>
+<div class={classnames(loadingOverlay, className)} {...rest}>
   {@html gearSvg}
   <slot />
 </div>
