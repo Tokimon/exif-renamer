@@ -1,4 +1,4 @@
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 
 import { text } from '~/ui/theme/text';
 import { color as themeColor, blacken, whiten } from '~/ui/theme/colors';
@@ -13,28 +13,35 @@ export const button = css`
   align-items: center;
   justify-content: center;
   border-radius: 6px;
-  cursor: default;
+  cursor: pointer;
   color: white;
+  border: none;
   text-transform: uppercase;
-  transition: background-color 0.2s ease, opacity 0.2s ease;
-  will-change: background-color, opacity;
   text-decoration: none;
+  transition-property: background-color, opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  will-change: background-color, opacity;
 
-  &:not(.disabled) {
-    cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+
+  &[aria-disabled] {
+    cursor: default;
   }
 `;
 
 export const buttonColor = (color: string): string => css`
-  ${button} {
+  &[aria-disabled] {
     background: ${whiten(color, 60)};
-  
-    &:not([aria-disabled="true"]) {
-      background: ${themeColor(color)};
-  
-      &:hover {
-        background: ${blacken(color, 15)};
-      }
+  }
+
+  &:not([aria-disabled]) {
+    background: ${themeColor(color)};
+
+    &:hover, &:focus {
+      background: ${blacken(color, 25)};
     }
   }
 `;

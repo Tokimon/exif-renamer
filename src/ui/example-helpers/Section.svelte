@@ -1,5 +1,5 @@
 <script lang="typescript">
-  import { css } from 'emotion';
+  import { css } from '@emotion/css';
 
   export let title;
 
@@ -19,7 +19,9 @@
   `;
 </script>
 
-{#if title}<h2 class={headline}>{title}</h2>{/if}
+{#if title}
+  <h2 class={headline}>{title}</h2>
+{/if}
 <div class={className}>
   <slot />
 </div>

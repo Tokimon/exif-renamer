@@ -1,5 +1,5 @@
 <script context="module" lang="typescript">
-  import { cx } from 'emotion';
+  import { cx } from '@emotion/css';
 
   import { container } from './FocusDot.style';
 </script>

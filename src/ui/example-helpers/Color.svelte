@@ -1,5 +1,5 @@
 <script lang="typescript">
-  import { css } from 'emotion';
+  import { css } from '@emotion/css';
 
   import { text } from '~/ui/theme/text';
 

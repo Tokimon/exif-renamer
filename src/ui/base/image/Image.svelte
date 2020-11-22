@@ -1,5 +1,5 @@
 <script context="module" lang="typescript">
-  import { cx } from 'emotion';
+  import { cx } from '@emotion/css';
 
   import SvgIcon from '~/ui/svg/svg-icon/SvgIcon.svelte';
 
@@ -8,7 +8,7 @@
 
 <script lang="typescript">
   export let src: string;
-  export let alt: string;
+  export let alt: string = '';
 
   const { class: className, ...rest } = $$restProps;
 

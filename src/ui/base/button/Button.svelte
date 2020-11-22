@@ -1,5 +1,5 @@
 <script context="module" lang="typescript">
-  import { cx } from 'emotion';
+  import { cx } from '@emotion/css';
 
   import { button, buttonColor } from './button.style';
 </script>
@@ -13,19 +13,22 @@
 
   const colors = buttonColor(color);
 
-  const classNames = cx(button, colors, className);
+  const props = {
+    ...rest,
+    class: cx(button, colors, className),
+  };
 </script>
 
 {#if disabled}
-  <span class={classNames} aria-disabled="true" {...rest}>
+  <span aria-disabled="true" {...props}>
     <slot />
   </span>
 {:else if href}
-  <a class={classNames} {href} on:click {...rest}>
+  <a {href} on:click {...props}>
     <slot />
   </a>
-{:else if href}
-  <button type="button" class={classNames} on:click {...rest}>
+{:else}
+  <button type="button" on:click {...props}>
     <slot />
   </button>
 {/if}

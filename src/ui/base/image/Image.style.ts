@@ -1,4 +1,4 @@
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 
 import { whiten } from '~/ui/theme/colors';
 
@@ -6,7 +6,7 @@ import { whiten } from '~/ui/theme/colors';
 
 export const image = css`
   display: block;
-  object-fit: ${fit};
+  object-fit: cover;
   object-position: 50% 50%;
 `;
 
