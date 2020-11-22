@@ -1,4 +1,4 @@
-<script context="module" lang="typescript">
+<script context="module" lang="ts">
   import { cx } from '@emotion/css';
 
   import SvgIcon from '~/ui/svg/svg-icon/SvgIcon.svelte';
@@ -6,7 +6,7 @@
   import { image, icon } from './Image.style';
 </script>
 
-<script lang="typescript">
+<script lang="ts">
   export let src: string;
   export let alt: string = '';
 

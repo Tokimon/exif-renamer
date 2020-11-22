@@ -1,10 +1,10 @@
-<script context="module" lang="typescript">
+<script context="module" lang="ts">
   import { cx } from '@emotion/css';
 
   import { container } from './FocusDot.style';
 </script>
 
-<script lang="typescript">
+<script lang="ts">
   const { class: className, ...rest } = $$restProps;
 </script>
 

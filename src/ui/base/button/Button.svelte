@@ -1,10 +1,10 @@
-<script context="module" lang="typescript">
+<script context="module" lang="ts">
   import { cx } from '@emotion/css';
 
   import { button, buttonColor } from './button.style';
 </script>
 
-<script lang="typescript">
+<script lang="ts">
   export let disabled: boolean = false;
   export let href: string;
   export let color: string = 'primary';

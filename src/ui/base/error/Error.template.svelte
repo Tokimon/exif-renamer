@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
   import Error from './Error.svelte';
 </script>
 

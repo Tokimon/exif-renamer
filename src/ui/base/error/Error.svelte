@@ -1,4 +1,4 @@
-<script context="module" lang="typescript">
+<script context="module" lang="ts">
   import SvgIcon from '~/ui/svg/svg-icon/SvgIcon.svelte';
 
   import { error } from './Error.style';

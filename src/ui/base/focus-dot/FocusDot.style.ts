@@ -8,11 +8,11 @@ import colors from '~/ui/theme/colors';
 export const container = css`
   ${text}
   font-size: 10px;
-  border-radius: 8px;
+  border-radius: 9px;
   height: 16px;
   min-width: 16px;
   line-height: 1;
-  padding: 0 4px;
+  padding: 9px 5px;
   color: white;
   background: ${colors.secondary};
   display: inline-flex;

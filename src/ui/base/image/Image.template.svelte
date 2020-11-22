@@ -1,8 +1,5 @@
-<script lang="typescript">
+<script context="module" lang="ts">
   import Image from './Image.svelte';
-
-  const rest = $$restProps;
-  const style = 'width: 200px; height: 200px;';
 </script>
 
-<Image {style} {...rest} />
+<Image style="width: 200px; height: 200px;" {...$$restProps} />
