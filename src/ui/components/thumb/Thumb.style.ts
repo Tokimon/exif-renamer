@@ -1,5 +1,6 @@
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 
+import { blacken } from '~/ui/theme/colors';
 
 
 export const thumb = css`
@@ -14,8 +15,9 @@ export const dot = css`
   position: absolute;
   right: 0;
   bottom: 0;
-  transform: translate(-3px, -3px);
+  transform: translate(-6px, -6px);
   z-index: 1;
+  box-shadow: inset 0 2px 2px ${blacken('secondary', 40)};
 `;
 
 export const container = css`

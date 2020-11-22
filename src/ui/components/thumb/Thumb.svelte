@@ -1,11 +1,11 @@
-<script context="module" lang="typescript">
-  import Image from "~/ui/base/image/Image.svelte";
-  import FocusDot from "~/ui/base/focus-dot/FocusDot.svelte";
+<script context="module" lang="ts">
+  import Image from '~/ui/base/image/Image.svelte';
+  import FocusDot from '~/ui/base/focus-dot/FocusDot.svelte';
 
-  import { thumb, dot, container } from "./Thumb.style";
+  import { thumb, dot, container } from './Thumb.style';
 </script>
 
-<script lang="typescript">
+<script lang="ts">
   export let src: string;
   export let count: number = 1;
 </script>
