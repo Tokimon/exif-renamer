@@ -1,14 +1,16 @@
 import { css } from '@emotion/css';
 
-import { blacken } from '~/ui/theme/colors';
+import { blacken, color } from '~/ui/theme/colors';
 
 
-export const thumb = css`
+
+export const image = css`
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  transition: opacity 0.2s;
 `;
 
 export const dot = css`
@@ -20,13 +22,24 @@ export const dot = css`
   box-shadow: inset 0 2px 2px ${blacken('secondary', 40)};
 `;
 
-export const container = css`
+export const thumb = css`
   position: relative;
   width: 100px;
+  height: 100px;
+  border-radius: 4px;
+  overflow: hidden;
 
-  &::after {
-    content: '';
-    display: block;
-    padding-top: 100%;
+  &:hover, &:focus {
+    background: ${color('primary')};
+
+    ${'.' + image} {
+      filter: grayscale(1);
+      opacity: 0.6;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px ${color('secondary')}
   }
 `;

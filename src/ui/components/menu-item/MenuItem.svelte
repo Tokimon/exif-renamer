@@ -1,5 +1,5 @@
 <script context="module" lang="ts">
-  import { cx } from '@emotion/css';
+  import classnames from 'classnames';
 
   import SvgIcon from '~/ui/svg/svg-icon/SvgIcon.svelte';
 
@@ -12,7 +12,7 @@
   const { class: className, ...rest } = $$restProps;
 </script>
 
-<div class={cx(menuItem, className)} on:click {...rest}>
+<div class={classnames(menuItem, className)} on:click {...rest}>
   <SvgIcon svg={icon} />
   <slot />
 </div>

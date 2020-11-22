@@ -4,8 +4,6 @@
 
 <script lang="ts">
   export let text: string = '';
-
-  console.log($$restProps);
 </script>
 
 <MenuItem on:click {...$$restProps}>{text}</MenuItem>
