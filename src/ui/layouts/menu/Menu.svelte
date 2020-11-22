@@ -1,14 +1,27 @@
-<script context="module" lang="typescript">
-  import MenuItem from "~/ui/components/menu-item/MenuItem.svelte";
-  import searchFolderSvg from "~/ui/svg/icons/folder-search.svg";
+<script context="module" lang="ts">
+  import { createEventDispatcher } from 'svelte';
+  import { delegateHandler } from 'vanillajs-browser-helpers/delegate';
 
-  import { menu } from "./Menu.style";
+  import MenuItem from '~/ui/components/menu-item/MenuItem.svelte';
+  import { menuItem } from '~/ui/components/menu-item/MenuItem.style';
+  import searchFolderSvg from '~/ui/svg/icons/folder-search.svg';
+
+  import { menu } from './Menu.style';
 </script>
 
-<script lang="typescript">
-  export let loadPath;
+<script lang="ts">
+  const dispatch = createEventDispatcher();
+
+  const onClick = delegateHandler(`.${menuItem}`, function () {
+    dispatch('itemclick', {
+      elm: this,
+      context: this.dataset.context,
+    });
+  });
 </script>
 
-<div class={menu}>
-  <MenuItem icon={searchFolderSvg} on:click={loadPath} />
+<div class={menu} on:click={onClick}>
+  <MenuItem icon={searchFolderSvg.id || searchFolderSvg} data-context="search">
+    Search
+  </MenuItem>
 </div>
