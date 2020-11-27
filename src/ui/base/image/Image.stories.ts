@@ -2,28 +2,30 @@ import type { StoryConfig } from '~/definitions/stories.d';
 
 import Image from './Image.template.svelte';
 
+import svg from '~/ui/svg/icons/landscape.svg';
+
+
+
+interface ExampleProps {
+  src: string;
+  alt: string;
+}
+
 
 
 export default {
   title: 'Base/Image'
 };
 
-export const Default = (): StoryConfig => ({
+export const Default = (props: ExampleProps): StoryConfig => ({
   Component: Image,
   props: {
-    src: 'https://placeimg.com/200/200/any',
-    alt: 'My Image'
+    ...props,
+    noImageIcon: svg.id
   }
 });
 
-export const NoSource = (): StoryConfig => ({
-  Component: Image,
-  props: {}
-});
-
-export const FailedSource = (): StoryConfig => ({
-  Component: Image,
-  props: {
-    src: 'does-not-exists.com'
-  }
-});
+Default.args = {
+  src: 'https://placeimg.com/200/200/any',
+  alt: 'My Image'
+};

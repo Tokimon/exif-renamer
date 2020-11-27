@@ -1,14 +1,15 @@
 <script context="module" lang="ts">
   import classnames from 'classnames';
 
-  import SvgIcon from '~/ui/svg/svg-icon/SvgIcon.svelte';
+  import SvgIcon from '~/ui/base/svg-icon/SvgIcon.svelte';
 
-  import { image as imageCn, icon } from './Image.style';
+  import { image, icon } from './Image.style';
 </script>
 
 <script lang="ts">
   export let src: string;
   export let alt: string = '';
+  export let noImageIcon: string;
 
   const { class: className, ...rest } = $$restProps;
 
@@ -21,13 +22,13 @@
 
 {#if !failed}
   <img
-    class={classnames('img', imageCn, className)}
+    class={classnames('img', image, className)}
     {src}
     {alt}
     on:error={handleError}
     {...rest} />
 {:else}
   <div class={classnames('no-img', icon, className)} {...rest}>
-    <SvgIcon svg="landscape" />
+    <SvgIcon svg={noImageIcon} />
   </div>
 {/if}
