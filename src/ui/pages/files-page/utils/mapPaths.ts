@@ -1,4 +1,8 @@
-export default (paths: string[]): Array<[string, number]> => {
+import type { PathMapping } from '~/definitions/path.d';
+
+
+
+export default (paths: string[]): PathMapping => {
   const mapping = paths.reduce(
     (m, path) => {
       const root = path.replace(/_\d+$/, '');
