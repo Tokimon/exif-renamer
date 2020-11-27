@@ -1,6 +1,6 @@
 import { css } from '@emotion/css';
 
-import { blacken, color } from '~/ui/theme/colors';
+import { color } from '~/ui/theme/colors';
 
 
 
@@ -10,7 +10,7 @@ export const image = css`
   left: 0;
   width: 100%;
   height: 100%;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, filter 0.2s;
 `;
 
 export const dot = css`
@@ -19,7 +19,6 @@ export const dot = css`
   bottom: 0;
   transform: translate(-6px, -6px);
   z-index: 1;
-  box-shadow: inset 0 2px 2px ${blacken('secondary', 40)};
 `;
 
 export const thumb = css`
@@ -28,6 +27,7 @@ export const thumb = css`
   height: 100px;
   border-radius: 4px;
   overflow: hidden;
+  transition: background 0.2s;
 
   &:hover, &:focus {
     background: ${color('primary')};
