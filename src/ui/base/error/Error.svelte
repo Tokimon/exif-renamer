@@ -1,10 +1,16 @@
 <script context="module" lang="ts">
-  import SvgIcon from '~/ui/svg/svg-icon/SvgIcon.svelte';
+  import classnames from 'classnames';
+
+  import SvgIcon from '~/ui/base/svg-icon/SvgIcon.svelte';
 
   import { error } from './Error.style';
 </script>
 
-<div class={error}>
+<script lang="ts">
+  const { class: className, ...rest } = $$restProps;
+</script>
+
+<div class={classnames(error, className)} {...rest}>
   <SvgIcon svg="alert" />
   <slot />
 </div>
