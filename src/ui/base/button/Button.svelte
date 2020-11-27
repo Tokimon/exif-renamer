@@ -1,53 +1,34 @@
-<script>
-  import { css } from 'emotion';
+<script context="module" lang="ts">
+  import classnames from 'classnames';
 
-  import { text } from 'ui/theme/text';
-  import { color as themeColor, blacken, whiten } from 'ui/theme/colors';
+  import { button, buttonColor } from './button.style';
+</script>
 
-  export let disabled = false;
-  export let href;
-  export let color = 'primary';
+<script lang="ts">
+  export let disabled: boolean = false;
+  export let href: string;
+  export let color: string = 'primary';
 
   const { class: className, ...rest } = $$restProps;
 
-  const button = css`
-    ${text}
-    padding: 0 10px;
-    height: 30px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 6px;
-    cursor: default;
-    background: ${whiten(color, 60)};
-    color: white;
-    text-transform: uppercase;
-    transition: background-color 0.2s ease, opacity 0.2s ease;
-    will-change: background-color, opacity;
-    text-decoration: none;
+  const colors = buttonColor(color);
 
-    &:not(.disabled) {
-      cursor: pointer;
-      background: ${themeColor(color)};
-
-      &:hover {
-        background: ${blacken(color, 15)};
-      }
-    }
-  `;
+  const props = {
+    ...rest,
+    class: classnames(button, colors, className),
+  };
 </script>
 
 {#if disabled}
-  <span class='button disabled {button}' {...rest}>
+  <span aria-disabled="true" {...props}>
     <slot />
   </span>
-{:else}
-  <a
-    class='button {button}'
-    {href}
-    on:click
-    {...rest}
-  >
+{:else if href}
+  <a {href} on:click {...props}>
     <slot />
   </a>
+{:else}
+  <button type="button" on:click {...props}>
+    <slot />
+  </button>
 {/if}

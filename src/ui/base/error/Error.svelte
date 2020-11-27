@@ -1,28 +1,16 @@
-<script>
-  import { css } from 'emotion';
+<script context="module" lang="ts">
+  import classnames from 'classnames';
 
-  import { text } from 'ui/theme/text';
-  import colors from 'ui/theme/colors';
+  import SvgIcon from '~/ui/base/svg-icon/SvgIcon.svelte';
 
-  import SvgIcon from 'ui/utility/svg-icon/SvgIcon.svelte';
-
-  import alertSvg from 'ui/svg/icons/alert.svg';
-
-  const className = css`
-    ${text}
-    color: ${colors.danger};
-    display: flex;
-    align-items: center;
-
-    .svg-icon {
-      width: 1em;
-      height: 1em;
-      margin-right: 5px;
-    }
-  `;
+  import { error } from './Error.style';
 </script>
 
-<div class={className}>
-  <SvgIcon svg={alertSvg} />
+<script lang="ts">
+  const { class: className, ...rest } = $$restProps;
+</script>
+
+<div class={classnames(error, className)} {...rest}>
+  <SvgIcon svg="alert" />
   <slot />
 </div>

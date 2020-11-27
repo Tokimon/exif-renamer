@@ -1,4 +1,4 @@
-const { ipcRenderer, ipcMain } = require('electron');
+const { ipcRenderer/*, ipcMain */ } = require('electron');
 
 const events = {
   UPDATE_EXIF: 'update-exif',

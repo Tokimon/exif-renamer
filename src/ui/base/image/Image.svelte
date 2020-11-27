@@ -1,52 +1,34 @@
-<script>
-  import { css, cx } from 'emotion';
+<script context="module" lang="ts">
+  import classnames from 'classnames';
 
-	import SvgIcon from 'ui/utility/svg-icon/SvgIcon.svelte';
-  import { colors, whiten } from 'ui/theme/colors';
+  import SvgIcon from '~/ui/base/svg-icon/SvgIcon.svelte';
 
-  import landscapeSvg from 'ui/svg/icons/landscape.svg';
+  import { image, icon } from './Image.style';
+</script>
 
-  export let src;
-  export let alt;
-  export let fit = 'cover';
+<script lang="ts">
+  export let src: string;
+  export let alt: string = '';
+  export let noImageIcon: string;
 
   const { class: className, ...rest } = $$restProps;
 
   $: failed = !src;
 
-  const handleError = () => { failed = true; };
-
-  const image = css`
-    display: block;
-    object-fit: ${fit};
-    object-position: 50% 50%;
-  `;
-
-  const icon = css`
-    display: inline-flex;
-    background: ${whiten('text', 87)};
-
-    svg {
-      margin: auto;
-      fill: ${whiten('text', 30)};
-      max-width: 25px;
-      max-height: 25px;
-      width: 80%;
-      height: 80%;
-    }
-  `;
+  const handleError = () => {
+    failed = true;
+  };
 </script>
 
 {#if !failed}
   <img
-    class={cx('img', image, className)}
-    src={src}
-    alt={alt}
+    class={classnames('img', image, className)}
+    {src}
+    {alt}
     on:error={handleError}
-    {...rest}
-  />
+    {...rest} />
 {:else}
-  <div class={cx('no-img', icon, className)} {...rest}>
-    <SvgIcon svg={landscapeSvg} />
+  <div class={classnames('no-img', icon, className)} {...rest}>
+    <SvgIcon svg={noImageIcon} />
   </div>
 {/if}
