@@ -1,4 +1,5 @@
 <script context="module" lang="ts">
+  import classnames from 'classnames';
   import { createEventDispatcher } from 'svelte';
   import { delegateHandler } from 'vanillajs-browser-helpers/delegate';
 
@@ -10,6 +11,8 @@
 </script>
 
 <script lang="ts">
+  const { class: className, ...rest } = $$restProps;
+
   const dispatch = createEventDispatcher();
 
   const onClick = delegateHandler(`.${menuItem}`, function () {
@@ -20,7 +23,7 @@
   });
 </script>
 
-<div class={menu} on:click={onClick}>
+<div class={classnames(menu, className)} on:click={onClick} {...rest}>
   <MenuItem icon={searchFolderSvg.id || searchFolderSvg} data-context="search">
     Search
   </MenuItem>
