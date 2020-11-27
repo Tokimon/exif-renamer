@@ -1,10 +1,10 @@
-<script lang="typescript">
-  import DropSvg from '../svg/static/folder.svg'
+<script lang="ts">
+  import DropSvg from '../svg/static/folder.svg';
 
-  const test = 0
+  const test = 0;
 </script>
 
-<style lang='stylus'>
+<style lang="stylus">
   .zone {
     position: relative;
     display: flex;
@@ -38,7 +38,7 @@
   }
 </style>
 
-<div class='zone drop-zone'>
+<div class="zone drop-zone">
   {@html dropSvg}
-  <div class='text'>Drop folder here</div>
+  <div class="text">Drop folder here</div>
 </div>
