@@ -1,6 +1,7 @@
 <script lang="ts">
   import FocusDot from './FocusDot.svelte';
+
+  export let number: number = 0;
 </script>
 
-<FocusDot>9</FocusDot>
-<FocusDot>99</FocusDot>
+<FocusDot>{number || 0}</FocusDot>
