@@ -19,7 +19,7 @@ export default {
 
 export const Default = (): StoryConfig => ({
   Component: FileList,
-  props: { types, paths },
+  props: { paths },
   on: {
     thumbclick: detailedAction('File thumb clicked')
   }
