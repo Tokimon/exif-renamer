@@ -7,7 +7,7 @@
 
   const container = css`
     ${text}
-    width: 150px;
+    width: 100px;
     font-weight: bold;
     text-align: center;
     padding: 5px;
@@ -17,7 +17,7 @@
     &::before {
       content: '${value}';
       background: ${value};
-      height: 140px;
+      height: 90px;
       margin-bottom: 5px;
       color: white;
       display: flex;

@@ -9,6 +9,8 @@ export const colors = {
   text: '#666b6a'
 };
 
+export const colorNames = Object.keys(colors);
+
 export const color = (_color: string, alpha?: number): string => {
   const clr = colors[_color] || _color;
   if (!clr || !alpha) { return clr; }

@@ -1,5 +1,13 @@
-import ColorsEx from './colors.example.svelte';
+import type { StoryConfig } from '~/definitions/stories.d';
 
-export default { title: 'Theme' };
+import ColorsTemplate from './Colors.template.svelte';
+import TextTemplate from './Text.template.svelte';
 
-export const Colors = () => ({ Component: ColorsEx });
+
+
+export default {
+  title: 'Theme'
+};
+
+export const Colors = (): StoryConfig => ({ Component: ColorsTemplate });
+export const Text = (): StoryConfig => ({ Component: TextTemplate });
