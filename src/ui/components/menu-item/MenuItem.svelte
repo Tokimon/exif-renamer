@@ -1,7 +1,7 @@
 <script context="module" lang="ts">
   import classnames from 'classnames';
 
-  import SvgIcon from '~/ui/svg/svg-icon/SvgIcon.svelte';
+  import SvgIcon from '~/ui/base/svg-icon/SvgIcon.svelte';
 
   import { menuItem } from './MenuItem.style';
 </script>
