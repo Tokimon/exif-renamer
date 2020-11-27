@@ -5,7 +5,11 @@ const SveltePreprocess = require('svelte-preprocess');
 
 module.exports = {
   stories: [resolve('src/**/*.stories.ts')],
-  addons: ['@storybook/addon-actions'],
+  addons: [
+    '@storybook/addon-actions',
+    '@storybook/addon-backgrounds',
+    '@storybook/addon-controls'
+  ],
   webpackFinal: async (config, { configType }) => {
     const svelteRule = config.module.rules.find(
       (rule) => rule.test.source.includes('svelte')
@@ -36,13 +40,16 @@ module.exports = {
 
     config.module.rules.push(
       {
-        test: /[\\/]svg[\\/]icons[\\/].*\.svg(\?.*)?$/,
-        use: ['svg-sprite-loader']
-      },
-
-      {
         test: /[\\/]svg[\\/]inline[\\/].*\.svg(\?.*)?$/,
         use: ['svg-inline-loader']
+      },
+      {
+        test: /[\\/]svg[\\/]icons[\\/].*\.svg(\?.*)?$/,
+        loader: 'svg-sprite-loader',
+        options: {
+          spriteFilename: 'icons.svg',
+          // extract: true
+        }
       }
     );
 
@@ -53,6 +60,7 @@ module.exports = {
     config.resolve.alias['~'] = resolve('src');
 
     // console.log(config.module.rules);
+    // console.log(config);
     // console.log(config.resolve);
 
 
