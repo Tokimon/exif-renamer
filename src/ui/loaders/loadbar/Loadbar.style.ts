@@ -11,8 +11,6 @@ export const bar = css`
   bottom: 0;
   z-index: 1;
   background: ${colors.primary};
-  transition: width 0.2s linear;
-  will-change: width;
 `;
 
 export const pctText = css`
@@ -32,8 +30,6 @@ export const pctTextReveal = css`
   ${pctText}
   z-index: 2;
   color: white;
-  transition: clip-path 0.2s linear;
-  will-change: clip-path;
 `;
 
 export const loadbar = css`
