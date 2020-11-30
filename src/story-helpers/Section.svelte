@@ -8,7 +8,7 @@
     font-size: 21px;
   `;
 
-  const className = css`
+  const body = css`
     font-family: sans-serif;
     display: flex;
     flex-wrap: wrap;
@@ -22,6 +22,6 @@
 {#if title}
   <h2 class={headline}>{title}</h2>
 {/if}
-<div class={className}>
+<div class={body}>
   <slot />
 </div>

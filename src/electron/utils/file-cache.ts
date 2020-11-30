@@ -3,28 +3,35 @@ import { promises as fs } from 'fs';
 
 import debounce from 'lodash.debounce';
 
+
+import type { ExifCache } from '~/definitions/exif.d.ts'
+
+
+
 let _cache = {};
 
 const filename = (folder) => nPath.join(folder, '.cache');
 
-export const load = async (folder) => {
+
+
+export const load = async (folder: string): ExifCache => {
   _cache = {};
 
   try {
     const json = await fs.readFile(filename(folder));
-    _cache = JSON.parse(json);
+    _cache = JSON.parse(json.toString());
   } catch (ex) { /* do nothing */ }
 
   return _cache;
 };
 
-export const save = (folder) => {
+export const save = (folder: string): Promise<void> => {
   return fs.writeFile(filename(folder), JSON.stringify(_cache));
 };
 
 export const debounceSave = debounce(save, 5000);
 
-export const addFile = (path, data) => {
+export const addFile = (path: string, data) => {
   _cache[path] = data;
   return _cache;
 };
