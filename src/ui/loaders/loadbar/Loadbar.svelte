@@ -1,10 +1,8 @@
-<script context="module" lang="ts">
+<script lang="ts">
   import classnames from 'classnames';
 
   import { bar, pctText, pctTextReveal, loadbar } from './Loadbar.style';
-</script>
 
-<script lang="ts">
   export let value = 0;
   export let total = 0;
 

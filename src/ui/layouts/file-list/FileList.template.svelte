@@ -1,4 +1,4 @@
-<script context="module">
+<script lang="ts">
   import FileList from './FileList.svelte';
 </script>
 

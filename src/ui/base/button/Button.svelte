@@ -1,10 +1,10 @@
-<script context="module" lang="ts">
+<script lang="ts">
   import classnames from 'classnames';
 
   import { button, buttonColor } from './button.style';
-</script>
+  
 
-<script lang="ts">
+  
   export let disabled: boolean = false;
   export let href: string;
   export let color: string = 'primary';

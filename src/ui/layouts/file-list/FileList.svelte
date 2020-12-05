@@ -1,4 +1,4 @@
-<script context="module" lang="ts">
+<script lang="ts">
   import classnames from 'classnames';
   import { createEventDispatcher } from 'svelte';
   import { delegateHandler } from 'vanillajs-browser-helpers/delegate';
@@ -8,9 +8,7 @@
   import { thumb } from '~/ui/components/thumb/Thumb.style';
 
   import { list } from './FileList.style';
-</script>
 
-<script lang="ts">
   export let paths: PathMapping = [];
 
   const { class: className, ...rest } = $$restProps;

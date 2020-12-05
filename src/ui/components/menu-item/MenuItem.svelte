@@ -1,12 +1,10 @@
-<script context="module" lang="ts">
+<script lang="ts">
   import classnames from 'classnames';
 
   import SvgIcon from '~/ui/base/svg-icon/SvgIcon.svelte';
 
   import { menuItem } from './MenuItem.style';
-</script>
 
-<script lang="ts">
   export let icon: string;
 
   const { class: className, ...rest } = $$restProps;

@@ -1,10 +1,8 @@
-<script context="module" lang="ts">
+<script lang="ts">
   import { css } from '@emotion/css';
 
   import { text } from './text';
-</script>
-
-<script lang="ts">
+  
   const p = css`
     ${text}
   `;

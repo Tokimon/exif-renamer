@@ -1,4 +1,4 @@
-<script context="module" lang="ts">
+<script lang="ts">
   import classnames from 'classnames';
   import { createEventDispatcher } from 'svelte';
   import { delegateHandler } from 'vanillajs-browser-helpers/delegate';
@@ -8,9 +8,7 @@
   import searchFolderSvg from '~/ui/svg/icons/folder-search.svg';
 
   import { menu } from './Menu.style';
-</script>
 
-<script lang="ts">
   const { class: className, ...rest } = $$restProps;
 
   const dispatch = createEventDispatcher();

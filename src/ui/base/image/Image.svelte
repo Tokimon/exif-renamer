@@ -1,12 +1,10 @@
-<script context="module" lang="ts">
+<script lang="ts">
   import classnames from 'classnames';
 
   import SvgIcon from '~/ui/base/svg-icon/SvgIcon.svelte';
 
   import { image, icon } from './Image.style';
-</script>
 
-<script lang="ts">
   export let src: string;
   export let alt: string = '';
   export let noImageIcon: string;

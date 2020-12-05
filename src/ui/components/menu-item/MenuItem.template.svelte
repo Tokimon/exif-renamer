@@ -1,8 +1,6 @@
-<script context="module" lang="ts">
-  import MenuItem from './MenuItem.svelte';
-</script>
-
 <script lang="ts">
+  import MenuItem from './MenuItem.svelte';
+
   export let text: string = '';
 </script>
 

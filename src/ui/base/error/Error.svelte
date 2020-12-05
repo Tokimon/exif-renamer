@@ -1,12 +1,10 @@
-<script context="module" lang="ts">
+<script lang="ts">
   import classnames from 'classnames';
 
   import SvgIcon from '~/ui/base/svg-icon/SvgIcon.svelte';
 
   import { error } from './Error.style';
-</script>
 
-<script lang="ts">
   const { class: className, ...rest } = $$restProps;
 </script>
 

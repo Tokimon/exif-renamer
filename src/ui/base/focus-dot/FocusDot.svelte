@@ -1,10 +1,8 @@
-<script context="module" lang="ts">
+<script lang="ts">
   import classnames from 'classnames';
 
   import { container } from './FocusDot.style';
-</script>
 
-<script lang="ts">
   const { class: className, ...rest } = $$restProps;
 </script>
 

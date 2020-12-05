@@ -1,4 +1,4 @@
-<script context="module" lang="ts">
+<script lang="ts">
   import Section from '~/story-helpers/Section.svelte';
   import Color from '~/story-helpers/Color.svelte';
 

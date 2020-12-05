@@ -1,4 +1,4 @@
-<script context="module" lang="ts">
+<script lang="ts">
   import classnames from 'classnames';
   import { createEventDispatcher } from 'svelte';
   import randomId from 'vanillajs-helpers/randomId';
@@ -6,9 +6,7 @@
   import { folderSelect, input, hider, help } from './FolderSelect.style';
 
   const id = 'FolderSelect-' + randomId(5);
-</script>
 
-<script lang="ts">
   const { class: className, ...rest } = $$restProps;
 
   const dispatch = createEventDispatcher();

@@ -1,9 +1,8 @@
-<script context="module" lang="ts">
-  import classnames from 'classnames';
-</script>
-
 <script lang="ts">
+  import classnames from 'classnames';
+
   export let svg: string;
+
   const { class: className, ...rest } = $$restProps;
 </script>
 
