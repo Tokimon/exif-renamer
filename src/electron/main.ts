@@ -1,7 +1,8 @@
 import { app, BrowserWindow, contextBridge } from 'electron';
+import { resolve } from 'path';
 
-import * as rendererEvents from '~/electron/events/renderer';
-import selectDirectory from '~/electron/fs/selectDirectory';
+// import * as rendererEvents from '@/electron/events/renderer';
+// import selectDirectory from '@/electron/fs/selectDirectory';
 
 
 
@@ -14,16 +15,16 @@ function createWindow() {
     }
   });
 
-  win.loadFile('public/index.html');
+  win.loadFile(resolve('public/index.html'));
   win.webContents.openDevTools();
 
-  contextBridge.exposeInMainWorld(
-    '__electron__',
-    {
-      ...rendererEvents,
-      selectDirectory: selectDirectory(win)
-    }
-  );
+  // contextBridge.exposeInMainWorld(
+  //   '__electron__',
+  //   {
+  //     ...rendererEvents,
+  //     selectDirectory: selectDirectory(win)
+  //   }
+  // );
 }
 
 app.on('ready', createWindow);

@@ -1,6 +1,6 @@
 import { ipcRenderer } from 'electron';
 
-import type { ExifData } from '~/definitions/exif.d';
+import type { ExifData } from '@/types/exif.d';
 
 import {
   READ_FILE_EXIF,
@@ -12,7 +12,6 @@ import {
 
 export const readFileExif = (filePath: string): Promise<ExifData> =>
   ipcRenderer.invoke(READ_FILE_EXIF, filePath);
-
 
 export const writeFileExif = (filePath: string, exif: ExifData): Promise<ExifData> =>
   ipcRenderer.invoke(WRITE_FILE_EXIF, filePath, exif);

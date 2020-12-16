@@ -4,7 +4,7 @@ import type {
   readFileExifHandler,
   writeFileExifHandler,
   findFilePathsHandler
-} from '~/definitions/event-handlers.d';
+} from '@/types/event-handlers.d';
 
 import {
   READ_FILE_EXIF,

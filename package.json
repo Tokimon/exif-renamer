@@ -7,13 +7,15 @@
     "build:dev": "rollup -c -w",
     "serve": "sirv public --single",
     "serve:dev": "sirv public --single --dev",
-    "start": "electron .",
+    "build:electron": "rollup --config ./bundler-configs/rollup.config.electron.js",
+    "start": "electron ./build/electron.js",
     "lint": "eslint .",
     "svgo": "svgo -f ./src -r --config=.svgo.yml",
     "sandbox": "start-storybook"
   },
   "dependencies": {
     "@emotion/css": "^11.0.0",
+    "@types/node": "^14.14.10",
     "classnames": "^2.2.6",
     "color": "^3.1.3",
     "date-fns": "^2.16.1",
@@ -74,6 +76,7 @@
     "rollup-plugin-svelte-inline-svg": "^0.1.0",
     "rollup-plugin-svg-icons": "^2.1.2",
     "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript": "^1.0.1",
     "rollup-plugin-url": "^3.0.1",
     "stylus": "^0.54.8",
     "svelte": "^3.29.7",
@@ -82,6 +85,6 @@
     "svg-inline-loader": "^0.8.2",
     "svg-sprite-loader": "^5.0.0",
     "svgo": "^1.3.2",
-    "typescript": "^4.0.5"
+    "typescript": "^4.1.3"
   }
 }

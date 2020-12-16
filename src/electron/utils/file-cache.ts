@@ -1,20 +1,20 @@
 import nPath from 'path';
 import { promises as fs } from 'fs';
 
-import debounce from 'lodash.debounce';
+import debounce from 'lodash/debounce';
 
 
-import type { ExifCache } from '~/definitions/exif.d.ts'
-
-
-
-let _cache = {};
-
-const filename = (folder) => nPath.join(folder, '.cache');
+import type { ExifCache, ExifData } from '@/types/exif.d'
 
 
 
-export const load = async (folder: string): ExifCache => {
+let _cache: ExifCache = {};
+
+const filename = (folder: string): string => nPath.join(folder, '.cache');
+
+
+
+export const load = async (folder: string): Promise<ExifCache> => {
   _cache = {};
 
   try {
@@ -31,16 +31,16 @@ export const save = (folder: string): Promise<void> => {
 
 export const debounceSave = debounce(save, 5000);
 
-export const addFile = (path: string, data) => {
+export const addFile = (path: string, data: ExifData): ExifCache => {
   _cache[path] = data;
   return _cache;
 };
 
-export const getFile = (path) => {
+export const getFile = (path: string): ExifData | undefined => {
   return _cache[path];
 };
 
-export const removeFile = (path) => {
+export const removeFile = (path: string): ExifCache => {
   delete _cache[path];
   return _cache;
 };
