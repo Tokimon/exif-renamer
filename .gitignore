@@ -1,6 +1,7 @@
 .idea
 .git
 .DS_Store
+build
 node_modules
 public
 _trash
