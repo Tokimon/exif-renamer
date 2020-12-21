@@ -1,6 +1,11 @@
 import { action, ActionOptions } from '@storybook/addon-actions';
 
-const eventToObject = (e: Event) =>
+
+
+type PropMapping = Record<string, unknown>;
+
+
+const eventToObject = (e: CustomEvent<any>) =>
   [
     'bubbles',
     'cancelBubble',
@@ -18,15 +23,15 @@ const eventToObject = (e: Event) =>
     'timeStamp',
     'type'
   ]
-    .reduce((obj, key) => {
-      obj[key] = e[key];
+    .reduce((obj: PropMapping, key: string): PropMapping => {
+      obj[key] = e[key as keyof CustomEvent<any>];
       return obj;
-    }, {});
+    }, {} as PropMapping);
 
 
 
-const detailedAction = (message: string, options: ActionOptions) =>
-  (e: CustomEvent): void => {
+const detailedAction = (message: string, options?: ActionOptions) =>
+  (e: CustomEvent<any>): void => {
     action(message, options)(eventToObject(e));
   };
 

@@ -1,5 +1,5 @@
-import type { StoryConfig } from '~/definitions/stories.d';
-import detailedAction from '~/story-helpers/detailedAction';
+import type { StoryConfig } from '@/types/stories.d';
+import detailedAction from '@/story-helpers/detailedAction';
 
 import FolderSelect from './FolderSelect.template.svelte';
 

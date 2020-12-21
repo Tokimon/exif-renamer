@@ -3,7 +3,7 @@
 
   const types = ['animals', 'nature', 'arch', 'people', 'tech'];
 
-  const m = {};
+  const m: Record<string, number> = {};
 
   const paths = Array.from(Array(20000), () => {
     const imageType = types[Math.round(Math.random() * 4)];

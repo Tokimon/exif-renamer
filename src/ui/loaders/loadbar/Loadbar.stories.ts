@@ -1,4 +1,4 @@
-import type { StoryConfig } from '~/definitions/stories.d';
+import type { StoryConfig } from '@/types/stories.d';
 
 import Loadbar from './Loadbar.template.svelte';
 

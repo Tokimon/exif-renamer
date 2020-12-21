@@ -4,10 +4,10 @@ import { setContext } from 'svelte';
 
 
 
-import App from '~/App.svelte';
+import App from '@/App.svelte';
 
 
-setContext('electron', __electron__);
+// setContext('electron', window.__electron__);
 
 
 const app = new App({

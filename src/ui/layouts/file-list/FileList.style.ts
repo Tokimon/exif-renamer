@@ -1,6 +1,6 @@
 import { css } from '@emotion/css';
 
-import { thumb } from '~/ui/components/thumb/Thumb.style'
+import { thumb } from '@/ui/components/thumb/Thumb.style';
 
 
 

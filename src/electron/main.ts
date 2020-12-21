@@ -15,7 +15,7 @@ function createWindow() {
     }
   });
 
-  win.loadFile(resolve('public/index.html'));
+  win.loadFile(resolve('build/web/index.html'));
   win.webContents.openDevTools();
 
   // contextBridge.exposeInMainWorld(

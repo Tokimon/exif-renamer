@@ -1,7 +1,5 @@
-import detailedAction from '~/story-helpers/detailedAction';
-import type { StoryConfig } from '~/definitions/stories.d';
-
-import svg from '~/ui/svg/icons/alert.svg'
+import detailedAction from '@/story-helpers/detailedAction';
+import type { StoryConfig } from '@/types/stories.d';
 
 import MenuItem from './MenuItem.template.svelte';
 
@@ -20,7 +18,7 @@ export default {
 export const Default = ({ text }: ExampleProps): StoryConfig => ({
   Component: MenuItem,
   props: {
-    icon: svg.id,
+    icon: 'alert',
     text
   },
   on: {

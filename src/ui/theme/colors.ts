@@ -1,6 +1,6 @@
 import Color from 'color';
 
-export const colors = {
+export const colors: Record<string, string> = {
   primary: '#2ba0bc',
   secondary: '#84af1b',
   danger: '#c61616',

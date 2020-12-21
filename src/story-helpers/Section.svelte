@@ -1,7 +1,7 @@
 <script lang="ts">
   import { css } from '@emotion/css';
 
-  export let title;
+  export let title: string = '';
 
   const headline = css`
     font-family: sans-serif;

@@ -1,10 +1,8 @@
-<script context="module">
+<script lang="ts">
   import { css } from '@emotion/css';
 
   import LoadingOverlay from './LoadingOverlay.svelte';
-</script>
 
-<script lang="ts">
   export let text = '';
 
   const Ex = css`

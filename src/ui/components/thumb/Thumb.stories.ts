@@ -1,6 +1,4 @@
-import type { StoryConfig } from '~/definitions/stories.d';
-
-import svg from '~/ui/svg/icons/landscape.svg';
+import type { StoryConfig } from '@/types/stories.d';
 
 import Thumb from './Thumb.template.svelte';
 
@@ -21,7 +19,7 @@ export const Default = (props: ExampleProps): StoryConfig => ({
   Component: Thumb,
   props: {
     ...props,
-    noImageIcon: svg.id
+    noImageIcon: 'landscape'
   }
 });
 

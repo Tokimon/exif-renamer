@@ -2,12 +2,11 @@
   import classnames from 'classnames';
 
   import { button, buttonColor } from './button.style';
-  
 
-  
   export let disabled: boolean = false;
-  export let href: string;
   export let color: string = 'primary';
+  export let href: string = '';
+  export let target: string = '';
 
   const { class: className, ...rest } = $$restProps;
 
@@ -24,7 +23,7 @@
     <slot />
   </span>
 {:else if href}
-  <a {href} on:click {...props}>
+  <a {href} {target} on:click {...props}>
     <slot />
   </a>
 {:else}

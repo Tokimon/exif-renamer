@@ -3,9 +3,8 @@
   import { createEventDispatcher } from 'svelte';
   import { delegateHandler } from 'vanillajs-browser-helpers/delegate';
 
-  import MenuItem from '~/ui/components/menu-item/MenuItem.svelte';
-  import { menuItem } from '~/ui/components/menu-item/MenuItem.style';
-  import searchFolderSvg from '~/ui/svg/icons/folder-search.svg';
+  import MenuItem from '@/ui/components/menu-item/MenuItem.svelte';
+  import { menuItem } from '@/ui/components/menu-item/MenuItem.style';
 
   import { menu } from './Menu.style';
 
@@ -22,7 +21,5 @@
 </script>
 
 <div class={classnames(menu, className)} on:click={onClick} {...rest}>
-  <MenuItem icon={searchFolderSvg.id || searchFolderSvg} data-context="search">
-    Search
-  </MenuItem>
+  <MenuItem icon="folder-search" data-context="search">Search</MenuItem>
 </div>

@@ -1,8 +1,6 @@
-import type { StoryConfig } from '~/definitions/stories.d';
+import type { StoryConfig } from '@/types/stories.d';
 
 import Image from './Image.template.svelte';
-
-import svg from '~/ui/svg/icons/landscape.svg';
 
 
 
@@ -21,7 +19,7 @@ export const Default = (props: ExampleProps): StoryConfig => ({
   Component: Image,
   props: {
     ...props,
-    noImageIcon: svg.id
+    noImageIcon: 'landscape'
   }
 });
 

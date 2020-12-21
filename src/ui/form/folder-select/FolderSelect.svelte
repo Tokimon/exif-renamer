@@ -16,7 +16,7 @@
   let showHelp = true;
 
   const onChange = (e: Event) => {
-    const input = e.target as HTMLInputElement;
+    const input = e.currentTarget as HTMLInputElement;
     const { files } = input;
     showHelp = !files.length;
     folder = '';
@@ -32,6 +32,7 @@
   };
 </script>
 
+<!-- svelte-ignore component-name-lowercase -->
 <div class={classnames(className, folderSelect)} {...rest}>
   <label for={id} class={input} title={folder}>
     <div class={hider}>

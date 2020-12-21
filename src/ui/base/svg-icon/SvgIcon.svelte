@@ -13,5 +13,5 @@
   xmlns:xlink="http://www.w3.org/1999/xlink"
   focusable="false"
   {...rest}>
-  <use xlink:href={'#' + svg} />
+  <use xlink:href={'icons.svg#' + svg} />
 </svg>
