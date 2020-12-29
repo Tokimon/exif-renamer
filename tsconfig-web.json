@@ -1,22 +1,27 @@
 {
-  "extends": "@tsconfig/node14/tsconfig.json",
+  "extends": "@tsconfig/svelte/tsconfig.json",
   "include": [
-    "src/electron/*"
+    "src/ui/**/*",
+    "src/App.svelte",
+    "src/web.ts"
   ],
   "exclude": [
+    "src/ui/**/*.stories.ts",
+    "src/ui/story-helpers/*",
     "node_modules/*"
   ],
   "compilerOptions": {
-    "module": "CommonJS",
     "strict": true,
+    "resolveJsonModule": true,
     "noImplicitAny": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
+    "module": "es2020",
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      "@/*": [
+      "~/*": [
         "src/*"
       ]
     }

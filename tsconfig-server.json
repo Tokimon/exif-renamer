@@ -1,19 +1,22 @@
 {
-  "extends": "@tsconfig/svelte/tsconfig.json",
+  "extends": "@tsconfig/node14/tsconfig.json",
   "include": [
-    "src/**/*"
+    "src/server.ts",
+    "src/preload.ts",
+    "src/server/**/*"
   ],
   "exclude": [
     "node_modules/*"
   ],
   "compilerOptions": {
+    "outDir": "main",
+    "module": "CommonJS",
     "strict": true,
     "resolveJsonModule": true,
     "noImplicitAny": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "es2020",
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {

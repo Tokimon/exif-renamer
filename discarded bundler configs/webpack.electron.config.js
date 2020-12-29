@@ -1,11 +1,19 @@
 const { resolve } = require('path');
 
 
+const nodeBuiltIns = require('module').builtinModules;
+
+console.log(`/(${nodeBuiltIns.join('|')})/`, '\n\n');
+
 
 module.exports = {
-  entry: './src/electron/main.ts',
+  target: 'electron-renderer',
+  entry: {
+    main: './src/server.ts',
+    preload: './src/preload.ts'
+  },
   output: {
-    path: resolve('build/server'),
+    path: resolve('build'),
     filename: '[name].js',
     libraryTarget: 'commonjs'
   },
@@ -16,11 +24,12 @@ module.exports = {
     extensions: ['.ts', '.js'],
     mainFields: ['module', 'main'],
     alias: {
-      '@': resolve('src')
+      '~/': resolve('src')
     },
-    // fallback: {
-    //   path: require.resolve('path')
-    // }
+    fallback: {
+      path: 'empty',
+      fs: 'empty'
+    }
     // fallback: require('module').builtinModules.reduce((o, key) => {
     //   o[key] = false;
     //   return o;
@@ -30,7 +39,11 @@ module.exports = {
     hints: 'warning'
   },
   module: {
-    noParse: new RegExp(require('module').builtinModules.join('|')),
+    // noParse: (content) => {
+    //   const ok = new RegExp(`(${nodeBuiltIns.join('|')})`).test(content);
+    //   if (ok) { console.log(content, '\n\n'); }
+    //   return ok;
+    // }, //new RegExp(`\b(${nodeBuiltIns.join('|')})\b`),
     rules: [
       {
         test: /\.ts$/,
