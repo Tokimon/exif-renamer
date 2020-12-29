@@ -1,7 +1,7 @@
 <script lang="ts">
   import classnames from 'classnames';
 
-  import SvgIcon from '@/ui/base/svg-icon/SvgIcon.svelte';
+  import SvgIcon from '~/ui/base/svg-icon/SvgIcon.svelte';
 
   import { image, icon } from './Image.style';
 

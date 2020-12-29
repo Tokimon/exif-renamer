@@ -4,23 +4,24 @@ import { promises as fs } from 'fs';
 import debounce from 'lodash/debounce';
 
 
-import type { ExifCache, ExifData } from '@/types/exif.d'
+import type { ExifCache, ExifData } from '~/types/exif.d';
 
 
 
-let _cache: ExifCache = {};
+let _cache: ExifCache = new Map();
 
 const filename = (folder: string): string => nPath.join(folder, '.cache');
 
 
 
 export const load = async (folder: string): Promise<ExifCache> => {
-  _cache = {};
-
   try {
     const json = await fs.readFile(filename(folder));
-    _cache = JSON.parse(json.toString());
-  } catch (ex) { /* do nothing */ }
+    const obj = JSON.parse(json.toString());
+    _cache = new Map(Object.entries(obj));
+  } catch (ex) {
+    _cache = new Map();
+  }
 
   return _cache;
 };
@@ -32,15 +33,15 @@ export const save = (folder: string): Promise<void> => {
 export const debounceSave = debounce(save, 5000);
 
 export const addFile = (path: string, data: ExifData): ExifCache => {
-  _cache[path] = data;
+  _cache.set(path, data);
   return _cache;
 };
 
 export const getFile = (path: string): ExifData | undefined => {
-  return _cache[path];
+  return _cache.get(path);
 };
 
 export const removeFile = (path: string): ExifCache => {
-  delete _cache[path];
+  _cache.delete(path);
   return _cache;
 };

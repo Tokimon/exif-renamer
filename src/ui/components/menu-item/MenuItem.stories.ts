@@ -1,5 +1,5 @@
-import detailedAction from '@/story-helpers/detailedAction';
-import type { StoryConfig } from '@/types/stories.d';
+import detailedAction from '~/ui/story-helpers/detailedAction';
+import type { StoryConfig } from '~/types/stories.d';
 
 import MenuItem from './MenuItem.template.svelte';
 

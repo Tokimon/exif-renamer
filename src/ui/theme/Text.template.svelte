@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { css } from '@emotion/css';
+  import { css } from '~/ui/utils/css';
 
   import { text } from './text';
-  
+
   const p = css`
     ${text}
   `;

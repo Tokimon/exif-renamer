@@ -1,4 +1,4 @@
-import type { PathMapping } from '@/types/path.d';
+import type { PathMapping } from '~/types/path.d';
 
 
 

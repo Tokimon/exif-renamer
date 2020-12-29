@@ -5,7 +5,7 @@ import nPath from 'path';
 
 interface GlobProps {
   folder: string;
-  extensions: string[]
+  extensions: string[];
 }
 
 
@@ -19,6 +19,6 @@ export function extGlob(ext: string[]): string {
 }
 
 export function glob({ folder, extensions }: GlobProps): Promise<string[]> {
-  const exp = nPath.resolve(folder, extGlob(extensions)).replace(/\\/g, '/');
+  const exp = nPath.resolve(folder, extGlob(extensions)).replace(/\\/g, '~/');
   return globby(exp);
 }

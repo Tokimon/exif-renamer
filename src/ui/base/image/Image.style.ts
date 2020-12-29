@@ -1,6 +1,6 @@
-import { css } from '@emotion/css';
+import { css } from '~/ui/utils/css';
 
-import { whiten } from '@/ui/theme/colors';
+import { whiten } from '~/ui/theme/colors';
 
 
 

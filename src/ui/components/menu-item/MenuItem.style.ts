@@ -1,7 +1,7 @@
-import { css } from '@emotion/css';
+import { css } from '~/ui/utils/css';
 
-import { color, whiten, blacken } from '@/ui/theme/colors';
-import { text } from '@/ui/theme/text';
+import { color, whiten, blacken } from '~/ui/theme/colors';
+import { text } from '~/ui/theme/text';
 
 
 
@@ -15,6 +15,7 @@ export const menuItem = css`
   cursor: pointer;
   padding: 10px 20px;
   transition: background-color 0.2s, color 0.2s;
+  border-radius: 4px;
 
   svg {
     width: 16px;
@@ -24,7 +25,7 @@ export const menuItem = css`
   }
 
   &:hover {
-    background: ${whiten('primary', 80)};
+    background: ${whiten('primary', 85)};
     color: ${blacken('primary', 30)};
   }
 `;

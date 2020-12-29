@@ -1,4 +1,4 @@
-import type { StoryConfig } from '@/types/stories.d';
+import type { StoryConfig } from '~/types/stories.d';
 
 import ColorsTemplate from './Colors.template.svelte';
 import TextTemplate from './Text.template.svelte';

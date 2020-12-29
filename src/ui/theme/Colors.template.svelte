@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Section from '@/story-helpers/Section.svelte';
-  import Color from '@/story-helpers/Color.svelte';
+  import Section from '~/story-helpers/Section.svelte';
+  import Color from '~/story-helpers/Color.svelte';
 
   import colors from './colors';
 </script>

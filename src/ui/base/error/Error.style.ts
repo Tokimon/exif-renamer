@@ -1,7 +1,7 @@
-import { css } from '@emotion/css';
+import { css } from '~/ui/utils/css';
 
-import { text } from '@/ui/theme/text';
-import colors from '@/ui/theme/colors';
+import { text } from '~/ui/theme/text';
+import colors from '~/ui/theme/colors';
 
 
 

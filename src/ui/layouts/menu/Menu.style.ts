@@ -1,11 +1,16 @@
-import { css } from '@emotion/css';
+import { css } from '~/ui/utils/css';
 
-import { whiten } from '@/ui/theme/colors';
 
+import { menuItem } from '~/ui/components/menu-item/MenuItem.style';
 
 
 export const menu = css`
   position: relative;
-  padding-right: 5px;
-  border-right: 1px solid ${whiten('text', 80)};
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  ${'.' + menuItem} {
+    margin: 5px;
+  }
 `;

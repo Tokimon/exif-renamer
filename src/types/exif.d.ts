@@ -3,7 +3,4 @@ import type { Tags } from 'exiftool-vendored/dist/Tags.d';
 
 export type ExifData = Tags;
 
-
-export type ExifCache = {
-  [key: string]: ExifData
-}
+export type ExifCache = Map<string, ExifData>;

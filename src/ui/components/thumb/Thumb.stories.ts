@@ -1,4 +1,4 @@
-import type { StoryConfig } from '@/types/stories.d';
+import type { StoryConfig } from '~/types/stories.d';
 
 import Thumb from './Thumb.template.svelte';
 

@@ -1,6 +1,6 @@
-import { css } from '@emotion/css';
+import { css } from '~/ui/utils/css';
 
-import { color } from '@/ui/theme/colors';
+import { color } from '~/ui/theme/colors';
 
 
 

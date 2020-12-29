@@ -1,4 +1,4 @@
-import type { StoryConfig } from '@/types/stories.d';
+import type { StoryConfig } from '~/types/stories.d';
 
 import FocusDot from './FocusDot.template.svelte';
 

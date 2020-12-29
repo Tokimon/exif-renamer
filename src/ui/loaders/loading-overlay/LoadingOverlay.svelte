@@ -1,7 +1,7 @@
 <script lang="ts">
   import classnames from 'classnames';
 
-  import gearSvg from '@/ui/svg/inline/animated/gear.svg';
+  import gearSvg from '~/ui/svg/inline/animated/gear.svg';
 
   import { loadingOverlay } from './LoadingOverlay.style';
 

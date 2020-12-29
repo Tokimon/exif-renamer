@@ -1,7 +1,7 @@
 import { action } from '@storybook/addon-actions';
 
-import type { StoryConfig } from '@/types/stories.d';
-import { colorNames } from '@/ui/theme/colors';
+import type { StoryConfig } from '~/types/stories.d';
+import { colorNames } from '~/ui/theme/colors';
 
 import Button from './Button.template.svelte';
 

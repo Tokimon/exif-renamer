@@ -1,4 +1,4 @@
-import type { StoryConfig } from '@/types/stories.d';
+import type { StoryConfig } from '~/types/stories.d';
 
 import Error from './Error.template.svelte';
 

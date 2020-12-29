@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { css } from '@emotion/css';
+  import { css } from '~/ui/utils/css';
 
   import LoadingOverlay from './LoadingOverlay.svelte';
 
