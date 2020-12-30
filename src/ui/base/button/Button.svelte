@@ -27,6 +27,7 @@
     <slot />
   </a>
 {:else}
+  <!-- svelte-ignore component-name-lowercase -->
   <button type="button" on:click {...props}>
     <slot />
   </button>

@@ -1,13 +1,12 @@
 import { css } from '~/ui/utils/css';
 
-import { text } from '~/ui/theme/text';
+import { fontSize } from '~/ui/theme/font';
 import colors from '~/ui/theme/colors';
 
 
 
 export const container = css`
-  ${text}
-  font-size: 10px;
+  font-size: ${fontSize(10)};
   border-radius: 9px;
   height: 16px;
   min-width: 16px;

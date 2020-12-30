@@ -1,12 +1,7 @@
-<script lang="ts">
+<script lang="ts" context="module">
   import { css } from '~/ui/utils/css';
 
-  import { text } from '~/ui/theme/text';
-
-  export let value = 'black';
-
   const container = css`
-    ${text}
     width: 100px;
     font-weight: bold;
     text-align: center;
@@ -15,8 +10,8 @@
     box-shadow: 0 0 6px -2px gray;
 
     &::before {
-      content: '${value}';
-      background: ${value};
+      content: var(--color, black);
+      background: var(--color, black);
       height: 90px;
       margin-bottom: 5px;
       color: white;
@@ -30,6 +25,10 @@
   `;
 </script>
 
-<div class={container}>
+<script lang="ts">
+  export let value = 'black';
+</script>
+
+<div class={container} style="--color:{value};">
   <slot />
 </div>
