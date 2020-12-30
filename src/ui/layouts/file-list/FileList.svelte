@@ -1,5 +1,4 @@
 <script lang="ts">
-  import classnames from 'classnames';
   import { createEventDispatcher } from 'svelte';
   import { delegateHandler } from 'vanillajs-browser-helpers/delegate';
 
@@ -11,8 +10,6 @@
 
   export let paths: PathMapping = [];
 
-  const { class: className, ...rest } = $$restProps;
-
   const dispatch = createEventDispatcher();
 
   const onClick = delegateHandler(`.${thumb}`, function () {
@@ -20,7 +17,7 @@
   });
 </script>
 
-<div class={classnames(list, className)} on:click={onClick} {...rest}>
+<div class={list} on:click={onClick}>
   {#each paths as [src, count]}
     <Thumb {src} {count} data-path={src} />
   {/each}

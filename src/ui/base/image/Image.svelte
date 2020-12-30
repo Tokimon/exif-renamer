@@ -9,8 +9,6 @@
   export let alt: string = '';
   export let noImageIcon: string = '';
 
-  const { class: className, ...rest } = $$restProps;
-
   $: failed = !src;
 
   const handleError = () => {
@@ -19,14 +17,9 @@
 </script>
 
 {#if !failed}
-  <img
-    class={classnames('img', image, className)}
-    {src}
-    {alt}
-    on:error={handleError}
-    {...rest} />
+  <img class={classnames('img', image)} {src} {alt} on:error={handleError} />
 {:else}
-  <div class={classnames('no-img', icon, className)} {...rest}>
+  <div class={classnames('no-img', icon)}>
     <SvgIcon svg={noImageIcon} />
   </div>
 {/if}

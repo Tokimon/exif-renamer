@@ -1,17 +1,12 @@
 <script lang="ts">
-  import classnames from 'classnames';
-
-  export let svg: string;
-
-  const { class: className, ...rest } = $$restProps;
+  export let svg: string = '';
 </script>
 
 <svg
-  class={classnames('svg-icon', className)}
+  class="svg-icon"
   viewBox="0 0 100 100"
   type="image/svg+xml"
   xmlns:xlink="http://www.w3.org/1999/xlink"
-  focusable="false"
-  {...rest}>
-  <use xlink:href={'icons.svg#' + svg} />
+  focusable="false">
+  <use xlink:href="icons.svg#{svg}" />
 </svg>
