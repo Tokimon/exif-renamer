@@ -14,9 +14,9 @@ export default {
   title: 'Base/FocusDot'
 };
 
-export const Default = ({ number }: ExampleProps): StoryConfig => ({
+export const Default = (props: ExampleProps): StoryConfig => ({
   Component: FocusDot,
-  props: { number }
+  props
 });
 
 Default.args = {

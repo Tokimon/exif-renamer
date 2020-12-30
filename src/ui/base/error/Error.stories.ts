@@ -14,9 +14,9 @@ export default {
   title: 'Base/Error'
 };
 
-export const Default = ({ text }: ExampleProps): StoryConfig => ({
+export const Default = (props: ExampleProps): StoryConfig => ({
   Component: Error,
-  props: { text }
+  props
 });
 
 Default.args = {
