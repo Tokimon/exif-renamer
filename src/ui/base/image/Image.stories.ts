@@ -7,6 +7,7 @@ import Image from './Image.template.svelte';
 interface ExampleProps {
   src: string;
   alt: string;
+  noImageIcon: string;
 }
 
 
@@ -17,13 +18,11 @@ export default {
 
 export const Default = (props: ExampleProps): StoryConfig => ({
   Component: Image,
-  props: {
-    ...props,
-    noImageIcon: 'landscape'
-  }
+  props
 });
 
 Default.args = {
   src: 'https://placeimg.com/200/200/any',
-  alt: 'My Image'
+  alt: 'My Image',
+  noImageIcon: 'landscape'
 };
