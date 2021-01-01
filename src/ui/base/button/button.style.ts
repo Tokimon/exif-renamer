@@ -1,6 +1,6 @@
 import { css } from '~/ui/utils/css';
 
-import { text } from '~/ui/theme/text';
+import { text } from '~/ui/theme/font';
 import { color as themeColor, blacken, whiten } from '~/ui/theme/colors';
 
 

@@ -1,13 +1,10 @@
 <script lang="ts">
-  import classnames from 'classnames';
   import { createEventDispatcher } from 'svelte';
   import randomId from 'vanillajs-helpers/randomId';
 
   import { folderSelect, input, hider, help } from './FolderSelect.style';
 
   const id = 'FolderSelect-' + randomId(5);
-
-  const { class: className, ...rest } = $$restProps;
 
   const dispatch = createEventDispatcher();
 
@@ -18,7 +15,7 @@
   const onChange = (e: Event) => {
     const input = e.currentTarget as HTMLInputElement;
     const { files } = input;
-    showHelp = !files.length;
+    showHelp = !files || !files.length;
     folder = '';
 
     if (showHelp) {
@@ -33,7 +30,7 @@
 </script>
 
 <!-- svelte-ignore component-name-lowercase -->
-<div class={classnames(className, folderSelect)} {...rest}>
+<div class={folderSelect}>
   <label for={id} class={input} title={folder}>
     <div class={hider}>
       <input type="file" {id} webkitDirectory on:change={onChange} />

@@ -24,9 +24,9 @@ export default {
   }
 };
 
-export const Default = ({ value }: ExampleProps): StoryConfig => ({
+export const Default = (props: ExampleProps): StoryConfig => ({
   Component: Loadbar,
-  props: { value }
+  props
 });
 
 Default.args = {

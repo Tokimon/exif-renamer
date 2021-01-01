@@ -1,19 +1,18 @@
 import { css } from '~/ui/utils/css';
 
 import { color, whiten, blacken } from '~/ui/theme/colors';
-import { text } from '~/ui/theme/text';
+import { fontSize } from '~/ui/theme/font';
 
 
 
 export const menuItem = css`
-  ${text}
-  font-size: 16px;
+  font-size: ${fontSize(14)};
   position: relative;
   color: ${color('primary')};
   display: flex;
   align-items: center;
   cursor: pointer;
-  padding: 10px 20px;
+  padding: 10px;
   transition: background-color 0.2s, color 0.2s;
   border-radius: 4px;
 

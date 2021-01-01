@@ -1,13 +1,12 @@
 import { css } from '~/ui/utils/css';
 
-import { text } from '~/ui/theme/text';
+import { fontSize } from '~/ui/theme/font';
 import { color, blacken } from '~/ui/theme/colors';
 
 
 
 export const loadingOverlay = css`
-  ${text}
-  font-size: 16px;
+  font-size: ${fontSize(16)};
   padding: 10px;
   display: flex;
   align-items: center;

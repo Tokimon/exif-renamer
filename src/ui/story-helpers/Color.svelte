@@ -1,22 +1,18 @@
 <script lang="ts">
   import { css } from '~/ui/utils/css';
 
-  import { text } from '~/ui/theme/text';
-
-  export let value = 'black';
-
   const container = css`
-    ${text}
     width: 100px;
     font-weight: bold;
     text-align: center;
     padding: 5px;
     background: white;
     box-shadow: 0 0 6px -2px gray;
+    position: relative;
 
     &::before {
-      content: '${value}';
-      background: ${value};
+      content: attr(data-color);
+      background: var(--color);
       height: 90px;
       margin-bottom: 5px;
       color: white;
@@ -28,8 +24,10 @@
       font-weight: normal;
     }
   `;
+
+  export let value = 'black';
 </script>
 
-<div class={container}>
+<div class={container} data-color={value} style="--color:{value};">
   <slot />
 </div>

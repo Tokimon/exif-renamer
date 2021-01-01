@@ -14,9 +14,9 @@ export default {
   title: 'Loaders/LoadingOverlay'
 };
 
-export const Default = ({ text }: ExampleProps): StoryConfig => ({
+export const Default = (props: ExampleProps): StoryConfig => ({
   Component: LoadingOverlay,
-  props: { text }
+  props
 });
 
 Default.args = {

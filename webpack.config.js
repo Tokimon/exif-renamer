@@ -1,7 +1,9 @@
 const { resolve } = require('path');
 const webpack = require('webpack');
-const sveltePreprocess = require('svelte-preprocess');
+const { typescript: svelteTS } = require('svelte-preprocess');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const tsConfigFile = resolve('tsconfig-web.json');
 
 module.exports = {
   entry: './src/web.ts',
@@ -33,7 +35,7 @@ module.exports = {
         use: {
           loader: 'ts-loader',
           options: {
-            configFile: resolve('tsconfig-web.json')
+            configFile: tsConfigFile
           }
         },
         exclude: /node_modules/
@@ -44,11 +46,16 @@ module.exports = {
         use: {
           loader: 'svelte-loader',
           options: {
-            // @ts-ignore
-            preprocess: sveltePreprocess(),
+            preprocess: [
+              svelteTS({ tsconfigFile: tsConfigFile })
+            ],
             emitCss: false
           }
         }
+      },
+      {
+        test: /[\\/]svg[\\/]inline[\\/].*\.svg(\?.*)?$/,
+        use: 'svg-inline-loader'
       }
     ]
   },

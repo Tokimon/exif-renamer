@@ -1,28 +1,25 @@
 import type { StoryConfig } from '~/types/stories.d';
 
-import Image from './Image.template.svelte';
+import DirectoryDisplay from './DirectoryDisplay.template.svelte';
 
 
 
 interface ExampleProps {
   src: string;
-  alt: string;
-  noImageIcon: string;
+  count: number;
 }
 
 
 
 export default {
-  title: 'Base/Image'
+  title: 'Components/DirectoryDisplay'
 };
 
 export const Default = (props: ExampleProps): StoryConfig => ({
-  Component: Image,
+  Component: DirectoryDisplay,
   props
 });
 
 Default.args = {
-  src: 'https://placeimg.com/200/200/any',
-  alt: 'My Image',
-  noImageIcon: 'landscape'
+  path: 'some/directory/to/find/files/from'
 };

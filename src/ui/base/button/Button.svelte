@@ -8,26 +8,22 @@
   export let href: string = '';
   export let target: string = '';
 
-  const { class: className, ...rest } = $$restProps;
-
   const colors = buttonColor(color);
 
-  const props = {
-    ...rest,
-    class: classnames(button, colors, className),
-  };
+  const cn = classnames(button, colors);
 </script>
 
 {#if disabled}
-  <span aria-disabled="true" {...props}>
+  <span aria-disabled="true" class={cn}>
     <slot />
   </span>
 {:else if href}
-  <a {href} {target} on:click {...props}>
+  <a {href} {target} on:click class={cn}>
     <slot />
   </a>
 {:else}
-  <button type="button" on:click {...props}>
+  <!-- svelte-ignore component-name-lowercase -->
+  <button type="button" on:click class={cn}>
     <slot />
   </button>
 {/if}

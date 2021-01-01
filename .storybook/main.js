@@ -1,11 +1,12 @@
 const { resolve } = require('path');
-const SveltePreprocess = require('svelte-preprocess');
+const { typescript: svelteTS } = require('svelte-preprocess');
 
-
+const tsConfigFile = resolve('tsconfig-web.json');
 
 module.exports = {
   stories: [resolve('src/**/*.stories.ts')],
   addons: [
+    // '@storybook/addon-docs',
     '@storybook/addon-actions',
     '@storybook/addon-backgrounds',
     '@storybook/addon-controls'
@@ -19,17 +20,27 @@ module.exports = {
       (rule) => rule.test.source.includes('jpeg')
     );
 
+    config.module.rules.forEach((rule) => {
+      const { source } = rule.test;
+      if (source.includes('tsx?')) {
+        rule.test = new RegExp(source.replace('tsx?', 'tsx'));
+      }
+    });
+
+
     if (svelteRule) {
       svelteRule.options = {
         emitCss: false,
-            hotReload: false,
-            hotOptions: {
-              // List of options and defaults: https://www.npmjs.com/package/svelte-loader-hot#usage
-              noPreserveState: true,
-              optimistic: false
-            },
-            preprocess: SveltePreprocess({})
-      }
+        hotReload: false,
+        hotOptions: {
+          // List of options and defaults: https://www.npmjs.com/package/svelte-loader-hot#usage
+          noPreserveState: true,
+          optimistic: false
+        },
+        preprocess: [
+          svelteTS({ tsconfigFile: tsConfigFile })
+        ]
+      };
     }
 
 
@@ -40,26 +51,28 @@ module.exports = {
 
     config.module.rules.push(
       {
-        test: /[\\/]svg[\\/]inline[\\/].*\.svg(\?.*)?$/,
-        use: ['svg-inline-loader']
+        test: /\.ts$/,
+        use: {
+          loader: 'ts-loader',
+          options: {
+            configFile: tsConfigFile
+          }
+        },
+        exclude: /node_modules/
       },
       {
-        test: /[\\/]svg[\\/]icons[\\/].*\.svg(\?.*)?$/,
-        loader: 'svg-sprite-loader',
-        options: {
-          spriteFilename: 'icons.svg',
-          // extract: true
-        }
+        test: /[\\/]svg[\\/]inline[\\/].*\.svg(\?.*)?$/,
+        use: 'svg-inline-loader'
       }
     );
 
     if (imageRule) {
-      imageRule.test = /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani|pdf)(\?.*)?$/;
+      imageRule.test = /\.(ico|jpg|jpeg|png|gif)(\?.*)?$/;
     }
 
     config.resolve.alias['~'] = resolve('src');
 
-    // console.log(config.module.rules);
+    // console.log(require('util').inspect(config.module.rules, false, 10, true));
     // console.log(config);
     // console.log(config.resolve);
 
