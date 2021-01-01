@@ -2,13 +2,16 @@ import { injectGlobal } from '~/ui/utils/css';
 
 
 // Type exports
-export enum FontTypes {
-  text,
-  headline
+export type FontType = 'text' | 'headline';
+
+export interface FontMapValue {
+  size: number;
+  family: string,
+  string: string;
 }
 
 export interface FontVariableProps {
-  type: FontTypes;
+  type: FontType;
   size?: number;
   family?: string;
 }
@@ -18,39 +21,25 @@ export interface FontVariableProps {
 
 
 // Cache building
-const fontString = (type: FontTypes) => {
-  const typeStr: string = FontTypes[type];
-  const sizeVar = `var(--size-${typeStr})`;
-  const familyVar = `var(--font-${typeStr})`;
+const fontString = (type: FontType) => {
+  const sizeVar = `var(--size-${type})`;
+  const familyVar = `var(--font-${type})`;
 
-  const str = `font: ${sizeVar} ${familyVar};`;
-
-  Object.defineProperty(str, 'size', {
-    value: `font-size: ${sizeVar};`,
-    writable: false,
-    enumerable: true
-  });
-
-  Object.defineProperty(str, 'family', {
-    value: `font-size: ${familyVar};`,
-    writable: false,
-    enumerable: true
-  });
-
-  return str;
+  return `font: ${sizeVar} ${familyVar};`;
 };
 
-const fonts = new Map([
-  [FontTypes.text, {
+
+const fonts = new Map<FontType, FontMapValue>([
+  ['text', {
     size: 12,
     family: 'sans-serif',
-    string: fontString(FontTypes.text)
+    string: fontString('text')
   }],
 
-  [FontTypes.headline, {
+  ['headline', {
     size: 30,
     family: 'sans-serif',
-    string: fontString(FontTypes.headline)
+    string: fontString('headline')
   }],
 ]);
 
@@ -61,20 +50,20 @@ const fonts = new Map([
 // High Level exports
 export const fontSize = (num: number) => `${num / 10}rem`;
 
-export const font = (type = FontTypes.text) => {
+export const font = (type: FontType = 'text') => {
   const entry = fonts.get(type);
   return entry ? entry.string : '';
 };
 
-export const text = font(FontTypes.text);
-export const headline = font(FontTypes.headline);
+export const text = font('text');
+export const headline = font('headline');
 
 export const fontVariable = ({ type, size, family }: FontVariableProps): string => {
   if (!type) { return ''; }
 
   const vars: string[] = [];
-  size && vars.push(`--size-${FontTypes[type]}: ${fontSize(size)};`);
-  family && vars.push(`--font-${FontTypes[type]}: ${family};`);
+  size && vars.push(`--size-${type}: ${fontSize(size)};`);
+  family && vars.push(`--font-${type}: ${family};`);
 
   return vars.join('\n');
 };
@@ -88,6 +77,10 @@ const vars = Array.from(fonts.entries())
 injectGlobal`
   :root {
     ${vars}
+  }
+
+  html {
+    font-size: 62.5%;
   }
 
   body {

@@ -1,4 +1,5 @@
 import type { StoryConfig } from '~/types/stories.d';
+import type { FontType } from './font';
 
 import ColorsTemplate from './Colors.template.svelte';
 import FontTemplate from './font.template.svelte';
@@ -15,7 +16,7 @@ export default {
     type: {
       control: {
         type: 'select',
-        options: ['text', 'headline']
+        options: ['text', 'headline'] as FontType[]
       }
     }
   }

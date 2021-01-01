@@ -1,4 +1,4 @@
-<script lang="ts" context="module">
+<script lang="ts">
   import { css } from '~/ui/utils/css';
 
   const container = css`
@@ -8,10 +8,11 @@
     padding: 5px;
     background: white;
     box-shadow: 0 0 6px -2px gray;
+    position: relative;
 
     &::before {
-      content: var(--color, black);
-      background: var(--color, black);
+      content: attr(data-color);
+      background: var(--color);
       height: 90px;
       margin-bottom: 5px;
       color: white;
@@ -23,12 +24,10 @@
       font-weight: normal;
     }
   `;
-</script>
 
-<script lang="ts">
   export let value = 'black';
 </script>
 
-<div class={container} style="--color:{value};">
+<div class={container} data-color={value} style="--color:{value};">
   <slot />
 </div>
