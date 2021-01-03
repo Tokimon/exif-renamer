@@ -9,7 +9,7 @@
     "build": "npm run build:app && npm run svg:sprite",
     "start": "electron ./main/server.js",
     "lint": "eslint .",
-    "svg:sprite": "spritely -i src/ui/svg/icons -q -o renderer/icons.svg",
+    "svg:sprite": "spritely -i src/ui/0_assets/svg/icons -q -o renderer/icons.svg",
     "svgo": "svgo -f ./src/ui/svg -r --config=.svgo.yml",
     "storybook": "start-storybook --quiet"
   },
