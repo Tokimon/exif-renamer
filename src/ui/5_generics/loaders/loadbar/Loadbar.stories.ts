@@ -11,7 +11,7 @@ interface ExampleProps {
 
 
 export default {
-  title: 'Loaders/Loadbar',
+  title: '5_generics/Loaders/Loadbar',
   argTypes: {
     value: {
       control: {

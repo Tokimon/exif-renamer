@@ -4,4 +4,4 @@
   export let value = 0;
 </script>
 
-<Loadbar {value} total={100} />
+<Loadbar {value} total={100} style="width: 400px" />

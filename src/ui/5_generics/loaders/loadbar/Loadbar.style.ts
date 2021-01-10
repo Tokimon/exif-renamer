@@ -35,6 +35,6 @@ export const loadbar = css`
   position: relative;
   box-shadow: inset 0 0 0 2px ${whiten('text', 60)};
   border-radius: 10px;
-  height: 60px;
+  height: 40px;
   overflow: hidden;
 `;
