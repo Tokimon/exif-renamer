@@ -3,11 +3,12 @@
   "include": [
     "src/ui/**/*",
     "src/App.svelte",
-    "src/web.ts"
+    "src/web.ts",
+    "@custom_types/*"
   ],
   "exclude": [
     "src/ui/**/*.stories.ts",
-    "src/ui/story-helpers/*",
+    "src/ui/1_globals/story-helpers/*",
     "node_modules/*"
   ],
   "compilerOptions": {

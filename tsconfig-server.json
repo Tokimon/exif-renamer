@@ -3,7 +3,8 @@
   "include": [
     "src/server.ts",
     "src/preload.ts",
-    "src/server/**/*"
+    "src/server/**/*",
+    "@custom_types/*"
   ],
   "exclude": [
     "node_modules/*"

@@ -1,9 +1,12 @@
 const { resolve } = require('path');
-const webpack = require('webpack');
 const { typescript: svelteTS } = require('svelte-preprocess');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+
+
 const tsConfigFile = resolve('tsconfig-web.json');
+
+
 
 module.exports = {
   entry: './src/web.ts',
@@ -60,9 +63,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: './src/index.html' }),
-    new webpack.DefinePlugin({
-      global: 'window'		// Placeholder for global used in any node_modules
-    })
+    new HtmlWebpackPlugin({ template: './src/index.html' })
   ]
 };
