@@ -1,6 +1,6 @@
 <script lang="ts">
-  import type { IMenuItem } from '~/ui/components/menu-item/MenuItem.d';
-  import MenuItem from '~/ui/components/menu-item/MenuItem.svelte';
+  import type { IMenuItem } from '~/ui/3_pieces/menu-item/MenuItem.d';
+  import MenuItem from '~/ui/3_pieces/menu-item/MenuItem.svelte';
 
   import { menu } from './Menu.style';
 

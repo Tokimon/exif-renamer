@@ -11,7 +11,7 @@ interface ExampleProps {
 
 
 export default {
-  title: 'Base/FocusDot'
+  title: '1_base/FocusDot'
 };
 
 export const Default = (props: ExampleProps): StoryConfig => ({

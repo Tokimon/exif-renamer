@@ -12,7 +12,7 @@ interface ExampleProps {
 
 
 export default {
-  title: 'Components/Thumb'
+  title: '3_pieces/Thumb'
 };
 
 export const Default = (props: ExampleProps): StoryConfig => ({

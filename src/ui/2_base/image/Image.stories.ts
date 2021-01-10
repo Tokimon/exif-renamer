@@ -13,7 +13,7 @@ interface ExampleProps {
 
 
 export default {
-  title: 'Base/Image'
+  title: '1_base/Image'
 };
 
 export const Default = (props: ExampleProps): StoryConfig => ({

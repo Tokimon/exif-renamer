@@ -15,7 +15,7 @@ const paths = Array.from(Array(50), () => [
 
 
 export default {
-  title: 'Layouts/FileList'
+  title: '4_components/FileList'
 };
 
 export const Default = (): StoryConfig => ({

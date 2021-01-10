@@ -11,7 +11,7 @@ interface FontExampleProps {
 
 
 export default {
-  title: 'Theme'
+  title: '1_globals/Theme'
 };
 
 export const Colors = (): StoryConfig => ({ Component: ColorsTemplate });

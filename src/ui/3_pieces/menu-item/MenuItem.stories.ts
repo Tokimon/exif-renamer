@@ -13,7 +13,7 @@ interface ExampleProps {
 
 
 export default {
-  title: 'Components/MenuItem'
+  title: '3_pieces/MenuItem'
 };
 
 export const Default = ({ text }: ExampleProps): StoryConfig => ({

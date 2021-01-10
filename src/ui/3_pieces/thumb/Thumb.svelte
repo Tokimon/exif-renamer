@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Image from '~/ui/base/image/Image.svelte';
-  import FocusDot from '~/ui/base/focus-dot/FocusDot.svelte';
+  import Image from '~/ui/2_base/image/Image.svelte';
+  import FocusDot from '~/ui/2_base/focus-dot/FocusDot.svelte';
 
   import { thumb, dot, image } from './Thumb.style';
 
@@ -9,9 +9,9 @@
 </script>
 
 <div class={thumb} tabindex="0">
-  <Image class={image} {src} title={src} />
+  <Image className={image} {src} title={src} />
 
   {#if count > 1}
-    <FocusDot class={dot}>{count}</FocusDot>
+    <FocusDot className={dot}>{count}</FocusDot>
   {/if}
 </div>

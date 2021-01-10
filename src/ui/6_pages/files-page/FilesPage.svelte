@@ -1,7 +1,6 @@
 <script lang="ts">
-  import FileList from '~/ui/layouts/file-list/FileList.svelte';
-
-  import mapPaths from '~/ui/utils/mapPaths';
+  import mapPaths from '~/ui/1_globals/utils/mapPaths';
+  import FileList from '~/ui/4_components/file-list/FileList.svelte';
 
   export let paths: string[] = [];
 

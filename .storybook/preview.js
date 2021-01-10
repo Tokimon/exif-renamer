@@ -1,6 +1,6 @@
 import { injectGlobal } from '@emotion/css';
 
-import '~/ui/theme/font';
+import '~/ui/1_globals/theme/font';
 
 injectGlobal`
   #root {

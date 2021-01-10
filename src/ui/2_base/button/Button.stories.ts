@@ -18,7 +18,7 @@ interface ExampleProps {
 
 
 export default {
-  title: 'Base/Button',
+  title: '1_base/Button',
   argTypes: {
     text: {
       control: { type: 'text' }

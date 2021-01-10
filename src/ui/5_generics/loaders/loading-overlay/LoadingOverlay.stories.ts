@@ -11,7 +11,7 @@ interface ExampleProps {
 
 
 export default {
-  title: 'Loaders/LoadingOverlay'
+  title: '5_generics/loaders/LoadingOverlay'
 };
 
 export const Default = (props: ExampleProps): StoryConfig => ({

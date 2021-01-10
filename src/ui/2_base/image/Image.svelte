@@ -1,13 +1,14 @@
 <script lang="ts">
   import classnames from 'classnames';
 
-  import SvgIcon from '~/ui/base/svg-icon/SvgIcon.svelte';
+  import SvgIcon from '~/ui/2_base/svg-icon/SvgIcon.svelte';
 
   import { image, icon } from './Image.style';
 
   export let src: string = '';
   export let alt: string = '';
   export let noImageIcon: string = '';
+  export let className: string = '';
   export let style: string = '';
 
   $: failed = !src;
@@ -19,7 +20,7 @@
 
 {#if !failed}
   <img
-    class={classnames('img', image)}
+    class={classnames('img', image, className)}
     {style}
     {src}
     {alt}

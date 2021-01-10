@@ -7,7 +7,7 @@ import Menu from './Menu.template.svelte';
 
 
 export default {
-  title: 'Layouts/Menu'
+  title: '4_components/Menu'
 };
 
 export const Default = (): StoryConfig => ({
