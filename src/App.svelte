@@ -1,44 +1,24 @@
 <script lang="ts">
-  import { onDestroy } from 'svelte';
+  import directoryStore from '~/ui/1_globals/stores/directoryStore';
+  import pathsStore from './ui/1_globals/stores/pathsStore';
+  import { getActions } from '~/ui/1_globals/utils/serverActions';
 
-  import type { IMenuItem } from '~/ui/components/menu-item/MenuItem.d';
+  import DirectoryDisplay from './ui/3_pieces/directory-display/DirectoryDisplay.svelte';
 
-  import { getActions } from '~/ui/utils/serverActions';
-  import { files } from '~/ui/stores/filesStore';
+  import FilesPage from '~/ui/6_pages/files-page/FilesPage.svelte';
 
-  import Menu from '~/ui/layouts/menu/Menu.svelte';
-  import PageLayout from '~/ui/layouts/page-layout/PageLayout.svelte';
-  import FilesPage from '~/ui/pages/files-page/FilesPage.svelte';
+  const { chooseDirectory } = getActions();
 
-  const { findFiles } = getActions();
-  const { setPaths } = files;
-
-  let menuItems: IMenuItem[] = [
-    {
-      icon: 'folder-search',
-      label: 'Search',
-      onClick: async () => {
-        const paths = await findFiles();
-        // Paths === null when user cancels
-        paths != null && setPaths(paths);
-      },
-    },
-  ];
-
-  let paths: string[] = [];
-
-  const unsubscribe = files.subscribe((state) => {
-    paths = Array.from(state.paths);
-  });
-
-  onDestroy(unsubscribe);
+  const clickDirectory = async () => {
+    const directory = await chooseDirectory();
+    directory && directoryStore.set(directory);
+  };
 </script>
 
-<PageLayout>
-  <slot slot="menu">
-    <Menu {menuItems} />
-  </slot>
-  <slot slot="content">
-    <FilesPage {paths} />
-  </slot>
-</PageLayout>
+<div>
+  <DirectoryDisplay
+    path={$directoryStore}
+    style="cursor:pointer"
+    on:click={clickDirectory} />
+  <FilesPage paths={$pathsStore} />
+</div>

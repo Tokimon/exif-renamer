@@ -2,7 +2,9 @@ export type ReadExifDataAction = (path: string) => Promise<ExifData>;
 
 export type WriteExifDataAction = (path: string, exif: ExifData) => Promise<ExifData>;
 
-export type FindFilesAction = () => Promise<string[] | null>;
+export type FindFilesAction = (path: string) => Promise<string[] | null>;
+
+export type ChooseDirectoryAction = () => Promise<string | null>;
 
 export type ServerAction = ReadExifDataAction | WriteExifDataAction | FindFilesAction;
 
@@ -10,5 +12,6 @@ export type ServerAction = ReadExifDataAction | WriteExifDataAction | FindFilesA
 export interface ServerActionRecord {
   readExifData: ReadExifDataAction;
   writeExifData: WriteExifDataAction;
+  chooseDirectory: ChooseDirectoryAction;
   findFiles: FindFilesAction;
 }

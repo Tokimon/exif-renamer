@@ -1,5 +1,1 @@
-export type readExifPayload = {
-  filePath: string;
-};
-
-export default (payload: readExifPayload) => Promise.resolve(['Hey reading exif data works']);
+export default (path: string) => Promise.resolve(['Hey reading exif data works']);

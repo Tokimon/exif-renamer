@@ -1,4 +1,4 @@
-import { setContext, getContext } from 'svelte';
+// import { setContext, getContext } from 'svelte';
 
 import type { ServerActionRecord } from '~/types/serverActions.d';
 
@@ -16,6 +16,6 @@ declare global {
 
 export const getActions = (): ServerActionRecord => window.server;
 
-export const initServerActions = (): void => setContext('server', window.server);
+// export const initServerActions = (): void => setContext('server', window.server);
 
-export const serverActions = (): ServerActionRecord => getContext('server');
+// export const serverActions = (): ServerActionRecord => getContext('server');

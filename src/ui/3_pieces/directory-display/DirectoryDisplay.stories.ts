@@ -12,7 +12,7 @@ interface ExampleProps {
 
 
 export default {
-  title: 'Components/DirectoryDisplay'
+  title: '3_pieces/DirectoryDisplay'
 };
 
 export const Default = (props: ExampleProps): StoryConfig => ({

@@ -7,19 +7,10 @@ import extensions from './extensions.json';
 
 const fileGlob = `*.{${extensions.join(',')}}`;
 const allFilesglob = join('**', fileGlob);
-const exifGlobPath = (shallow?: boolean) => (path: string) => join(
-  path,
-  shallow ? fileGlob : allFilesglob
-);
 
 
 
-export default (paths: string | string[], shallow?: boolean): Promise<string[]> => {
-  const buildGlobPath = exifGlobPath(shallow);
-
-  const globExp = Array.isArray(paths)
-    ? paths.map(buildGlobPath)
-    : buildGlobPath(paths);
-
-  return glob(globExp);
+export default (root: string, shallow?: boolean): Promise<string[]> => {
+  const fileExp = shallow ? fileGlob : allFilesglob;
+  return glob(join(root, fileExp));
 };
