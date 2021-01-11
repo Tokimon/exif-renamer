@@ -4,7 +4,7 @@
     "src/ui/**/*",
     "src/App.svelte",
     "src/web.ts",
-    "@custom_types/*"
+    "src/types/*"
   ],
   "exclude": [
     "src/ui/**/*.stories.ts",

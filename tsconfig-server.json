@@ -4,7 +4,7 @@
     "src/server.ts",
     "src/preload.ts",
     "src/server/**/*",
-    "@custom_types/*"
+    "src/types/*"
   ],
   "exclude": [
     "node_modules/*"
