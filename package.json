@@ -8,7 +8,7 @@
     "build:dev": "concurrently \"npm run build:server -- --watch\" \"npm run build:web -- --watch\"",
     "build": "npm run build:app",
     "svg:icons": "spritely -i src/ui/0_assets/svg/icons -q -o src/ui/0_assets/svg/inline/icons.svg",
-    "svg:optimize": "svgo -f ./src/ui/svg -r --config=.svgo.yml",
+    "svg:optimize": "svgo -f ./src/ui/0_assets/svg -r --config=.svgo.yml",
     "svg": "npm run svg:optimize && npm run svg:icons",
     "storybook": "start-storybook -s .storybook/public",
     "lint": "eslint .",

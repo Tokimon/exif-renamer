@@ -1,2 +1,6 @@
 https://www.freeicons.io/
 https://www.flaticon.com/
+
+https://material.io/resources/icons/?icon=help&style=baseline
+
+https://fontawesome.com/icons?d=gallery
