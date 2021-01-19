@@ -32,13 +32,13 @@ const fontString = (type: FontType) => {
 const fonts = new Map<FontType, FontMapValue>([
   ['text', {
     size: 12,
-    family: 'sans-serif',
+    family: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
     string: fontString('text')
   }],
 
   ['headline', {
     size: 30,
-    family: 'sans-serif',
+    family: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
     string: fontString('headline')
   }],
 ]);
