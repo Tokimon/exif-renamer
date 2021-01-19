@@ -1,6 +1,6 @@
 <script lang="ts">
   import directoryStore from '~/ui/1_globals/stores/directoryStore';
-  import pathsStore from './ui/1_globals/stores/pathsStore';
+  import fileInfoStore from './ui/1_globals/stores/fileInfoStore';
   import { getActions } from '~/ui/1_globals/utils/serverActions';
 
   import DirectoryDisplay from './ui/3_pieces/directory-display/DirectoryDisplay.svelte';
@@ -20,5 +20,5 @@
     path={$directoryStore}
     style="cursor:pointer"
     on:click={clickDirectory} />
-  <FilesPage paths={$pathsStore} />
+  <FilesPage files={$fileInfoStore} />
 </div>

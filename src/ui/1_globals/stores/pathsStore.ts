@@ -3,10 +3,13 @@ import { getActions } from '~/ui/1_globals/utils/serverActions';
 
 import directoryStore from './directoryStore';
 
-export default derived(directoryStore, (directory: string, set: (value: string[]) => void) => {
-  if (!directory) { return set([]); }
+export default derived(
+  directoryStore,
+  (directory: string, set: (value: string[]) => void) => {
+    if (!directory) { return set([]); }
 
-  getActions()
-    .findFiles(directory)
-    .then((paths) => set(paths || []));
-});
+    getActions()
+      .findFiles(directory)
+      .then((paths) => set(paths || []));
+  }
+);
