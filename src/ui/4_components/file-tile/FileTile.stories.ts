@@ -1,6 +1,6 @@
 import type { StoryConfig } from '~/types/stories.d';
 
-import Thumb from './Thumb.template.svelte';
+import FileTile from './FileTile.template.svelte';
 
 
 
@@ -12,18 +12,16 @@ interface ExampleProps {
 
 
 export default {
-  title: '3_pieces/Thumb'
+  title: '4_components/FileTile'
 };
 
 export const Default = (props: ExampleProps): StoryConfig => ({
-  Component: Thumb,
-  props: {
-    ...props,
-    noImageIcon: 'landscape'
-  }
+  Component: FileTile,
+  props
 });
 
 Default.args = {
-  src: 'https://placeimg.com/100/100/any',
+  path: '/My/File.png',
+  thumbnail: 'https://placeimg.com/100/100/any',
   count: 99
 };

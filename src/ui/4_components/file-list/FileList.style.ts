@@ -1,6 +1,6 @@
 import { css } from '~/ui/1_globals/utils/css';
 
-import { thumb } from '~/ui/3_pieces/thumb/Thumb.style';
+import { container as tile } from '~/ui/4_components/file-tile/FileTile.style';
 
 
 
@@ -9,7 +9,7 @@ export const list = css`
   display: flex;
   flex-wrap: wrap;
 
-  ${'.' + thumb} {
+  ${'.' + tile} {
     cursor: pointer;
   }
 

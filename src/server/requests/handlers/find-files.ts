@@ -2,7 +2,7 @@ import uniqueArray from 'vanillajs-helpers/ts/uniqueArray';
 
 import type { FindFilesAction } from '~/types/serverActions.d';
 
-import getSupportedFiles from '~/server/exif/getSupportedFiles';
+import getSupportedFiles from '~/server/metadata/getSupportedFiles';
 
 
 

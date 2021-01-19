@@ -1,24 +1,36 @@
 <script lang="ts">
   import classnames from 'classnames';
 
+  import fileExtension from '~/ui/1_globals/utils/fileExtension';
+  import extensionToIcon from '~/ui/1_globals/utils/extensionToIcon';
+  import isWebImage from '~/ui/1_globals/utils/isWebImage';
   import SvgIcon from '~/ui/2_base/svg-icon/SvgIcon.svelte';
 
-  import { image, icon } from './Image.style';
+  import { image, noImage } from './Image.style';
 
-  export let src: string = '';
-  export let alt: string = '';
-  export let noImageIcon: string = '';
-  export let className: string = '';
-  export let style: string = '';
+  export let src = '';
+  export let alt = '';
+  export let extension = '';
+  export let noImageIcon: string | null = '';
+  export let className = '';
+  export let style = '';
+
+  let ext = '';
+  let fileIcon: string | null = null;
+  let failed = false;
 
   $: failed = !src;
+  $: {
+    ext = extension || fileExtension(src);
+    fileIcon = noImageIcon || extensionToIcon(ext);
+  }
 
   const handleError = () => {
     failed = true;
   };
 </script>
 
-{#if !failed}
+{#if !failed && isWebImage(src)}
   <img
     class={classnames('img', image, className)}
     {style}
@@ -26,7 +38,8 @@
     {alt}
     on:error={handleError} />
 {:else}
-  <div class={classnames('no-img', icon)} {style}>
-    <SvgIcon svg={noImageIcon} />
+  <div class={classnames('no-img', noImage, className)} {style}>
+    <SvgIcon svg={fileIcon || 'question-circle'} />
+    <b>.{ext}</b>
   </div>
 {/if}

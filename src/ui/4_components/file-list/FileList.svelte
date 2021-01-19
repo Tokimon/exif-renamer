@@ -2,24 +2,24 @@
   import { createEventDispatcher } from 'svelte';
   import { delegateHandler } from 'vanillajs-browser-helpers/delegate';
 
-  import type { PathMapping } from '~/types/path.d';
+  import type { FileInfo } from '~/types/file.d';
 
-  import Thumb from '~/ui/3_pieces/thumb/Thumb.svelte';
-  import { thumb } from '~/ui/3_pieces/thumb/Thumb.style';
+  import FileTile from '~/ui/4_components/file-tile/FileTile.svelte';
+  import { container as fileTileContainer } from '~/ui/4_components/file-tile/FileTile.style';
 
   import { list } from './FileList.style';
 
-  export let paths: PathMapping = [];
+  export let files: FileInfo[] = [];
 
   const dispatch = createEventDispatcher();
 
-  const onClick = delegateHandler(`.${thumb}`, function () {
+  const onClick = delegateHandler(`.${fileTileContainer}`, function () {
     dispatch('thumbclick', { thumb: this });
   });
 </script>
 
 <div class={list} on:click={onClick}>
-  {#each paths as [src, count]}
-    <Thumb {src} {count} data-path={src} />
+  {#each files as file}
+    <FileTile {...file} />
   {/each}
 </div>

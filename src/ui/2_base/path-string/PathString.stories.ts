@@ -1,6 +1,6 @@
 import type { StoryConfig } from '~/types/stories.d';
 
-import DirectoryDisplay from './DirectoryDisplay.template.svelte';
+import PathString from './PathString.template.svelte';
 
 
 
@@ -13,7 +13,7 @@ interface ExampleProps {
 
 
 export default {
-  title: '3_pieces/DirectoryDisplay',
+  title: '2_base/PathString',
   argTypes: {
     width: {
       control: {
@@ -27,7 +27,7 @@ export default {
 };
 
 export const Default = (props: ExampleProps): StoryConfig => ({
-  Component: DirectoryDisplay,
+  Component: PathString,
   props
 });
 

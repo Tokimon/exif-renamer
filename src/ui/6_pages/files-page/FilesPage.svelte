@@ -1,10 +1,11 @@
 <script lang="ts">
-  import mapPaths from '~/ui/1_globals/utils/mapPaths';
+  import type { FileInfo } from '~/types/file.d';
+
+  import FileFilterBar from '~/ui/4_components/file-filter-bar/FileFilterBar.svelte';
   import FileList from '~/ui/4_components/file-list/FileList.svelte';
 
-  export let paths: string[] = [];
-
-  $: mappedPaths = mapPaths(paths);
+  export let files: FileInfo[] = [];
 </script>
 
-<FileList paths={mappedPaths} />
+<FileFilterBar count={files.length} />
+<FileList {files} />
