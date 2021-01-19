@@ -1,7 +1,7 @@
 import { join } from 'path';
 import glob from 'globby';
 
-import extensions from './extensions.json';
+import extensions from '~/shared/supported-extensions.json';
 
 
 
