@@ -1,7 +1,7 @@
-import fileExtension from '~/ui/1_globals/utils/fileExtension';
+import imageWebExtensions from '~/shared/extensions/images-web';
 
-const webImageExt = new Set(['apng', 'avif', 'bmp', 'gif', 'ico', 'jpeg', 'jpg', 'png', 'svg', 'tif', 'tiff', 'webp', 'xmb']);
+import fileExtension from '~/ui/1_globals/utils/fileExtension';
 
 export default (path: string) =>
   path.startsWith('http') ||
-  webImageExt.has(fileExtension(path));
+  imageWebExtensions.has(fileExtension(path));
