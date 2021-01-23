@@ -16,6 +16,13 @@
     "module": "es2020",
     "moduleResolution": "node",
     "baseUrl": ".",
+    "lib": [
+      "ESNext"
+    ],
+    "types": [
+      "node",
+      "jest"
+    ],
     "paths": {
       "~/*": [
         "src/*"
