@@ -26,6 +26,9 @@
 </symbol><symbol viewBox="0 0 24 24" id="calendar">
   <path d="M0 0h24v24H0z" fill="none"></path>
   <path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"></path>
+</symbol><symbol viewBox="0 0 24 24" id="camera-roll">
+  <path d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M14 5c0-1.1-.9-2-2-2h-1V2c0-.55-.45-1-1-1H6c-.55 0-1 .45-1 1v1H4c-1.1 0-2 .9-2 2v15c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2h8V5h-8zm-2 13h-2v-2h2v2zm0-9h-2V7h2v2zm4 9h-2v-2h2v2zm0-9h-2V7h2v2zm4 9h-2v-2h2v2zm0-9h-2V7h2v2z"></path>
 </symbol><symbol viewBox="0 0 24 24" id="check">
   <path d="M0 0h24v24H0V0z" fill="none"></path>
   <path d="M9 16.2l-3.5-3.5a.984.984 0 00-1.4 0 .984.984 0 000 1.4l4.19 4.19c.39.39 1.02.39 1.41 0L20.3 7.7a.984.984 0 000-1.4.984.984 0 00-1.4 0L9 16.2z"></path>
