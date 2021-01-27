@@ -2,7 +2,11 @@ export type ReadExifDataAction = (path: string) => Promise<ExifData>;
 
 export type WriteExifDataAction = (path: string, exif: ExifData) => Promise<ExifData>;
 
-export type FindFilesAction = (path: string) => Promise<string[] | null>;
+export type FindFilesAction = (
+  directory: string,
+  extensions?: string[],
+  shallow?: boolean
+) => Promise<string[] | null>;
 
 export type ChooseDirectoryAction = () => Promise<string | null>;
 
