@@ -1,4 +1,4 @@
-import { loadRequestHandler } from './handleRequest';
+import { createRequestHandler } from './handleRequest';
 
 describe('server/requests/handleRequest', () => {
   const handler = jest.fn((payload) => Promise.resolve('payload: ' + payload));
@@ -6,15 +6,15 @@ describe('server/requests/handleRequest', () => {
   const badLoader = jest.fn(() => { throw 'Failed to load'; });
 
 
-  const goodCaller = loadRequestHandler(loader);
-  const badCaller = loadRequestHandler(badLoader);
+
+  const goodCaller = createRequestHandler(loader);
+  const badCaller = createRequestHandler(badLoader);
 
   const call = (caller: typeof goodCaller | typeof badCaller) =>
     (payload?: string, handler = 'testHandler') => caller({ handler, payload });
 
   const callGood = call(goodCaller);
   const callBad = call(badCaller);
-
 
 
 
