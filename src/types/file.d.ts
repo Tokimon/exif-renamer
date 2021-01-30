@@ -1,5 +1,6 @@
 export interface FileInfo {
-  path: string;
+  name: string;
   count: number;
-  thumb?: string;
+  paths: string[];
+  thumbnail?: string;
 }

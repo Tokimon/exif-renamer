@@ -1,7 +1,7 @@
 <script lang="ts">
   import fileExtension from '~/ui/1_globals/utils/fileExtension';
   import fileName from '~/ui/1_globals/utils/fileName';
-  import extensionToIcon from '~/ui/1_globals/utils/extensionToIcon';
+  import extensionToIcon from '~/ui/1_globals/core/extensionToIcon';
 
   import Image from '~/ui/2_base/image/Image.svelte';
   import FocusDot from '~/ui/2_base/focus-dot/FocusDot.svelte';

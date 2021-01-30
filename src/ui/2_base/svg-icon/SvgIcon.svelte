@@ -1,5 +1,5 @@
 <script context="module">
-  import appendIcons from '~/ui/1_globals/utils/appendIcons';
+  import appendIcons from '~/ui/1_globals/core/appendIcons';
 
   appendIcons();
 </script>

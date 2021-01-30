@@ -1,8 +1,8 @@
 <script lang="ts">
   import classnames from 'classnames';
 
+  import extensionToIcon from '~/ui/1_globals/core/extensionToIcon';
   import fileExtension from '~/ui/1_globals/utils/fileExtension';
-  import extensionToIcon from '~/ui/1_globals/utils/extensionToIcon';
   import isWebImage from '~/ui/1_globals/utils/isWebImage';
   import SvgIcon from '~/ui/2_base/svg-icon/SvgIcon.svelte';
 
@@ -36,7 +36,8 @@
     {style}
     {src}
     {alt}
-    on:error={handleError} />
+    on:error={handleError}
+  />
 {:else}
   <div class={classnames('no-img', noImage, className)} {style}>
     <SvgIcon svg={fileIcon || 'question-circle'} />

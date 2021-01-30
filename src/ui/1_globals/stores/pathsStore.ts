@@ -1,5 +1,5 @@
 import { derived } from 'svelte/store';
-import { getActions } from '~/ui/1_globals/utils/serverActions';
+import { getActions } from '~/ui/1_globals/core/serverActions';
 
 import directoryStore from './directoryStore';
 
