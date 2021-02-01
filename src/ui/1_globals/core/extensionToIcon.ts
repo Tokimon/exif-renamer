@@ -12,7 +12,7 @@ import settingsExt from '~/shared/extensions/settings';
 
 
 
-export default (ext: string): string | null => {
+export default (ext: string): string | undefined => {
   if (imgWebExt.has(ext) || imgOtherExt.has(ext)) { return 'image-square'; }
   if (videoExt.has(ext)) { return 'play-circle'; }
   if (imgCameraExt.has(ext)) { return 'camera-roll'; }
@@ -23,5 +23,5 @@ export default (ext: string): string | null => {
   if (dataExt.has(ext)) { return 'server'; }
   if (settingsExt.has(ext)) { return 'dials'; }
 
-  return null;
+  return;
 };

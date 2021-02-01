@@ -35,14 +35,14 @@ const focus = `
 `;
 
 const selected = `
-  box-shadow: 0 0 0 3px var(--highlight-color);
+  ${focus}
 
   & > .img {
     filter: grayscale(0.7) contrast(0.3) brightness(1.6);
   }
 
   & > .no-img {
-    background: ${whiten('primary', 45)};
+    color: var(--highlight-color);
   }
 `;
 

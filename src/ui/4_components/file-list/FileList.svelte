@@ -19,7 +19,7 @@
 </script>
 
 <div class={list} on:click={onClick}>
-  {#each files as file}
-    <FileTile {...file} />
+  {#each files as { name, count, thumbnail }}
+    <FileTile {name} {count} {thumbnail} />
   {/each}
 </div>

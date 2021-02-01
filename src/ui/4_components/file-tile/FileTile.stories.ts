@@ -21,7 +21,7 @@ export const Default = (props: ExampleProps): StoryConfig => ({
 });
 
 Default.args = {
-  path: '/My/File.png',
+  name: 'Some logn file name.png',
   thumbnail: 'https://placeimg.com/100/100/any',
   count: 99
 };
