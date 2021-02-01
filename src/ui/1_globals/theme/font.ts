@@ -1,4 +1,4 @@
-import { injectGlobal } from '~/ui/1_globals/utils/css';
+import { injectGlobal } from '~/ui/1_globals/core/css';
 
 
 // Type exports

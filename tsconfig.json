@@ -17,6 +17,8 @@
     "moduleResolution": "node",
     "baseUrl": ".",
     "lib": [
+      "ES2019",
+      "ES2020",
       "ESNext"
     ],
     "types": [

@@ -1,4 +1,4 @@
-import { css } from '~/ui/1_globals/utils/css';
+import { css } from '~/ui/1_globals/core/css';
 import { color, whiten, blacken } from '~/ui/1_globals/theme/colors';
 import { fontSize } from '~/ui/1_globals/theme/font';
 

@@ -1,4 +1,4 @@
-import { fileGlobExpression } from './getFilePaths';
+import fileGlobExpression from './fileGlobExpression';
 
 
 const ext = ['gif', 'txt', 'raw', 'psd', 'jpg'];

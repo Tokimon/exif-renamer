@@ -22,6 +22,6 @@ export const Default = (props: ExampleProps): StoryConfig => ({
 });
 
 Default.args = {
-  src: 'https://placeimg.png',
+  src: 'https://placeimg.com/100/100/any',
   alt: 'My Image'
 };

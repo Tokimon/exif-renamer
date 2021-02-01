@@ -8,4 +8,5 @@
 </script>
 
 <FileFilterBar count={files.length} />
+
 <FileList {files} />

@@ -1,4 +1,4 @@
-import { css } from '~/ui/1_globals/utils/css';
+import { css } from '~/ui/1_globals/core/css';
 import { menuItem } from '~/ui/3_pieces/menu-item/MenuItem.style';
 
 

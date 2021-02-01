@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { css } from '~/ui/1_globals/utils/css';
+  import { css } from '~/ui/1_globals/core/css';
 
   const container = css`
     width: 100px;
