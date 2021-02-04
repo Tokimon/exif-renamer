@@ -52,7 +52,12 @@ module.exports = {
             preprocess: [
               svelteTS({ tsconfigFile: tsConfigFile })
             ],
-            emitCss: false
+            emitCss: false,
+            // TODO: Add this when storybook update the svelte-loader to 3.0.0
+            // compileOptions: {
+            //   css: false,
+            //   immutable: true
+            // }
           }
         }
       },
