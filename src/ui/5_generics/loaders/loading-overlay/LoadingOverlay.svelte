@@ -1,10 +1,13 @@
 <script lang="ts">
+  import Overlay from '~/ui/2_base/overlay/Overlay.svelte';
   import gearSvg from '~/ui/0_assets/svg/inline/animated/gear.svg';
 
-  import { loadingOverlay } from './LoadingOverlay.style';
+  import { loading } from './LoadingOverlay.style';
 </script>
 
-<div class={loadingOverlay}>
-  {@html gearSvg}
-  <slot />
-</div>
+<Overlay>
+  <div class={loading}>
+    {@html gearSvg}
+    <slot />
+  </div>
+</Overlay>
