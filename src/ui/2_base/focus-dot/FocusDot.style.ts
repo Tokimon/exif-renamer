@@ -1,12 +1,10 @@
 import { css } from '~/ui/1_globals/core/css';
-
-import { fontSize } from '~/ui/1_globals/theme/font';
 import colors from '~/ui/1_globals/theme/colors';
 
 
 
 export const container = css`
-  font-size: ${fontSize(10)};
+  font-size: 1rem;
   border-radius: 9px;
   height: 16px;
   min-width: 16px;

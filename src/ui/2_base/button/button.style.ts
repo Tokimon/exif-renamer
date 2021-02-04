@@ -3,17 +3,17 @@ import { text } from '~/ui/1_globals/theme/font';
 import { color as themeColor, blacken, whiten } from '~/ui/1_globals/theme/colors';
 
 
-
 export const button = css`
   ${text}
-  padding: 0 10px;
-  height: 30px;
+  padding: 0 0.5em;
+  height: 2.2em;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 6px;
+  border-radius: 0.4em;
   cursor: pointer;
   color: white;
+  white-space: nowrap;
   border: none;
   text-transform: uppercase;
   text-decoration: none;
@@ -28,6 +28,21 @@ export const button = css`
 
   &[aria-disabled] {
     cursor: default;
+  }
+
+  > * {
+    margin: 0 0.25em;
+    display: inline-block;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  .svg-icon {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
   }
 `;
 

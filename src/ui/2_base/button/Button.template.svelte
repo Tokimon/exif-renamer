@@ -10,5 +10,5 @@
   }
 </script>
 
-<Button {target} on:click {...$$restProps}>{text}</Button>
+<Button {target} on:click {...$$restProps} />
 <Button {target} on:click {...$$restProps}>{text} 2</Button>

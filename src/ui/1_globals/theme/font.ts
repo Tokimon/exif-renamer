@@ -48,8 +48,6 @@ const fonts = new Map<FontType, FontMapValue>([
 
 
 // High Level exports
-export const fontSize = (num: number) => `${num / 10}rem`;
-
 export const font = (type: FontType = 'text') => {
   const entry = fonts.get(type);
   return entry ? entry.string : '';
@@ -62,7 +60,7 @@ export const fontVariable = ({ type, size, family }: FontVariableProps): string 
   if (!type) { return ''; }
 
   const vars: string[] = [];
-  size && vars.push(`--size-${type}: ${fontSize(size)};`);
+  size && vars.push(`--size-${type}: ${size / 10}rem;`);
   family && vars.push(`--font-${type}: ${family};`);
 
   return vars.join('\n');

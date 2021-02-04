@@ -1,17 +1,11 @@
 import { css } from '~/ui/1_globals/core/css';
-import { fontSize } from '~/ui/1_globals/theme/font';
-import { color, blacken } from '~/ui/1_globals/theme/colors';
 
 
 
-export const loadingOverlay = css`
-  font-size: ${fontSize(16)};
-  padding: 10px;
+export const loading = css`
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  background: ${color(blacken('text', 70), 85)};
+  font-size: 1.6rem;
   color: white;
   text-align: center;
   box-sizing: border-box;

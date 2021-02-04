@@ -11,7 +11,7 @@ interface ExampleProps {
 
 
 export default {
-  title: '1_base/Error'
+  title: '2_base/Error'
 };
 
 export const Default = (props: ExampleProps): StoryConfig => ({

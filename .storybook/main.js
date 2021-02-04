@@ -31,12 +31,17 @@ module.exports = {
     if (svelteRule) {
       svelteRule.options = {
         emitCss: false,
-        hotReload: false,
+        hotReload: false, // setting to true will result in the error: "Cannot read property '_debugName' of undefined"
         hotOptions: {
           // List of options and defaults: https://www.npmjs.com/package/svelte-loader-hot#usage
           noPreserveState: true,
           optimistic: false
         },
+        // TODO: Add this when storybook update the svelte-loader to 3.0.0
+        // compileOptions: {
+        //   css: false,
+        //   immutable: true
+        // },
         preprocess: [
           svelteTS({ tsconfigFile: tsConfigFile })
         ]
