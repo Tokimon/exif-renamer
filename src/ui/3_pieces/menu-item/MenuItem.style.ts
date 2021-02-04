@@ -1,11 +1,10 @@
 import { css } from '~/ui/1_globals/core/css';
 import { color, whiten, blacken } from '~/ui/1_globals/theme/colors';
-import { fontSize } from '~/ui/1_globals/theme/font';
 
 
 
 export const menuItem = css`
-  font-size: ${fontSize(14)};
+  font-size: 1.4rem;
   position: relative;
   color: ${color('primary')};
   display: flex;
