@@ -10,6 +10,7 @@ import Button from './Button.template.svelte';
 
 interface ExampleProps {
   text: string;
+  icon: string;
   href: string;
   color: string;
   disabled: boolean;
@@ -18,9 +19,12 @@ interface ExampleProps {
 
 
 export default {
-  title: '1_base/Button',
+  title: '2_base/Button',
   argTypes: {
     text: {
+      control: { type: 'text' }
+    },
+    icon: {
       control: { type: 'text' }
     },
     href: {
@@ -52,5 +56,6 @@ Default.args = {
   text: 'Button',
   href: '',
   color: colorNames[0],
-  disabled: false
+  disabled: false,
+  icon: 'book'
 };
