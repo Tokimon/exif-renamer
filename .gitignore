@@ -7,5 +7,5 @@ _trash
 _files
 
 # Build directories
-main
-renderer
+backend
+frontend
