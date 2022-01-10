@@ -13,7 +13,7 @@
     "svg:icons": "spritely -i src/ui/0_assets/svg/icons -q -o src/ui/0_assets/svg/inline/icons.svg",
     "svg:optimize": "svgo -f ./src/ui/0_assets/svg -r --config=.svgo.yml",
     "svg": "npm run svg:optimize && npm run svg:icons",
-    "storybook": "start-storybook",
+    "storybook": "start-storybook -p 9002",
     "lint": "eslint .",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "start": "electron ./backend/server.js",
