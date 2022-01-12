@@ -3,7 +3,6 @@
 
   export let value = 0;
   export let total = 0;
-
   export let style = '';
 
   const pct = (value / total) * 100;
