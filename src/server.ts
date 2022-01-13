@@ -4,8 +4,6 @@ import { resolve } from 'path';
 
 import { handleRequest } from '~/server/requests/handleRequest';
 
-
-
 function createWindow() {
   const win = new BrowserWindow({
     width: 1024,
@@ -13,16 +11,13 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: false, // Done use node integration on renderer environment
       contextIsolation: true, // protect against prototype pollution
-      enableRemoteModule: false, // turn off remote
-      preload: resolve('main/preload.js') // use a preload script
-    }
+      preload: resolve('backend/preload.js'), // use a preload script
+    },
   });
 
-  win.loadFile(resolve('renderer/index.html'));
+  win.loadFile(resolve('frontend/index.html'));
   win.webContents.openDevTools();
 }
-
-
 
 app.on('ready', createWindow);
 

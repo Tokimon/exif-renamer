@@ -1,7 +1,9 @@
 {
   "extends": "@tsconfig/svelte/tsconfig.json",
   "include": [
-    "src/**/*"
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.svelte",
   ],
   "exclude": [
     "node_modules/*"
@@ -13,10 +15,12 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "es2020",
+    "module": "esnext",
     "moduleResolution": "node",
     "baseUrl": ".",
+    "isolatedModules": true,
     "lib": [
+      "dom",
       "ES2019",
       "ES2020",
       "ESNext"

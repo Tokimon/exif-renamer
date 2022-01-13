@@ -14,7 +14,7 @@
   "extends": [
     "eslint:recommended",
     "standard",
-    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
   "plugins": [
     "@typescript-eslint",

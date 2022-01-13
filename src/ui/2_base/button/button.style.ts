@@ -1,17 +1,21 @@
 import { css } from '~/ui/1_globals/core/css';
 import { text } from '~/ui/1_globals/theme/font';
-import { color as themeColor, blacken, whiten } from '~/ui/1_globals/theme/colors';
-
+import {
+  color as themeColor,
+  blacken,
+  whiten,
+} from '~/ui/1_globals/theme/colors';
 
 export const button = css`
   ${text}
   padding: 0 0.5em;
-  height: 2.2em;
+  height: 2em;
   display: inline-flex;
   align-items: center;
+  gap: 0.5em;
   justify-content: center;
   border-radius: 0.4em;
-  cursor: pointer;
+  cursor: default;
   color: white;
   white-space: nowrap;
   border: none;
@@ -26,17 +30,8 @@ export const button = css`
     outline: none;
   }
 
-  &[aria-disabled] {
-    cursor: default;
-  }
-
-  > * {
-    margin: 0 0.25em;
-    display: inline-block;
-
-    &:empty {
-      display: none;
-    }
+  :empty {
+    display: none;
   }
 
   .svg-icon {
@@ -46,16 +41,21 @@ export const button = css`
   }
 `;
 
-export const buttonColor = (color: string): string => css`
+const hoverStyle = (color: string) => css`
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background: ${blacken(color, 25)};
+  }
+`;
+
+export const buttonColor = (color: string, _static?: boolean): string => css`
+  background: ${themeColor(color)};
+
   &[aria-disabled] {
     background: ${whiten(color, 60)};
   }
 
-  &:not([aria-disabled]) {
-    background: ${themeColor(color)};
-
-    &:hover, &:focus {
-      background: ${blacken(color, 25)};
-    }
-  }
+  ${!_static && hoverStyle(color)}
 `;

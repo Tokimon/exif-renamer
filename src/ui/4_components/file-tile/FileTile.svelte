@@ -1,12 +1,10 @@
 <script lang="ts">
-  import fileExtension from '~/ui/1_globals/utils/fileExtension';
   import extensionToIcon from '~/ui/1_globals/core/extensionToIcon';
-
-  import Image from '~/ui/2_base/image/Image.svelte';
+  import fileExtension from '~/ui/1_globals/utils/fileExtension';
   import FocusDot from '~/ui/2_base/focus-dot/FocusDot.svelte';
+  import Image from '~/ui/2_base/image/Image.svelte';
   import PathString from '~/ui/2_base/path-string/PathString.svelte';
-
-  import { container, dot, image, checkbox } from './FileTile.style';
+  import { checkbox,container,dot,image } from './FileTile.style';
 
   export let name: string = '';
   export let thumbnail: string = '';
