@@ -1,12 +1,12 @@
-#Photo renamer
+# Photo renamer
 
 A tool to rename images from the actual date stored in the photo.
 
 Sometimes the name of the photo does not contain the date and in order to sort the photos correctly, this needs to be
 extracted and the photo renamed accordingly.
 
-##How to use
-Under normal circumstances the code below should be enough. 
+## How to use
+Under normal circumstances the code below should be enough.
 
 ```
 $ node rename.js <full path to folder containing the images>

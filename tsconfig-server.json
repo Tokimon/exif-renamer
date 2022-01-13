@@ -1,0 +1,30 @@
+{
+  "extends": "@tsconfig/node16/tsconfig.json",
+  "include": [
+    "src/server.ts",
+    "src/preload.ts",
+    "src/server/**/*",
+    "src/types/*"
+  ],
+  "exclude": [
+    "src/**/*.test.ts",
+    "node_modules/*"
+  ],
+  "compilerOptions": {
+    "outDir": "backend",
+    "module": "esnext",
+    "strict": true,
+    "resolveJsonModule": true,
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "~/*": [
+        "src/*"
+      ]
+    }
+  }
+}

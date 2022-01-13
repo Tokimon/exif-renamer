@@ -1,0 +1,76 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module",
+    "allowImportExportEverywhere": true,
+    "codeFrame": false
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "standard",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "svelte3",
+    "jest"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.svelte"
+      ],
+      "processor": "svelte3/svelte3"
+    }
+  ],
+  "rules": {
+    "semi": [
+      2,
+      "always"
+    ],
+    "semi-spacing": [
+      2,
+      {
+        "before": false,
+        "after": true
+      }
+    ],
+    "space-before-function-paren": [
+      2,
+      {
+        "anonymous": "never",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
+    "no-console": 1,
+    "no-multiple-empty-lines": [
+      2,
+      {
+        "max": 3,
+        "maxBOF": 0,
+        "maxEOF": 1
+      }
+    ],
+    "curly": [
+      2,
+      "all"
+    ],
+    "import/first": 0,
+    "quotes": [
+      2,
+      "single"
+    ],
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error"
+  }
+}
