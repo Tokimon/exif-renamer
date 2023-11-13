@@ -46,8 +46,6 @@
   <div class="pct-text">{value} / {total}</div>
   <div class="bar" style="width: {pct}%;"></div>
   <div class="pct-text-reveal" style="clip-path: inset(0 {100 - pct}% 0 0);">
-    {value}
-    /
-    {total}
+    {value} / {total}
   </div>
 </div>

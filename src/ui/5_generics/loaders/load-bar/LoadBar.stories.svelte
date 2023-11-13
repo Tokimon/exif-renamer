@@ -1,6 +1,6 @@
 <script lang="ts" context="module">
   import { Story, Template } from '@storybook/addon-svelte-csf';
-  import LoadBar from './Load_Bar.svelte';
+  import LoadBar from './LoadBar.svelte';
 
   export const meta = {
     title: 'Generics/Load Bar',
