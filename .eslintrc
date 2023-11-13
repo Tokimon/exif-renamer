@@ -4,36 +4,27 @@
     "ecmaVersion": 2019,
     "sourceType": "module",
     "allowImportExportEverywhere": true,
-    "codeFrame": false
+    "codeFrame": false,
+    "extraFileExtensions": [".svelte"]
   },
+  "overrides": [
+    {
+      "files": ["*.svelte"],
+      "parser": "svelte-eslint-parser",
+      "parserOptions": {
+        "parser": "@typescript-eslint/parser"
+      }
+    }
+  ],
   "env": {
     "es6": true,
     "browser": true,
     "node": true
   },
-  "extends": [
-    "eslint:recommended",
-    "standard",
-    "plugin:@typescript-eslint/recommended"
-  ],
-  "plugins": [
-    "@typescript-eslint",
-    "svelte3",
-    "jest"
-  ],
-  "overrides": [
-    {
-      "files": [
-        "*.svelte"
-      ],
-      "processor": "svelte3/svelte3"
-    }
-  ],
+  "extends": ["eslint:recommended", "standard", "plugin:svelte/recommended", "plugin:@typescript-eslint/recommended", "prettier"],
+  "plugins": ["@typescript-eslint", "jest", "prettier"],
   "rules": {
-    "semi": [
-      2,
-      "always"
-    ],
+    "semi": [2, "always"],
     "semi-spacing": [
       2,
       {
@@ -50,23 +41,9 @@
       }
     ],
     "no-console": 1,
-    "no-multiple-empty-lines": [
-      2,
-      {
-        "max": 3,
-        "maxBOF": 0,
-        "maxEOF": 1
-      }
-    ],
-    "curly": [
-      2,
-      "all"
-    ],
+    "curly": [2, "multi-line"],
     "import/first": 0,
-    "quotes": [
-      2,
-      "single"
-    ],
+    "quotes": [2, "single"],
     "jest/no-disabled-tests": "warn",
     "jest/no-focused-tests": "error",
     "jest/no-identical-title": "error",

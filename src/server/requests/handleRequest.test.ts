@@ -3,20 +3,20 @@ import { createRequestHandler } from './handleRequest';
 describe('server/requests/handleRequest', () => {
   const handler = jest.fn((payload) => Promise.resolve('payload: ' + payload));
   const loader = jest.fn(() => ({ default: handler }));
-  const badLoader = jest.fn(() => { throw 'Failed to load'; });
-
-
+  const badLoader = jest.fn(() => {
+    throw 'Failed to load';
+  });
 
   const goodCaller = createRequestHandler(loader);
   const badCaller = createRequestHandler(badLoader);
 
-  const call = (caller: typeof goodCaller | typeof badCaller) =>
-    (payload?: string, handler = 'testHandler') => caller({ handler, payload });
+  const call =
+    (caller: typeof goodCaller | typeof badCaller) =>
+    (payload?: string, handler = 'testHandler') =>
+      caller({ handler, payload });
 
   const callGood = call(goodCaller);
   const callBad = call(badCaller);
-
-
 
   beforeEach(() => {
     handler.mockClear();

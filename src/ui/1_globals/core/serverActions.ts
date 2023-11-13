@@ -1,8 +1,5 @@
 // import { setContext, getContext } from 'svelte';
-
 import type { ServerActionRecord } from '~/types/serverActions.d';
-
-
 
 declare global {
   interface Window {
@@ -10,9 +7,8 @@ declare global {
   }
 }
 
-
-// TODO: This has to be more connected to the store, so I cannot do a 1-to-1 mapping of the sersver functions
-// data comming to and from the server has to be stored in the store as well
+// TODO: This has to be more connected to the store, so I cannot do a 1-to-1 mapping of the server functions
+// data coming to and from the server has to be stored in the store as well
 
 export const getActions = (): ServerActionRecord => window.server;
 

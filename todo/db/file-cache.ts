@@ -1,18 +1,11 @@
-import nPath from 'path';
 import { promises as fs } from 'fs';
-
 import debounce from 'lodash/debounce';
-
-
+import nPath from 'path';
 import type { ExifCache, ExifData } from '~/types/exif.d';
-
-
 
 let _cache: ExifCache = new Map();
 
 const filename = (folder: string): string => nPath.join(folder, '.cache');
-
-
 
 export const load = async (folder: string): Promise<ExifCache> => {
   try {

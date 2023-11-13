@@ -1,7 +1,5 @@
 import fileExtension from './fileExtension';
 
-
-
 describe('ui/1_globals/utils/fileExtension', () => {
   test('Extracts extension from file name', () => {
     expect(fileExtension('file.png')).toBe('png');

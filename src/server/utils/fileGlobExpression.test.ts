@@ -1,9 +1,7 @@
 import fileGlobExpression from './fileGlobExpression';
 
-
 const ext = ['gif', 'txt', 'raw', 'psd', 'jpg'];
 const unixRoot = 'home/user/me/files';
-
 
 describe('server/metadata/getFilePaths', () => {
   describe('.fileGlobExpression', () => {

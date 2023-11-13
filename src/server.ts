@@ -1,7 +1,6 @@
+import { BrowserWindow, app } from 'electron';
 import 'module-alias/register';
-import { app, BrowserWindow } from 'electron';
 import { resolve } from 'path';
-
 import { handleRequest } from '~/server/requests/handleRequest';
 
 function createWindow() {

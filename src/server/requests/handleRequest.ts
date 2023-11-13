@@ -1,5 +1,4 @@
 import { ipcMain } from 'electron';
-
 import waitForPromise from '~/shared/utils/waitForPromise';
 
 type RequestHandler = (payload?: any) => Promise<any>;
@@ -18,10 +17,7 @@ type HandlerInvoker = (action: Action) => Promise<any>;
 type HandlerModuleLoader = (path?: string) => RequestHandlerModule;
 type HandlerLoader = NodeRequire | HandlerModuleLoader;
 
-const loadRequestHandler = (
-  handler: string,
-  load: HandlerLoader
-): RequestHandler => {
+const loadRequestHandler = (handler: string, load: HandlerLoader): RequestHandler => {
   let cb;
 
   try {
@@ -33,9 +29,7 @@ const loadRequestHandler = (
   }
 
   if (!cb) {
-    throw new Error(
-      `Request handler: "${handler}" - did not "default" export a function`
-    );
+    throw new Error(`Request handler: "${handler}" - did not "default" export a function`);
   }
 
   return cb;
@@ -54,9 +48,7 @@ const loader =
     }
   };
 
-export const createRequestHandler = (
-  load: HandlerLoader = require
-): HandlerInvoker =>
+export const createRequestHandler = (load: HandlerLoader = require): HandlerInvoker =>
   waitForPromise({
     getKey: (a: Action) => a.handler,
     callback: loader(load),
@@ -64,5 +56,4 @@ export const createRequestHandler = (
 
 const requestHandler = createRequestHandler();
 
-export const handleRequest = () =>
-  ipcMain.handle('request', (_, action: Action) => requestHandler(action));
+export const handleRequest = () => ipcMain.handle('request', (_, action: Action) => requestHandler(action));

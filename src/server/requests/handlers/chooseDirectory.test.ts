@@ -1,32 +1,18 @@
 import { dialog } from 'electron';
 import { mocked } from 'ts-jest/utils';
-
 import chooseDirectory from './chooseDirectory';
-
-
 
 jest.mock('electron');
 
 const { showOpenDialog } = mocked(dialog);
 
-
-
-
 interface SetShowOpenDialogReturnValueProps {
-  canceled?: boolean,
+  canceled?: boolean;
   filePaths?: string[];
 }
 
-
-
-const setShowOpenDialogReturnValue = (
-  { canceled = false, filePaths = [] }: SetShowOpenDialogReturnValueProps
-) =>
-  showOpenDialog.mockReturnValue(
-    Promise.resolve({ canceled, filePaths })
-  );
-
-
+const setShowOpenDialogReturnValue = ({ canceled = false, filePaths = [] }: SetShowOpenDialogReturnValueProps) =>
+  showOpenDialog.mockReturnValue(Promise.resolve({ canceled, filePaths }));
 
 describe('server/requests/handlers/chooseDirectory', () => {
   beforeEach(() => {

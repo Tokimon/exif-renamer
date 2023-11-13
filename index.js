@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from 'electron';
+import { BrowserWindow, app } from 'electron';
 import { resolve } from 'path';
 
 function createWindow() {

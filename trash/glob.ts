@@ -1,14 +1,10 @@
 import globby from 'globby';
 import nPath from 'path';
 
-
-
 interface GlobProps {
   folder: string;
   extensions: string[];
 }
-
-
 
 // ExifTool supported extensions
 // (http://www.sno.phy.queensu.ca/~phil/exiftool)

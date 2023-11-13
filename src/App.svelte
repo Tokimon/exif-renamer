@@ -16,11 +16,7 @@
 </script>
 
 <div>
-  <DirectoryDisplay
-    path={$directoryStore}
-    style="cursor:pointer"
-    on:click={clickDirectory}
-  />
+  <DirectoryDisplay path="{$directoryStore}" style="cursor: pointer" on:click="{clickDirectory}" />
 
-  <FilesPage files={$fileInfoStore} />
+  <FilesPage files="{$fileInfoStore}" />
 </div>

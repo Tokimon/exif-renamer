@@ -1,5 +1,5 @@
-import exifTool from 'node-exiftool';
 import exifToolExe from 'dist-exiftool';
+import exifTool from 'node-exiftool';
 
 let _exifProcess;
 

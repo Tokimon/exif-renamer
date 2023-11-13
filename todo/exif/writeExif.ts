@@ -1,7 +1,7 @@
 import type { ExifData } from '~/types/exif';
 
 export type writeExifPayload = {
-  filePath: string,
+  filePath: string;
   exifData: ExifData;
 };
 

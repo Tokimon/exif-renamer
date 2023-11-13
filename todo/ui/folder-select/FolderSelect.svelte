@@ -1,6 +1,6 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte';
-  import randomId from 'vanillajs-helpers/randomId';
+  import randomId from '@jsfns/core/randomCryptoId';
 
   import { folderSelect, input, hider, help } from './FolderSelect.style';
 
@@ -13,17 +13,15 @@
   let showHelp = true;
 
   const onChange = (e: Event) => {
-    const input = e.currentTarget as HTMLInputElement;
-    const { files } = input;
-    showHelp = !files || !files.length;
+    const { files } = e.currentTarget as HTMLInputElement;
+    showHelp = true;
     folder = '';
 
-    if (showHelp) {
-      return;
-    }
+    if (!files?.length) return;
 
     const { path, name } = files[0];
     folder = path.replace(name, '');
+    showHelp = false;
 
     dispatch('change', { folder, path });
   };

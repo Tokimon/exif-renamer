@@ -1,7 +1,5 @@
 import { promises as fs } from 'fs';
-
 import { getFile } from '../utils/file-cache';
-
 import getExifProcess from './process';
 
 const exifDate = (date) => {
@@ -22,7 +20,7 @@ const readMetadata = (exifProcess, fileRead) => async (path) => {
   const md = {
     size,
     created: birthtimeMs,
-    modified
+    modified,
   };
 
   const { data } = await exifProcess.readMetadata(path);
@@ -41,9 +39,7 @@ export default async (paths, fileRead) => {
 
   await exifProcess.open();
 
-  const metadata = await Promise.all(
-    paths.map(readMetadata(exifProcess, fileRead))
-  );
+  const metadata = await Promise.all(paths.map(readMetadata(exifProcess, fileRead)));
 
   await exifProcess.close();
 

@@ -1,7 +1,5 @@
-import { css } from '~/ui/1_globals/utils/css';
 import { whiten } from '~/ui/1_globals/theme/colors';
-
-
+import { css } from '~/ui/1_globals/utils/css';
 
 export const root = css`
   display: flex;

@@ -1,9 +1,6 @@
-import { action, ActionOptions } from '@storybook/addon-actions';
-
-
+import { ActionOptions, action } from '@storybook/addon-actions';
 
 type PropMapping = Record<string, unknown>;
-
 
 const eventToObject = (e: CustomEvent<any>) =>
   [
@@ -21,16 +18,14 @@ const eventToObject = (e: CustomEvent<any>) =>
     'srcElement',
     'target',
     'timeStamp',
-    'type'
-  ]
-    .reduce((obj: PropMapping, key: string): PropMapping => {
-      obj[key] = e[key as keyof CustomEvent<any>];
-      return obj;
-    }, {} as PropMapping);
+    'type',
+  ].reduce((obj: PropMapping, key: string): PropMapping => {
+    obj[key] = e[key as keyof CustomEvent<any>];
+    return obj;
+  }, {} as PropMapping);
 
-
-
-const detailedAction = (message: string, options?: ActionOptions) =>
+const detailedAction =
+  (message: string, options?: ActionOptions) =>
   (e: CustomEvent<any>): void => {
     action(message, options)(eventToObject(e));
   };

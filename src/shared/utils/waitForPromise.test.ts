@@ -21,11 +21,7 @@ describe('shared/utils/waitForPromise', () => {
   test('Only calls callback once per Promise resolution', async () => {
     const runPromise = waitForPromise({ getKey, callback });
 
-    await Promise.all([
-      runPromise(),
-      runPromise(),
-      runPromise()
-    ]);
+    await Promise.all([runPromise(), runPromise(), runPromise()]);
 
     expect(callback).toHaveBeenCalledTimes(1);
   });
@@ -41,21 +37,13 @@ describe('shared/utils/waitForPromise', () => {
     expect(second).toBe(third);
 
     expect(await first).toBe('value');
-
   });
 
   test('Caching depends on the string returned form the given Key Finder function', async () => {
     const dynamicKey = (num: number) => num;
     const runPromise = waitForPromise({ getKey: dynamicKey, callback });
 
-    await Promise.all([
-      runPromise(1),
-      runPromise(1),
-      runPromise(1),
-      runPromise(2),
-      runPromise(2),
-      runPromise(2)
-    ]);
+    await Promise.all([runPromise(1), runPromise(1), runPromise(1), runPromise(2), runPromise(2), runPromise(2)]);
 
     expect(callback).toHaveBeenCalledTimes(2);
   });

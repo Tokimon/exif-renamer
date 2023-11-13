@@ -1,3 +1,16 @@
+plugins:
+  - 'prettier-plugin-svelte'
+  - '@trivago/prettier-plugin-sort-imports'
 singleQuote: true
-jsxBracketSameLine: false
-parser: 'typescript'
+useTabs: false
+printWidth: 140
+semi: true
+importOrder:
+  - '<THIRD_PARTY_MODULES>'
+  - '^@jsfns/(.*)$'
+  - '^[./]'
+importOrderSortSpecifiers: true
+svelteSortOrder: 'options-scripts-styles-markup'
+svelteStrictMode: true
+svelteAllowShorthand: true
+svelteIndentScriptAndStyle: true

@@ -1,8 +1,6 @@
 import type { FileInfo } from '~/types/file.d';
-
 import fileName from './fileName';
 import stripDuplicateCount from './stripDuplicateCount';
-
 
 export default (paths: string[]): FileInfo[] => {
   const m: Map<string, FileInfo> = new Map();
@@ -19,13 +17,7 @@ export default (paths: string[]): FileInfo[] => {
     }
   }
 
-  const groups = Array.from(m.values())
-    .sort(
-      (a, b) =>
-        a.name > b.name
-          ? 1
-          : a.name === b.name ? 0 : -1
-    );
+  const groups = Array.from(m.values()).sort((a, b) => (a.name > b.name ? 1 : a.name === b.name ? 0 : -1));
 
   groups.forEach(({ count, paths }) => {
     count > 1 && paths.sort();

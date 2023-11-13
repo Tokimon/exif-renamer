@@ -1,13 +1,7 @@
 {
   "extends": "@tsconfig/svelte/tsconfig.json",
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.svelte",
-  ],
-  "exclude": [
-    "node_modules/*"
-  ],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.svelte"],
+  "exclude": ["node_modules/*"],
   "compilerOptions": {
     "strict": true,
     "resolveJsonModule": true,
@@ -19,20 +13,10 @@
     "moduleResolution": "node",
     "baseUrl": ".",
     "isolatedModules": true,
-    "lib": [
-      "dom",
-      "ES2019",
-      "ES2020",
-      "ESNext"
-    ],
-    "types": [
-      "node",
-      "jest"
-    ],
+    "lib": ["dom", "ES2019", "ES2020", "ESNext"],
+    "types": ["node", "jest"],
     "paths": {
-      "~/*": [
-        "src/*"
-      ]
+      "~/*": ["src/*"]
     }
   }
 }

@@ -1,7 +1,5 @@
 import fileName from './fileName';
 
-
-
 describe('ui/1_globals/utils/fileName', () => {
   test('Extracts file name from path', () => {
     expect(fileName('/some/path/file.png')).toBe('file.png');

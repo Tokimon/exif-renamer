@@ -1,15 +1,7 @@
 {
   "extends": "@tsconfig/node16/tsconfig.json",
-  "include": [
-    "src/server.ts",
-    "src/preload.ts",
-    "src/server/**/*",
-    "src/types/*"
-  ],
-  "exclude": [
-    "src/**/*.test.ts",
-    "node_modules/*"
-  ],
+  "include": ["src/server.ts", "src/preload.ts", "src/server/**/*", "src/types/*"],
+  "exclude": ["src/**/*.test.ts", "node_modules/*"],
   "compilerOptions": {
     "outDir": "backend",
     "module": "esnext",
@@ -22,9 +14,7 @@
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      "~/*": [
-        "src/*"
-      ]
+      "~/*": ["src/*"]
     }
   }
 }
