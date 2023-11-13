@@ -1,20 +1,16 @@
-<script lang="ts">
-  import { Meta,Story,Template } from '@storybook/addon-svelte-csf';
+<script lang="ts" context="module">
+  import { Story, Template } from '@storybook/addon-svelte-csf';
   import FileTile from './FileTile.svelte';
+
+  export const meta = {
+    title: 'Components/FileTile',
+    component: FileTile,
+  };
 </script>
 
-<Meta
-  title="Components/FileTile"
-  component={FileTile}
-  argTypes={{
-    name: { control: "text" },
-    thumbnail: { control: "text", defaultValue: 'https://placeimg.com/100/100' },
-    count: { control: "number" },
-  }}
-/>
-
 <Template let:args>
-  <FileTile {...args}  />
+  <FileTile {...args} on:change />
 </Template>
 
-<Story name="Default" args={{ name: 'Some logn file name.png'  }} />
+<Story name="No Thumbnail" args="{{ name: 'Some long file name.png' }}" />
+<Story name="With Thumbnail" args="{{ name: 'Some long file name.png', thumbnail: 'https://placekitten.com/100/100' }}" />

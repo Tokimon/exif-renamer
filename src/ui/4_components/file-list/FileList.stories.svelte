@@ -1,21 +1,21 @@
-<script lang="ts">
-  import { Meta,Story,Template } from '@storybook/addon-svelte-csf';
+<script lang="ts" context="module">
+  import { Story, Template } from '@storybook/addon-svelte-csf';
   import FileList from './FileList.svelte';
 
+  export const meta = {
+    title: 'Components/FileList',
+    component: FileList,
+  };
+</script>
+
+<script lang="ts">
   import createFileInfoList from '~/ui/1_globals/story-helpers/createFileInfoList';
 
   const files = createFileInfoList();
 </script>
 
-<Meta
-  title="Components/FileList"
-  argTypes={{
-    onThumbClick: { action: "onThumbClick" },
-  }}
-/>
-
 <Template let:args>
-  <FileList on:thumbclick={args.onThumbClick} files={args.files} />
+  <FileList {...args} />
 </Template>
 
-<Story name="Default" args={{ files  }} />
+<Story name="Default" args="{{ files }}" />

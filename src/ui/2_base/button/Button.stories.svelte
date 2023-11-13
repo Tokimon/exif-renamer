@@ -1,35 +1,27 @@
-<script lang="ts">
-  import { Meta,Story,Template } from '@storybook/addon-svelte-csf';
-  import omit from 'lodash/omit';
-  import { colors } from '~/ui/1_globals/theme/colors';
+<script lang="ts" context="module">
+  import { Story, Template } from '@storybook/addon-svelte-csf';
   import Button from './Button.svelte';
+
+  import { large } from './button.story.module.css';
+
+  export const meta = {
+    title: 'Base/Button',
+    component: Button,
+  };
 </script>
 
-<Meta
-  title="Base/Button"
-  argTypes={{
-    label: { control: "text" },
-    icon: { control: "text" },
-    disabled: { control: "boolean", defaultValue: false },
-    static: { control: "boolean", defaultValue: false },
-    color: {
-      control: { type: "select", options: Object.keys(colors) },
-    },
-    href: { control: "text" },
-    onClick: { action: "onClick" },
-  }}
-/>
-
 <Template let:args>
-  <Button
-    {...omit(args, ['onClick'])}
-    target={args.href && '_blank'}
-    on:click={args.onClick}
-  />
+  <Button {...args} target="{args.href && '_blank'}" on:click>
+    {args.text ?? ''}
+  </Button>
 </Template>
 
-<Story name="Default" args={{ label: 'Default button' }}/>
+<Story name="Default" args="{{ text: 'Default Button' }}" />
 
-<Story name="Icon Only" args={{ icon: 'book' }}/>
+<Story name="Icon Only" args="{{ icon: 'book' }}" />
 
-<Story name="Link" args={{ icon: 'launch', href: 'https://google.com', label: 'google.com' }}/>
+<Story name="Link" args="{{ icon: 'launch', href: 'https://google.com', text: 'google.com' }}" />
+
+<Story name="With class override" let:args>
+  <Button {...args} className="{large}" on:click>Large button</Button>
+</Story>

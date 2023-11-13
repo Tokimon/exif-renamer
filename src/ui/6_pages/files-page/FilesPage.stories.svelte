@@ -1,14 +1,17 @@
-<script lang="ts">
-  import { Meta,Story,Template } from '@storybook/addon-svelte-csf';
+<script lang="ts" context="module">
+  import { Story } from '@storybook/addon-svelte-csf';
   import FilesPage from './FilesPage.svelte';
 
   import createFileInfoList from '~/ui/1_globals/story-helpers/createFileInfoList';
 
+  export const meta = {
+    title: 'Pages/FilesPage',
+    component: FilesPage,
+  };
+
   const files = createFileInfoList();
 </script>
 
-<Meta title="Pages/FilesPage" />
-
 <Story name="Default">
-  <FilesPage files={files} />
+  <FilesPage {files} />
 </Story>

@@ -1,7 +1,13 @@
-<script lang="ts">
-  import { css } from '~/ui/1_globals/core/css';
+<script lang="ts" context="module">
+  import type { Colors } from './types.js';
+</script>
 
-  const container = css`
+<script lang="ts">
+  export let value: Colors | null = null;
+</script>
+
+<style>
+  .container {
     width: 100px;
     font-weight: bold;
     text-align: center;
@@ -23,11 +29,9 @@
       box-sizing: border-box;
       font-weight: normal;
     }
-  `;
+  }
+</style>
 
-  export let value = 'black';
-</script>
-
-<div class={container} data-color={value} style="--color:{value};">
+<div class="container" data-color={value} style:--color={value ? `var(--${value})` : 'block'}>
   <slot />
 </div>

@@ -1,0 +1,22 @@
+.icon {
+  width: 1em;
+  height: 1em;
+  padding: 0.2em 0 0 0.5em;
+  flex: 0 0 auto;
+  display: block;
+  fill: var(--primary);
+}
+
+.folder {
+  flex: 1 1 auto;
+}
+
+.display {
+  display: flex;
+  margin: 0;
+  align-items: center;
+  overflow: hidden;
+  background: none;
+  border: none;
+  cursor: pointer;
+}

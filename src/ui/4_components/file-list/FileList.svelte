@@ -1,23 +1,31 @@
 <script lang="ts">
-  import { createEventDispatcher } from 'svelte';
-  import { delegateHandler } from 'vanillajs-browser-helpers/delegate';
   import type { FileInfo } from '~/types/file.d';
-  import { container as fileTileContainer } from '~/ui/4_components/file-tile/FileTile.style';
-  import FileTile from '~/ui/4_components/file-tile/FileTile.svelte';
-  import { list } from './FileList.style';
+  import FileTile, { type SelectionChangeEvent } from '~/ui/4_components/file-tile/FileTile.svelte';
 
   export let files: FileInfo[] = [];
+  export let selection: string[] = [];
 
-  const dispatch = createEventDispatcher();
+  let selected = new Set<string>();
+  function onSelectChange(e: CustomEvent<SelectionChangeEvent>) {
+    const { name, checked } = e.detail;
 
-  const onClick = delegateHandler(`.${fileTileContainer}`, (e: Event) => {
-    const { delegateTarget: thumb } = e as Event & { delegateTarget: Element };
-    dispatch('thumbclick', { thumb });
-  });
+    if (checked) selected.add(name);
+    else selected.delete(name);
+
+    selection = Array.from(selected);
+  }
 </script>
 
-<div class={list} on:click={onClick}>
+<style>
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+</style>
+
+<div class="list">
   {#each files as { name, count, thumbnail }}
-    <FileTile {name} {count} {thumbnail} />
+    <FileTile {name} {count} {thumbnail} on:selection-change="{onSelectChange}" />
   {/each}
 </div>

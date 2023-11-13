@@ -1,0 +1,8 @@
+:root {
+  --primary: oklch(0.74 0.16 219.84);
+  --secondary: oklch(0.76 0.22 127.68);
+  --danger: oklch(0.6 0.26 29.26 / 1);
+  --caution: oklch(0.86 0.19 91.36);
+  --valid: oklch(0.73 0.27 139);
+  --text: #5d5d5d;
+}

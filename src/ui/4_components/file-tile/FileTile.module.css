@@ -1,0 +1,69 @@
+.dot {
+  position: absolute;
+  right: 6px;
+  top: 75px;
+  z-index: 1;
+  background: var(--highlight-color);
+}
+
+.file-image {
+  width: 100%;
+  height: 100px;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+
+  & > * {
+    flex: 1;
+  }
+}
+
+.checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+}
+
+.file-tile {
+  --highlight-color: var(--text);
+
+  position: relative;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: none;
+  border-radius: 0.3rem;
+  padding: 0.3rem;
+  transition: box-shadow 0.2s;
+
+  &:hover,
+  &:has(:checked) {
+    box-shadow: 0 0 5px var(--highlight-color);
+  }
+
+  &:has(:checked) {
+    --highlight-color: var(--secondary);
+
+    .file-image {
+      background-color: var(--highlight-color);
+
+      & :global(.image) {
+        filter: grayscale(0.5);
+        opacity: 0.6;
+      }
+
+      & :global(.no-image) {
+        color: var(--highlight-color);
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+
+  &:hover {
+    --highlight-color: var(--primary);
+  }
+}

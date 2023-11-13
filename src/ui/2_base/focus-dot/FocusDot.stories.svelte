@@ -1,15 +1,15 @@
-<script lang="ts">
-  import { Meta,Story,Template } from '@storybook/addon-svelte-csf';
+<script lang="ts" context="module">
+  import { Story, Template } from '@storybook/addon-svelte-csf';
   import FocusDot from './FocusDot.svelte';
+
+  export const meta = {
+    title: 'Base/FocusDot',
+    component: FocusDot,
+  };
 </script>
 
-<Meta
-  title="Base/FocusDot"
-  argTypes={{ number: { control: "number" } }}
-/>
-
 <Template let:args>
-  <FocusDot>{args.number || 0}</FocusDot>
+  <FocusDot>{args.number ?? 0}</FocusDot>
 </Template>
 
-<Story name="Default" args={{ number: 99 }} />
+<Story name="Default" args="{{ number: 99 }}" />

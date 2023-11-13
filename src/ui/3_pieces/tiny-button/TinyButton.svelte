@@ -1,12 +1,9 @@
 <script lang="ts">
-  import classnames from 'classnames';
-
   import Button from '~/ui/2_base/button/Button.svelte';
 
-  import { tinyButton } from './TinyButton.style';
+  import { tiny } from './TinyButton.module.css';
 
   const { className, ...rest } = $$restProps;
-  const cn = classnames(tinyButton, className);
 </script>
 
-<Button on:click className={cn} {...rest}><slot /></Button>
+<Button on:click className="{tiny} {className}" {...rest}><slot /></Button>

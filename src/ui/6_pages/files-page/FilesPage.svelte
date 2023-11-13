@@ -5,8 +5,9 @@
   import FileList from '~/ui/4_components/file-list/FileList.svelte';
 
   export let files: FileInfo[] = [];
+  let selection: string[] = [];
 </script>
 
-<FileFilterBar count={files.length} />
+<FileFilterBar {files} {selection} style="margin-bottom: 1rem;" />
 
-<FileList {files} />
+<FileList {files} bind:selection />

@@ -1,18 +1,16 @@
-<script lang="ts">
-  import { Meta,Story,Template } from '@storybook/addon-svelte-csf';
-
+<script lang="ts" context="module">
+  import { Story } from '@storybook/addon-svelte-csf';
   import Error from './Error.svelte';
+
+  export const meta = {
+    title:"Base/Error",
+    component: Error,
+    argTypes: {
+      message: { control: "text" },
+    }
+  }
 </script>
 
-<Meta
-  title="Base/Error"
-  argTypes={{
-    message: { control: "text" },
-  }}
-/>
-
-<Template let:args>
-  <Error>{args.message}</Error>
-</Template>
-
-<Story name="Default" args={{ message: 'Oups some error happened' }} />
+<Story name="Default">
+  <Error>Oups some error happened</Error>
+</Story>

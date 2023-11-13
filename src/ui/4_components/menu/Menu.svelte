@@ -9,23 +9,32 @@
 
 <script lang="ts">
   import { createEventDispatcher } from 'svelte';
-  import { delegateHandler } from 'vanillajs-browser-helpers/delegate';
-  import { menuItem } from '~/ui/3_pieces/menu-item/MenuItem.style';
   import MenuItem from '~/ui/3_pieces/menu-item/MenuItem.svelte';
-  import { menu } from './Menu.style';
 
   export let items: MenuItemData[] = [];
 
-  const dispatch = createEventDispatcher();
+  // on:click={onClick}
+  // const dispatch = createEventDispatcher();
 
-  const onClick = delegateHandler(`.${menuItem}`, (e: Event) => {
-    const { delegateTarget: item } = e as Event & { delegateTarget: HTMLElement };
-    dispatch('itemclick', { item, id: item.dataset.id });
-  });
+  // const onClick = (e: Event) => {
+  //   const item = (e.target as HTMLElement).closest<HTMLElement>(`.${menuItem}`);
+  //   item && dispatch('itemclick', { item, id: item.dataset.id });
+  // };
 </script>
 
-<nav class={menu} on:click={onClick}>
+<style>
+  .menu {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2px;
+    padding: 5px;
+  }
+</style>
+
+<nav class="menu">
   {#each items as { label, id, ...rest }}
-    <MenuItem id={id} {...rest}>{label}</MenuItem>
+    <MenuItem {id} {...rest}>{label}</MenuItem>
   {/each}
 </nav>
