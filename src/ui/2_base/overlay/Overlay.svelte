@@ -25,7 +25,6 @@
 </style>
 
 <div class="overlay">
-  <!-- svelte-ignore a11y-click-events-have-key-events a11y-no-static-element-interactions -->
-  <div class="bg" on:click></div>
+  <div class="bg" on:click|self role="modal"></div>
   <div class="content"><slot /></div>
 </div>

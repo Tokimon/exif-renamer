@@ -1,5 +1,7 @@
 <script lang="ts">
   export let title: string = '';
+  export let gridMin: number | undefined = undefined;
+  export let style: string = '';
 </script>
 
 <style>
@@ -10,13 +12,18 @@
   .body {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 1rem;
+
+    &.grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(var(--grid-min), max-content));
+    }
   }
 </style>
 
 {#if title}
   <h2 class="header">{title}</h2>
 {/if}
-<div class="body">
+<section class="body" class:grid="{!!gridMin}" style="--grid-min: {gridMin}px; {style}">
   <slot />
-</div>
+</section>

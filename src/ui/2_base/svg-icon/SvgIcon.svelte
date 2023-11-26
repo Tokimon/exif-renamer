@@ -1,16 +1,22 @@
 <script lang="ts" context="module">
+  import { type IconNames } from '~/ui/0_assets/svg/icons';
   import appendIcons from '~/ui/1_globals/core/appendIcons';
 
   appendIcons();
 </script>
 
 <script lang="ts">
-  export let svg: string = '';
+  export let svg: IconNames;
   export let className: string = '';
   export let style: string = '';
 </script>
 
-<!-- TODO: Typescript does not allow to use "href" instead of "xlink:href" (which is depricated) -->
+<style>
+  .svg-icon {
+    aspect-ratio: 1;
+  }
+</style>
+
 <svg
   class="svg-icon {className}"
   {style}
@@ -19,5 +25,5 @@
   xmlns:xlink="http://www.w3.org/1999/xlink"
   focusable="false"
 >
-  <use xlink:href="#{svg}"></use>
+  <use href="#{svg}"></use>
 </svg>

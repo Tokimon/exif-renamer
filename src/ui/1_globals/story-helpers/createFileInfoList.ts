@@ -9,7 +9,7 @@ export default (): FileInfo[] =>
     return {
       name,
       count: Math.round(Math.random() * 99),
-      paths: [],
+      paths: [`path/to/${name}`],
       thumbnail: isWebImage(name) ? 'https://placekitten.com/150/' + (120 + Math.round(Math.random() * 30)) : undefined,
     };
   });

@@ -1,10 +1,4 @@
-<script lang="ts" context="module">
-  export type SelectionChangeEvent = { name: string; checked: boolean };
-</script>
-
 <script lang="ts">
-  import { createEventDispatcher } from 'svelte';
-  import type { ChangeEventHandler } from 'svelte/elements';
   import extensionToIcon from '~/ui/1_globals/core/extensionToIcon';
   import fileExtension from '~/ui/1_globals/utils/fileExtension';
   import FocusDot from '~/ui/2_base/focus-dot/FocusDot.svelte';
@@ -13,32 +7,24 @@
 
   import classNames from './FileTile.module.css';
 
-  const dispatch = createEventDispatcher<{ 'selection-change': SelectionChangeEvent }>();
-
   export let name: string = '';
   export let thumbnail: string = '';
   export let count: number = 1;
+  export let selected: boolean = false;
+  export let style: string = '';
+  export let className: string = '';
 
   let extension = '';
-
   $: extension = fileExtension(name);
-
-  const onChange: ChangeEventHandler<HTMLInputElement> = (e) => {
-    const { checked } = e.currentTarget;
-    dispatch('selection-change', { name, checked: !!checked });
-  };
 </script>
 
-<label class="{classNames['file-tile']}" title="{name}">
-  <input type="checkbox" class="{classNames.checkbox}" on:change="{onChange}" />
+<!-- svelte-ignore a11y-click-events-have-key-events a11y-no-static-element-interactions -->
+<div class="{classNames['file-tile']} {className}" aria-selected="{selected}" title="{name}" {style} on:click>
+  <Image src="{thumbnail}" className="{classNames.image}" {extension} noImageIcon="{extensionToIcon(extension)}" />
 
-  <div class="{classNames['file-image']}">
-    <Image src="{thumbnail}" {extension} noImageIcon="{extensionToIcon(extension)}" />
+  {#if count > 1}
+    <FocusDot className="{classNames.dot}">{count}</FocusDot>
+  {/if}
 
-    {#if count > 1}
-      <FocusDot className="{classNames.dot}">{count}</FocusDot>
-    {/if}
-  </div>
-
-  <PathString path="{name}" separator="." />
-</label>
+  <PathString path="{name}" className="{classNames.name}" separator="." />
+</div>

@@ -5,4 +5,6 @@
   --caution: oklch(0.86 0.19 91.36);
   --valid: oklch(0.73 0.27 139);
   --text: #5d5d5d;
+
+  --scrollbar: oklch(from var(--primary) l 0.03 h);
 }

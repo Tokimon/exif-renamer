@@ -15,6 +15,7 @@ export const iconNames = [
   'dials',
   'document',
   'edit',
+  'filter',
   'folder',
   'font',
   'gear',

@@ -9,7 +9,7 @@ import settingsExt from '~/shared/extensions/settings';
 import vectorExt from '~/shared/extensions/vector';
 import videoExt from '~/shared/extensions/video';
 
-export default (ext: string): string | undefined => {
+export default (ext: string) => {
   if (imgWebExt.has(ext) || imgOtherExt.has(ext)) return 'image-square';
   if (videoExt.has(ext)) return 'play-circle';
   if (imgCameraExt.has(ext)) return 'camera-roll';
@@ -20,5 +20,5 @@ export default (ext: string): string | undefined => {
   if (dataExt.has(ext)) return 'server';
   if (settingsExt.has(ext)) return 'dials';
 
-  return 'question-circle';
+  return 'question';
 };

@@ -1,8 +1,6 @@
 <script lang="ts">
-  import type { FileInfo } from '~/types/file.d';
+  import { fileInfoStore, selectedFileStore } from '~/ui/1_globals/stores/fileInfoStore';
 
-  export let files: FileInfo[] = [];
-  export let selection: string[] = [];
   export let style = '';
 </script>
 
@@ -25,6 +23,6 @@
 </style>
 
 <div class="file-filter-bar" {style}>
-  <div class="total-count">{files.length} Files</div>
-  {#if selection.length}<div class="selection-count">{selection.length} Files selected</div>{/if}
+  <div class="total-count">{$fileInfoStore.length} Files</div>
+  {#if $selectedFileStore.size}<div class="selection-count">{$selectedFileStore.size} Files selected</div>{/if}
 </div>

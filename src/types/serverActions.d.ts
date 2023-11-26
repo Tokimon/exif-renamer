@@ -4,6 +4,8 @@ export type WriteExifDataAction = (path: string, exif: ExifData) => Promise<Exif
 
 export type ChooseDirectoryAction = () => Promise<string | null>;
 
+export type FindFilesAction = (directory: string) => Promise<string[]>;
+
 export type ServerAction = ReadExifDataAction | WriteExifDataAction | FindFilesAction;
 
 export interface ServerActionRecord {

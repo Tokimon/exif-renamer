@@ -15,7 +15,7 @@
 <Story
   name="Failed unknown image"
   args="{{
-    src: 'https://placekitten.com/200/200',
+    src: 'https://placekitten.it/200/200',
     alt: 'My Image',
   }}"
 />
@@ -31,7 +31,7 @@
 <Story
   name="Loaded image"
   args="{{
-    src: 'https://placekitten.it/200/200',
+    src: 'https://placekitten.com/200/200',
     alt: 'My Image',
   }}"
 />

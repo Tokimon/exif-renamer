@@ -1,0 +1,5012 @@
+{
+  "InteropIndex": {
+    "id": "0x0001",
+    "name": "InteropIndex",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": false
+    },
+    "group": "InteropIFD"
+  },
+  "InteropVersion": {
+    "id": "0x0002",
+    "name": "InteropVersion",
+    "group": "InteropIFD"
+  },
+  "ProcessingSoftware": {
+    "id": "0x000b",
+    "name": "ProcessingSoftware",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "IFD0"
+  },
+  "SubfileType": {
+    "id": "0x00fe",
+    "name": "SubfileType",
+    "group": "IFD0"
+  },
+  "ImageWidth": {
+    "id": "0xbc80",
+    "name": "ImageWidth",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "ImageHeight": {
+    "id": "0xbc81",
+    "name": "ImageHeight",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "BitsPerSample": {
+    "id": "0x0102",
+    "name": "BitsPerSample",
+    "group": "IFD0"
+  },
+  "Compression": {
+    "id": "0x0103",
+    "name": "Compression",
+    "group": "IFD0"
+  },
+  "PhotometricInterpretation": {
+    "id": "0x0106",
+    "name": "PhotometricInterpretation",
+    "group": "IFD0"
+  },
+  "Thresholding": {
+    "id": "0x0107",
+    "name": "Thresholding",
+    "group": "IFD0"
+  },
+  "CellWidth": {
+    "id": "0x0108",
+    "name": "CellWidth",
+    "group": "IFD0"
+  },
+  "CellLength": {
+    "id": "0x0109",
+    "name": "CellLength",
+    "group": "IFD0"
+  },
+  "FillOrder": {
+    "id": "0x010a",
+    "name": "FillOrder",
+    "group": "IFD0"
+  },
+  "DocumentName": {
+    "id": "0x010d",
+    "name": "DocumentName",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "IFD0"
+  },
+  "ImageDescription": {
+    "id": "0x010e",
+    "name": "ImageDescription",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "IFD0"
+  },
+  "Make": {
+    "id": "0x010f",
+    "name": "Make",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "IFD0"
+  },
+  "Model": {
+    "id": "0x0110",
+    "name": "Model",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "IFD0"
+  },
+  "StripOffsets": {
+    "id": "0x0111",
+    "name": "StripOffsets",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "OtherImageStart": {
+    "id": "0x0201",
+    "name": "OtherImageStart",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "PreviewImageStart": {
+    "id": "0x0201",
+    "name": "PreviewImageStart",
+    "group": "IFD0"
+  },
+  "JpgFromRawStart": {
+    "id": "0x0201",
+    "name": "JpgFromRawStart",
+    "group": "IFD2"
+  },
+  "Orientation": {
+    "id": "0x0112",
+    "name": "Orientation",
+    "group": "IFD0"
+  },
+  "SamplesPerPixel": {
+    "id": "0x0115",
+    "name": "SamplesPerPixel",
+    "group": "IFD0"
+  },
+  "RowsPerStrip": {
+    "id": "0x0116",
+    "name": "RowsPerStrip",
+    "group": "IFD0"
+  },
+  "StripByteCounts": {
+    "id": "0x0117",
+    "name": "StripByteCounts",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "OtherImageLength": {
+    "id": "0x0202",
+    "name": "OtherImageLength",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "PreviewImageLength": {
+    "id": "0x0202",
+    "name": "PreviewImageLength",
+    "group": "IFD0"
+  },
+  "JpgFromRawLength": {
+    "id": "0x0202",
+    "name": "JpgFromRawLength",
+    "group": "IFD2"
+  },
+  "MinSampleValue": {
+    "id": "0x0118",
+    "name": "MinSampleValue",
+    "group": "IFD0"
+  },
+  "MaxSampleValue": {
+    "id": "0x0119",
+    "name": "MaxSampleValue",
+    "group": "IFD0"
+  },
+  "XResolution": {
+    "id": "0x011a",
+    "name": "XResolution",
+    "group": "IFD0"
+  },
+  "YResolution": {
+    "id": "0x011b",
+    "name": "YResolution",
+    "group": "IFD0"
+  },
+  "PlanarConfiguration": {
+    "id": "0x011c",
+    "name": "PlanarConfiguration",
+    "group": "IFD0"
+  },
+  "PageName": {
+    "id": "0x011d",
+    "name": "PageName",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "IFD0"
+  },
+  "XPosition": {
+    "id": "0x011e",
+    "name": "XPosition",
+    "group": "IFD0"
+  },
+  "YPosition": {
+    "id": "0x011f",
+    "name": "YPosition",
+    "group": "IFD0"
+  },
+  "FreeOffsets": {
+    "id": "0x0120",
+    "name": "FreeOffsets",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "FreeByteCounts": {
+    "id": "0x0121",
+    "name": "FreeByteCounts",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "GrayResponseUnit": {
+    "id": "0x0122",
+    "name": "GrayResponseUnit",
+    "group": "IFD0"
+  },
+  "GrayResponseCurve": {
+    "id": "0x0123",
+    "name": "GrayResponseCurve",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "T4Options": {
+    "id": "0x0124",
+    "name": "T4Options",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "T6Options": {
+    "id": "0x0125",
+    "name": "T6Options",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "ResolutionUnit": {
+    "id": "0x0128",
+    "name": "ResolutionUnit",
+    "group": "IFD0"
+  },
+  "PageNumber": {
+    "id": "0x0129",
+    "name": "PageNumber",
+    "type": {
+      "type": "number",
+      "bit": 16,
+      "signed": false,
+      "length": 2,
+      "required": false,
+      "writable": true
+    },
+    "group": "IFD0"
+  },
+  "ColorResponseUnit": {
+    "id": "0x012c",
+    "name": "ColorResponseUnit",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "TransferFunction": {
+    "id": "0x012d",
+    "name": "TransferFunction",
+    "type": {
+      "type": "number",
+      "bit": 16,
+      "signed": false,
+      "length": 768,
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "Software": {
+    "id": "0x0131",
+    "name": "Software",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "IFD0"
+  },
+  "ModifyDate": {
+    "id": "0x0132",
+    "name": "ModifyDate",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "IFD0"
+  },
+  "Artist": {
+    "id": "0x013b",
+    "name": "Artist",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "IFD0"
+  },
+  "HostComputer": {
+    "id": "0x013c",
+    "name": "HostComputer",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "IFD0"
+  },
+  "Predictor": {
+    "id": "0x013d",
+    "name": "Predictor",
+    "group": "IFD0"
+  },
+  "WhitePoint": {
+    "id": "0x013e",
+    "name": "WhitePoint",
+    "type": {
+      "type": "number",
+      "bit": 64,
+      "signed": false,
+      "length": 2,
+      "required": false,
+      "writable": true
+    },
+    "group": "IFD0"
+  },
+  "PrimaryChromaticities": {
+    "id": "0x013f",
+    "name": "PrimaryChromaticities",
+    "type": {
+      "type": "number",
+      "bit": 64,
+      "signed": false,
+      "length": 6,
+      "required": false,
+      "writable": true
+    },
+    "group": "IFD0"
+  },
+  "ColorMap": {
+    "id": "0x0140",
+    "name": "ColorMap",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "HalftoneHints": {
+    "id": "0x0141",
+    "name": "HalftoneHints",
+    "type": {
+      "type": "number",
+      "bit": 16,
+      "signed": false,
+      "length": 2,
+      "required": false,
+      "writable": true
+    },
+    "group": "IFD0"
+  },
+  "TileWidth": {
+    "id": "0x0142",
+    "name": "TileWidth",
+    "group": "IFD0"
+  },
+  "TileLength": {
+    "id": "0x0143",
+    "name": "TileLength",
+    "group": "IFD0"
+  },
+  "TileOffsets": {
+    "id": "0x0144",
+    "name": "TileOffsets",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "TileByteCounts": {
+    "id": "0x0145",
+    "name": "TileByteCounts",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "BadFaxLines": {
+    "id": "0x0146",
+    "name": "BadFaxLines",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "CleanFaxData": {
+    "id": "0x0147",
+    "name": "CleanFaxData",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "ConsecutiveBadFaxLines": {
+    "id": "0x0148",
+    "name": "ConsecutiveBadFaxLines",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "SubIFD": {
+    "id": "0x014a",
+    "name": "SubIFD",
+    "group": "-"
+  },
+  "A100DataOffset": {
+    "id": "0x014a",
+    "name": "A100DataOffset",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "InkSet": {
+    "id": "0x014c",
+    "name": "InkSet",
+    "group": "IFD0"
+  },
+  "InkNames": {
+    "id": "0x014d",
+    "name": "InkNames",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "NumberofInks": {
+    "id": "0x014e",
+    "name": "NumberofInks",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "DotRange": {
+    "id": "0x0150",
+    "name": "DotRange",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "TargetPrinter": {
+    "id": "0x0151",
+    "name": "TargetPrinter",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "IFD0"
+  },
+  "ExtraSamples": {
+    "id": "0x0152",
+    "name": "ExtraSamples",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "SampleFormat": {
+    "id": "0x0153",
+    "name": "SampleFormat",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "SubIFD"
+  },
+  "SMinSampleValue": {
+    "id": "0x0154",
+    "name": "SMinSampleValue",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "SMaxSampleValue": {
+    "id": "0x0155",
+    "name": "SMaxSampleValue",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "TransferRange": {
+    "id": "0x0156",
+    "name": "TransferRange",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "ClipPath": {
+    "id": "0x0157",
+    "name": "ClipPath",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "XClipPathUnits": {
+    "id": "0x0158",
+    "name": "XClipPathUnits",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "YClipPathUnits": {
+    "id": "0x0159",
+    "name": "YClipPathUnits",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "Indexed": {
+    "id": "0x015a",
+    "name": "Indexed",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "JPEGTables": {
+    "id": "0x01b5",
+    "name": "JPEGTables",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "OPIProxy": {
+    "id": "0x015f",
+    "name": "OPIProxy",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "GlobalParametersIFD": {
+    "id": "0x0190",
+    "name": "GlobalParametersIFD",
+    "group": "-"
+  },
+  "ProfileType": {
+    "id": "0x0191",
+    "name": "ProfileType",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "FaxProfile": {
+    "id": "0x0192",
+    "name": "FaxProfile",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "CodingMethods": {
+    "id": "0x0193",
+    "name": "CodingMethods",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "VersionYear": {
+    "id": "0x0194",
+    "name": "VersionYear",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "ModeNumber": {
+    "id": "0x0195",
+    "name": "ModeNumber",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "Decode": {
+    "id": "0x01b1",
+    "name": "Decode",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "DefaultImageColor": {
+    "id": "0x01b2",
+    "name": "DefaultImageColor",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "T82Options": {
+    "id": "0x01b3",
+    "name": "T82Options",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "JPEGProc": {
+    "id": "0x0200",
+    "name": "JPEGProc",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "ThumbnailOffset": {
+    "id": "0x0201",
+    "name": "ThumbnailOffset",
+    "group": "SubIFD"
+  },
+  "ThumbnailLength": {
+    "id": "0x0202",
+    "name": "ThumbnailLength",
+    "group": "SubIFD"
+  },
+  "JPEGRestartInterval": {
+    "id": "0x0203",
+    "name": "JPEGRestartInterval",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "JPEGLosslessPredictors": {
+    "id": "0x0205",
+    "name": "JPEGLosslessPredictors",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "JPEGPointTransforms": {
+    "id": "0x0206",
+    "name": "JPEGPointTransforms",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "JPEGQTables": {
+    "id": "0x0207",
+    "name": "JPEGQTables",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "JPEGDCTables": {
+    "id": "0x0208",
+    "name": "JPEGDCTables",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "JPEGACTables": {
+    "id": "0x0209",
+    "name": "JPEGACTables",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "YCbCrCoefficients": {
+    "id": "0x0211",
+    "name": "YCbCrCoefficients",
+    "type": {
+      "type": "number",
+      "bit": 64,
+      "signed": false,
+      "length": 3,
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "YCbCrSubSampling": {
+    "id": "0x0212",
+    "name": "YCbCrSubSampling",
+    "type": {
+      "type": "number",
+      "bit": 16,
+      "signed": false,
+      "length": 2,
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "YCbCrPositioning": {
+    "id": "0x0213",
+    "name": "YCbCrPositioning",
+    "group": "IFD0"
+  },
+  "ReferenceBlackWhite": {
+    "id": "0x0214",
+    "name": "ReferenceBlackWhite",
+    "type": {
+      "type": "number",
+      "bit": 64,
+      "signed": false,
+      "length": 6,
+      "required": false,
+      "writable": true
+    },
+    "group": "IFD0"
+  },
+  "StripRowCounts": {
+    "id": "0x022f",
+    "name": "StripRowCounts",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "ApplicationNotes": {
+    "id": "0x02bc",
+    "name": "ApplicationNotes",
+    "group": "IFD0"
+  },
+  "USPTOMiscellaneous": {
+    "id": "0x03e7",
+    "name": "USPTOMiscellaneous",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "RelatedImageFileFormat": {
+    "id": "0x1000",
+    "name": "RelatedImageFileFormat",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": false
+    },
+    "group": "InteropIFD"
+  },
+  "RelatedImageWidth": {
+    "id": "0x1001",
+    "name": "RelatedImageWidth",
+    "group": "InteropIFD"
+  },
+  "RelatedImageHeight": {
+    "id": "0x1002",
+    "name": "RelatedImageHeight",
+    "group": "InteropIFD"
+  },
+  "Rating": {
+    "id": "0x4746",
+    "name": "Rating",
+    "group": "IFD0"
+  },
+  "XP_DIP_XML": {
+    "id": "0x4747",
+    "name": "XP_DIP_XML",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "StitchInfo": {
+    "id": "0x4748",
+    "name": "StitchInfo",
+    "group": "-"
+  },
+  "RatingPercent": {
+    "id": "0x4749",
+    "name": "RatingPercent",
+    "group": "IFD0"
+  },
+  "SonyRawFileType": {
+    "id": "0x7000",
+    "name": "SonyRawFileType",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "SonyToneCurve": {
+    "id": "0x7010",
+    "name": "SonyToneCurve",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "VignettingCorrection": {
+    "id": "0x7031",
+    "name": "VignettingCorrection",
+    "group": "SubIFD"
+  },
+  "VignettingCorrParams": {
+    "id": "0x7032",
+    "name": "VignettingCorrParams",
+    "type": {
+      "type": "number",
+      "bit": 16,
+      "signed": true,
+      "length": 17,
+      "required": false,
+      "writable": false
+    },
+    "group": "SubIFD"
+  },
+  "ChromaticAberrationCorrection": {
+    "id": "0x7034",
+    "name": "ChromaticAberrationCorrection",
+    "group": "SubIFD"
+  },
+  "ChromaticAberrationCorrParams": {
+    "id": "0x7035",
+    "name": "ChromaticAberrationCorrParams",
+    "type": {
+      "type": "number",
+      "bit": 16,
+      "signed": true,
+      "length": 33,
+      "required": false,
+      "writable": false
+    },
+    "group": "SubIFD"
+  },
+  "DistortionCorrection": {
+    "id": "0x7036",
+    "name": "DistortionCorrection",
+    "group": "SubIFD"
+  },
+  "DistortionCorrParams": {
+    "id": "0x7037",
+    "name": "DistortionCorrParams",
+    "type": {
+      "type": "number",
+      "bit": 16,
+      "signed": true,
+      "length": 17,
+      "required": false,
+      "writable": false
+    },
+    "group": "SubIFD"
+  },
+  "SonyRawImageSize": {
+    "id": "0x7038",
+    "name": "SonyRawImageSize",
+    "type": {
+      "type": "number",
+      "bit": 32,
+      "signed": false,
+      "length": 2,
+      "required": false,
+      "writable": false
+    },
+    "group": "SubIFD"
+  },
+  "BlackLevel": {
+    "id": "0xc61a",
+    "name": "BlackLevel",
+    "group": "SubIFD"
+  },
+  "WB_RGGBLevels": {
+    "id": "0x7313",
+    "name": "WB_RGGBLevels",
+    "type": {
+      "type": "number",
+      "bit": 16,
+      "signed": true,
+      "length": 4,
+      "required": false,
+      "writable": false
+    },
+    "group": "SubIFD"
+  },
+  "SonyCropTopLeft": {
+    "id": "0x74c7",
+    "name": "SonyCropTopLeft",
+    "type": {
+      "type": "number",
+      "bit": 32,
+      "signed": false,
+      "length": 2,
+      "required": false,
+      "writable": false
+    },
+    "group": "SubIFD"
+  },
+  "SonyCropSize": {
+    "id": "0x74c8",
+    "name": "SonyCropSize",
+    "type": {
+      "type": "number",
+      "bit": 32,
+      "signed": false,
+      "length": 2,
+      "required": false,
+      "writable": false
+    },
+    "group": "SubIFD"
+  },
+  "ImageID": {
+    "id": "0x800d",
+    "name": "ImageID",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "WangTag1": {
+    "id": "0x80a3",
+    "name": "WangTag1",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "WangAnnotation": {
+    "id": "0x80a4",
+    "name": "WangAnnotation",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "WangTag3": {
+    "id": "0x80a5",
+    "name": "WangTag3",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "WangTag4": {
+    "id": "0x80a6",
+    "name": "WangTag4",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "ImageReferencePoints": {
+    "id": "0x80b9",
+    "name": "ImageReferencePoints",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "RegionXformTackPoint": {
+    "id": "0x80ba",
+    "name": "RegionXformTackPoint",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "WarpQuadrilateral": {
+    "id": "0x80bb",
+    "name": "WarpQuadrilateral",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "AffineTransformMat": {
+    "id": "0x80bc",
+    "name": "AffineTransformMat",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "Matteing": {
+    "id": "0x80e3",
+    "name": "Matteing",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "DataType": {
+    "id": "0x80e4",
+    "name": "DataType",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "ImageDepth": {
+    "id": "0x80e5",
+    "name": "ImageDepth",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "TileDepth": {
+    "id": "0x80e6",
+    "name": "TileDepth",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "ImageFullWidth": {
+    "id": "0x8214",
+    "name": "ImageFullWidth",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "ImageFullHeight": {
+    "id": "0x8215",
+    "name": "ImageFullHeight",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "TextureFormat": {
+    "id": "0x8216",
+    "name": "TextureFormat",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "WrapModes": {
+    "id": "0x8217",
+    "name": "WrapModes",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "FovCot": {
+    "id": "0x8218",
+    "name": "FovCot",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "MatrixWorldToScreen": {
+    "id": "0x8219",
+    "name": "MatrixWorldToScreen",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "MatrixWorldToCamera": {
+    "id": "0x821a",
+    "name": "MatrixWorldToCamera",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "Model2": {
+    "id": "0x827d",
+    "name": "Model2",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "CFARepeatPatternDim": {
+    "id": "0x828d",
+    "name": "CFARepeatPatternDim",
+    "type": {
+      "type": "number",
+      "bit": 16,
+      "signed": false,
+      "length": 2,
+      "required": false,
+      "writable": false
+    },
+    "group": "SubIFD"
+  },
+  "CFAPattern2": {
+    "id": "0x828e",
+    "name": "CFAPattern2",
+    "group": "SubIFD"
+  },
+  "BatteryLevel": {
+    "id": "0x828f",
+    "name": "BatteryLevel",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "KodakIFD": {
+    "id": "0x8290",
+    "name": "KodakIFD",
+    "group": "-"
+  },
+  "Copyright": {
+    "id": "0x8298",
+    "name": "Copyright",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "IFD0"
+  },
+  "ExposureTime": {
+    "id": "0x829a",
+    "name": "ExposureTime",
+    "group": "ExifIFD"
+  },
+  "FNumber": {
+    "id": "0x829d",
+    "name": "FNumber",
+    "group": "ExifIFD"
+  },
+  "MDFileTag": {
+    "id": "0x82a5",
+    "name": "MDFileTag",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "MDScalePixel": {
+    "id": "0x82a6",
+    "name": "MDScalePixel",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "MDColorTable": {
+    "id": "0x82a7",
+    "name": "MDColorTable",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "MDLabName": {
+    "id": "0x82a8",
+    "name": "MDLabName",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "MDSampleInfo": {
+    "id": "0x82a9",
+    "name": "MDSampleInfo",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "MDPrepDate": {
+    "id": "0x82aa",
+    "name": "MDPrepDate",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "MDPrepTime": {
+    "id": "0x82ab",
+    "name": "MDPrepTime",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "MDFileUnits": {
+    "id": "0x82ac",
+    "name": "MDFileUnits",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "PixelScale": {
+    "id": "0x830e",
+    "name": "PixelScale",
+    "type": {
+      "type": "double",
+      "length": 3,
+      "required": false,
+      "writable": true
+    },
+    "group": "IFD0"
+  },
+  "AdventScale": {
+    "id": "0x8335",
+    "name": "AdventScale",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "AdventRevision": {
+    "id": "0x8336",
+    "name": "AdventRevision",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "UIC1Tag": {
+    "id": "0x835c",
+    "name": "UIC1Tag",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "UIC2Tag": {
+    "id": "0x835d",
+    "name": "UIC2Tag",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "UIC3Tag": {
+    "id": "0x835e",
+    "name": "UIC3Tag",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "UIC4Tag": {
+    "id": "0x835f",
+    "name": "UIC4Tag",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "IPTC-NAA": {
+    "id": "0x83bb",
+    "name": "IPTC-NAA",
+    "group": "IFD0"
+  },
+  "IntergraphPacketData": {
+    "id": "0x847e",
+    "name": "IntergraphPacketData",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "IntergraphFlagRegisters": {
+    "id": "0x847f",
+    "name": "IntergraphFlagRegisters",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "IntergraphMatrix": {
+    "id": "0x8480",
+    "name": "IntergraphMatrix",
+    "group": "IFD0"
+  },
+  "INGRReserved": {
+    "id": "0x8481",
+    "name": "INGRReserved",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "ModelTiePoint": {
+    "id": "0x8482",
+    "name": "ModelTiePoint",
+    "group": "IFD0"
+  },
+  "Site": {
+    "id": "0x84e0",
+    "name": "Site",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "ColorSequence": {
+    "id": "0x84e1",
+    "name": "ColorSequence",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "IT8Header": {
+    "id": "0x84e2",
+    "name": "IT8Header",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "RasterPadding": {
+    "id": "0x84e3",
+    "name": "RasterPadding",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "BitsPerRunLength": {
+    "id": "0x84e4",
+    "name": "BitsPerRunLength",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "BitsPerExtendedRunLength": {
+    "id": "0x84e5",
+    "name": "BitsPerExtendedRunLength",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "ColorTable": {
+    "id": "0x84e6",
+    "name": "ColorTable",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "ImageColorIndicator": {
+    "id": "0x84e7",
+    "name": "ImageColorIndicator",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "BackgroundColorIndicator": {
+    "id": "0x84e8",
+    "name": "BackgroundColorIndicator",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "ImageColorValue": {
+    "id": "0x84e9",
+    "name": "ImageColorValue",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "BackgroundColorValue": {
+    "id": "0x84ea",
+    "name": "BackgroundColorValue",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "PixelIntensityRange": {
+    "id": "0x84eb",
+    "name": "PixelIntensityRange",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "TransparencyIndicator": {
+    "id": "0x84ec",
+    "name": "TransparencyIndicator",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "ColorCharacterization": {
+    "id": "0x84ed",
+    "name": "ColorCharacterization",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "HCUsage": {
+    "id": "0x84ee",
+    "name": "HCUsage",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "TrapIndicator": {
+    "id": "0x84ef",
+    "name": "TrapIndicator",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "CMYKEquivalent": {
+    "id": "0x84f0",
+    "name": "CMYKEquivalent",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "SEMInfo": {
+    "id": "0x8546",
+    "name": "SEMInfo",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "IFD0"
+  },
+  "AFCP_IPTC": {
+    "id": "0x8568",
+    "name": "AFCP_IPTC",
+    "group": "-"
+  },
+  "PixelMagicJBIGOptions": {
+    "id": "0x85b8",
+    "name": "PixelMagicJBIGOptions",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "JPLCartoIFD": {
+    "id": "0x85d7",
+    "name": "JPLCartoIFD",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "ModelTransform": {
+    "id": "0x85d8",
+    "name": "ModelTransform",
+    "type": {
+      "type": "double",
+      "length": 16,
+      "required": false,
+      "writable": true
+    },
+    "group": "IFD0"
+  },
+  "WB_GRGBLevels": {
+    "id": "0x8602",
+    "name": "WB_GRGBLevels",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "LeafData": {
+    "id": "0x8606",
+    "name": "LeafData",
+    "group": "-"
+  },
+  "PhotoshopSettings": {
+    "id": "0x8649",
+    "name": "PhotoshopSettings",
+    "group": "IFD0"
+  },
+  "ExifOffset": {
+    "id": "0x8769",
+    "name": "ExifOffset",
+    "group": "IFD0"
+  },
+  "ICC_Profile": {
+    "id": "0x8773",
+    "name": "ICC_Profile",
+    "group": "IFD0"
+  },
+  "TIFF_FXExtensions": {
+    "id": "0x877f",
+    "name": "TIFF_FXExtensions",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "MultiProfiles": {
+    "id": "0x8780",
+    "name": "MultiProfiles",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "SharedData": {
+    "id": "0x8781",
+    "name": "SharedData",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "T88Options": {
+    "id": "0x8782",
+    "name": "T88Options",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "ImageLayer": {
+    "id": "0x87ac",
+    "name": "ImageLayer",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "GeoTiffDirectory": {
+    "id": "0x87af",
+    "name": "GeoTiffDirectory",
+    "type": {
+      "type": "number",
+      "bit": 16,
+      "signed": false,
+      "length": null,
+      "required": false,
+      "writable": true
+    },
+    "group": "IFD0"
+  },
+  "GeoTiffDoubleParams": {
+    "id": "0x87b0",
+    "name": "GeoTiffDoubleParams",
+    "type": {
+      "type": "double",
+      "length": null,
+      "required": false,
+      "writable": true
+    },
+    "group": "IFD0"
+  },
+  "GeoTiffAsciiParams": {
+    "id": "0x87b1",
+    "name": "GeoTiffAsciiParams",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "IFD0"
+  },
+  "JBIGOptions": {
+    "id": "0x87be",
+    "name": "JBIGOptions",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "ExposureProgram": {
+    "id": "0x8822",
+    "name": "ExposureProgram",
+    "group": "ExifIFD"
+  },
+  "SpectralSensitivity": {
+    "id": "0x8824",
+    "name": "SpectralSensitivity",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "GPSInfo": {
+    "id": "0x8825",
+    "name": "GPSInfo",
+    "group": "IFD0"
+  },
+  "ISO": {
+    "id": "0x8827",
+    "name": "ISO",
+    "group": "ExifIFD"
+  },
+  "Opto-ElectricConvFactor": {
+    "id": "0x8828",
+    "name": "Opto-ElectricConvFactor",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "Interlace": {
+    "id": "0x8829",
+    "name": "Interlace",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "TimeZoneOffset": {
+    "id": "0x882a",
+    "name": "TimeZoneOffset",
+    "group": "ExifIFD"
+  },
+  "SelfTimerMode": {
+    "id": "0x882b",
+    "name": "SelfTimerMode",
+    "group": "ExifIFD"
+  },
+  "SensitivityType": {
+    "id": "0x8830",
+    "name": "SensitivityType",
+    "group": "ExifIFD"
+  },
+  "StandardOutputSensitivity": {
+    "id": "0x8831",
+    "name": "StandardOutputSensitivity",
+    "group": "ExifIFD"
+  },
+  "RecommendedExposureIndex": {
+    "id": "0x8832",
+    "name": "RecommendedExposureIndex",
+    "group": "ExifIFD"
+  },
+  "ISOSpeed": {
+    "id": "0x8833",
+    "name": "ISOSpeed",
+    "group": "ExifIFD"
+  },
+  "ISOSpeedLatitudeyyy": {
+    "id": "0x8834",
+    "name": "ISOSpeedLatitudeyyy",
+    "group": "ExifIFD"
+  },
+  "ISOSpeedLatitudezzz": {
+    "id": "0x8835",
+    "name": "ISOSpeedLatitudezzz",
+    "group": "ExifIFD"
+  },
+  "FaxRecvParams": {
+    "id": "0x885c",
+    "name": "FaxRecvParams",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "FaxSubAddress": {
+    "id": "0x885d",
+    "name": "FaxSubAddress",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "FaxRecvTime": {
+    "id": "0x885e",
+    "name": "FaxRecvTime",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "FedexEDR": {
+    "id": "0x8871",
+    "name": "FedexEDR",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "LeafSubIFD": {
+    "id": "0x888a",
+    "name": "LeafSubIFD",
+    "group": "-"
+  },
+  "ExifVersion": {
+    "id": "0x9000",
+    "name": "ExifVersion",
+    "group": "ExifIFD"
+  },
+  "DateTimeOriginal": {
+    "id": "0x9003",
+    "name": "DateTimeOriginal",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "CreateDate": {
+    "id": "0x9004",
+    "name": "CreateDate",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "GooglePlusUploadCode": {
+    "id": "0x9009",
+    "name": "GooglePlusUploadCode",
+    "group": "ExifIFD"
+  },
+  "OffsetTime": {
+    "id": "0x9010",
+    "name": "OffsetTime",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "OffsetTimeOriginal": {
+    "id": "0x9011",
+    "name": "OffsetTimeOriginal",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "OffsetTimeDigitized": {
+    "id": "0x9012",
+    "name": "OffsetTimeDigitized",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "ComponentsConfiguration": {
+    "id": "0x9101",
+    "name": "ComponentsConfiguration",
+    "group": "ExifIFD"
+  },
+  "CompressedBitsPerPixel": {
+    "id": "0x9102",
+    "name": "CompressedBitsPerPixel",
+    "group": "ExifIFD"
+  },
+  "ShutterSpeedValue": {
+    "id": "0x9201",
+    "name": "ShutterSpeedValue",
+    "group": "ExifIFD"
+  },
+  "ApertureValue": {
+    "id": "0x9202",
+    "name": "ApertureValue",
+    "group": "ExifIFD"
+  },
+  "BrightnessValue": {
+    "id": "0x9203",
+    "name": "BrightnessValue",
+    "group": "ExifIFD"
+  },
+  "ExposureCompensation": {
+    "id": "0x9204",
+    "name": "ExposureCompensation",
+    "group": "ExifIFD"
+  },
+  "MaxApertureValue": {
+    "id": "0x9205",
+    "name": "MaxApertureValue",
+    "group": "ExifIFD"
+  },
+  "SubjectDistance": {
+    "id": "0x9206",
+    "name": "SubjectDistance",
+    "group": "ExifIFD"
+  },
+  "MeteringMode": {
+    "id": "0x9207",
+    "name": "MeteringMode",
+    "group": "ExifIFD"
+  },
+  "LightSource": {
+    "id": "0x9208",
+    "name": "LightSource",
+    "group": "ExifIFD"
+  },
+  "Flash": {
+    "id": "0x9209",
+    "name": "Flash",
+    "group": "ExifIFD"
+  },
+  "FocalLength": {
+    "id": "0x920a",
+    "name": "FocalLength",
+    "group": "ExifIFD"
+  },
+  "FlashEnergy": {
+    "id": "0xa20b",
+    "name": "FlashEnergy",
+    "group": "ExifIFD"
+  },
+  "SpatialFrequencyResponse": {
+    "id": "0xa20c",
+    "name": "SpatialFrequencyResponse",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "Noise": {
+    "id": "0xa20d",
+    "name": "Noise",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "FocalPlaneXResolution": {
+    "id": "0xa20e",
+    "name": "FocalPlaneXResolution",
+    "group": "ExifIFD"
+  },
+  "FocalPlaneYResolution": {
+    "id": "0xa20f",
+    "name": "FocalPlaneYResolution",
+    "group": "ExifIFD"
+  },
+  "FocalPlaneResolutionUnit": {
+    "id": "0xa210",
+    "name": "FocalPlaneResolutionUnit",
+    "group": "ExifIFD"
+  },
+  "ImageNumber": {
+    "id": "0xa211",
+    "name": "ImageNumber",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "SecurityClassification": {
+    "id": "0xa212",
+    "name": "SecurityClassification",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "ImageHistory": {
+    "id": "0xa213",
+    "name": "ImageHistory",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "SubjectArea": {
+    "id": "0x9214",
+    "name": "SubjectArea",
+    "group": "ExifIFD"
+  },
+  "ExposureIndex": {
+    "id": "0xa215",
+    "name": "ExposureIndex",
+    "group": "ExifIFD"
+  },
+  "TIFF-EPStandardID": {
+    "id": "0xa216",
+    "name": "TIFF-EPStandardID",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "SensingMethod": {
+    "id": "0xa217",
+    "name": "SensingMethod",
+    "group": "ExifIFD"
+  },
+  "CIP3DataFile": {
+    "id": "0x923a",
+    "name": "CIP3DataFile",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "CIP3Sheet": {
+    "id": "0x923b",
+    "name": "CIP3Sheet",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "CIP3Side": {
+    "id": "0x923c",
+    "name": "CIP3Side",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "StoNits": {
+    "id": "0x923f",
+    "name": "StoNits",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "MakerNoteApple": {
+    "id": "0x927c",
+    "name": "MakerNoteApple",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteNikon": {
+    "id": "0x927c",
+    "name": "MakerNoteNikon",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteCanon": {
+    "id": "0x927c",
+    "name": "MakerNoteCanon",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteCasio": {
+    "id": "0x927c",
+    "name": "MakerNoteCasio",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteCasio2": {
+    "id": "0x927c",
+    "name": "MakerNoteCasio2",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteDJIInfo": {
+    "id": "0xc634",
+    "name": "MakerNoteDJIInfo",
+    "group": "IFD0"
+  },
+  "MakerNoteDJI": {
+    "id": "0x927c",
+    "name": "MakerNoteDJI",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteFLIR": {
+    "id": "0x927c",
+    "name": "MakerNoteFLIR",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteFujiFilm": {
+    "id": "0x927c",
+    "name": "MakerNoteFujiFilm",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteGE": {
+    "id": "0x927c",
+    "name": "MakerNoteGE",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteGE2": {
+    "id": "0x927c",
+    "name": "MakerNoteGE2",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteHasselblad": {
+    "id": "0x927c",
+    "name": "MakerNoteHasselblad",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteHP": {
+    "id": "0x927c",
+    "name": "MakerNoteHP",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteHP2": {
+    "id": "0x927c",
+    "name": "MakerNoteHP2",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteHP4": {
+    "id": "0x927c",
+    "name": "MakerNoteHP4",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteHP6": {
+    "id": "0x927c",
+    "name": "MakerNoteHP6",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteISL": {
+    "id": "0x927c",
+    "name": "MakerNoteISL",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteJVC": {
+    "id": "0x927c",
+    "name": "MakerNoteJVC",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteJVCText": {
+    "id": "0x927c",
+    "name": "MakerNoteJVCText",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteKodak1a": {
+    "id": "0x927c",
+    "name": "MakerNoteKodak1a",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteKodak1b": {
+    "id": "0x927c",
+    "name": "MakerNoteKodak1b",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteKodak2": {
+    "id": "0x927c",
+    "name": "MakerNoteKodak2",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteKodak3": {
+    "id": "0x927c",
+    "name": "MakerNoteKodak3",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteKodak4": {
+    "id": "0x927c",
+    "name": "MakerNoteKodak4",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteKodak5": {
+    "id": "0x927c",
+    "name": "MakerNoteKodak5",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteKodak6a": {
+    "id": "0x927c",
+    "name": "MakerNoteKodak6a",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteKodak6b": {
+    "id": "0x927c",
+    "name": "MakerNoteKodak6b",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteKodak7": {
+    "id": "0x927c",
+    "name": "MakerNoteKodak7",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteKodak8a": {
+    "id": "0x927c",
+    "name": "MakerNoteKodak8a",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteKodak8b": {
+    "id": "0x927c",
+    "name": "MakerNoteKodak8b",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteKodak8c": {
+    "id": "0x927c",
+    "name": "MakerNoteKodak8c",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteKodak9": {
+    "id": "0x927c",
+    "name": "MakerNoteKodak9",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteKodak10": {
+    "id": "0x927c",
+    "name": "MakerNoteKodak10",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteKodak11": {
+    "id": "0x927c",
+    "name": "MakerNoteKodak11",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteKodak12": {
+    "id": "0x927c",
+    "name": "MakerNoteKodak12",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteKodakUnknown": {
+    "id": "0x927c",
+    "name": "MakerNoteKodakUnknown",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteKyocera": {
+    "id": "0x927c",
+    "name": "MakerNoteKyocera",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteMinolta": {
+    "id": "0x927c",
+    "name": "MakerNoteMinolta",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteMinolta2": {
+    "id": "0x927c",
+    "name": "MakerNoteMinolta2",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteMinolta3": {
+    "id": "0x927c",
+    "name": "MakerNoteMinolta3",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteMotorola": {
+    "id": "0x927c",
+    "name": "MakerNoteMotorola",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteNikon2": {
+    "id": "0x927c",
+    "name": "MakerNoteNikon2",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteNikon3": {
+    "id": "0x927c",
+    "name": "MakerNoteNikon3",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteNintendo": {
+    "id": "0x927c",
+    "name": "MakerNoteNintendo",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteOlympus": {
+    "id": "0x927c",
+    "name": "MakerNoteOlympus",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteOlympus2": {
+    "id": "0x927c",
+    "name": "MakerNoteOlympus2",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteOlympus3": {
+    "id": "0x927c",
+    "name": "MakerNoteOlympus3",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteLeica": {
+    "id": "0x927c",
+    "name": "MakerNoteLeica",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteLeica2": {
+    "id": "0x927c",
+    "name": "MakerNoteLeica2",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteLeica3": {
+    "id": "0x927c",
+    "name": "MakerNoteLeica3",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteLeica4": {
+    "id": "0x927c",
+    "name": "MakerNoteLeica4",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteLeica5": {
+    "id": "0x927c",
+    "name": "MakerNoteLeica5",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteLeica6": {
+    "id": "0x927c",
+    "name": "MakerNoteLeica6",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteLeica7": {
+    "id": "0x927c",
+    "name": "MakerNoteLeica7",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteLeica8": {
+    "id": "0x927c",
+    "name": "MakerNoteLeica8",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteLeica9": {
+    "id": "0x927c",
+    "name": "MakerNoteLeica9",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteLeica10": {
+    "id": "0x927c",
+    "name": "MakerNoteLeica10",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNotePanasonic": {
+    "id": "0x927c",
+    "name": "MakerNotePanasonic",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNotePanasonic2": {
+    "id": "0x927c",
+    "name": "MakerNotePanasonic2",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNotePanasonic3": {
+    "id": "0x927c",
+    "name": "MakerNotePanasonic3",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNotePentax": {
+    "id": "0xc634",
+    "name": "MakerNotePentax",
+    "group": "IFD0"
+  },
+  "MakerNotePentax2": {
+    "id": "0x927c",
+    "name": "MakerNotePentax2",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNotePentax3": {
+    "id": "0x927c",
+    "name": "MakerNotePentax3",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNotePentax4": {
+    "id": "0x927c",
+    "name": "MakerNotePentax4",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNotePentax5": {
+    "id": "0xc634",
+    "name": "MakerNotePentax5",
+    "group": "IFD0"
+  },
+  "MakerNotePentax6": {
+    "id": "0x927c",
+    "name": "MakerNotePentax6",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNotePhaseOne": {
+    "id": "0x927c",
+    "name": "MakerNotePhaseOne",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteReconyx": {
+    "id": "0x927c",
+    "name": "MakerNoteReconyx",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteReconyx2": {
+    "id": "0x927c",
+    "name": "MakerNoteReconyx2",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteReconyx3": {
+    "id": "0x927c",
+    "name": "MakerNoteReconyx3",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteRicohPentax": {
+    "id": "0xc634",
+    "name": "MakerNoteRicohPentax",
+    "group": "IFD0"
+  },
+  "MakerNoteRicoh": {
+    "id": "0x927c",
+    "name": "MakerNoteRicoh",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteRicoh2": {
+    "id": "0x927c",
+    "name": "MakerNoteRicoh2",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteRicohText": {
+    "id": "0x927c",
+    "name": "MakerNoteRicohText",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteSamsung1a": {
+    "id": "0x927c",
+    "name": "MakerNoteSamsung1a",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteSamsung1b": {
+    "id": "0x927c",
+    "name": "MakerNoteSamsung1b",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteSamsung2": {
+    "id": "0x927c",
+    "name": "MakerNoteSamsung2",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteSanyo": {
+    "id": "0x927c",
+    "name": "MakerNoteSanyo",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteSanyoC4": {
+    "id": "0x927c",
+    "name": "MakerNoteSanyoC4",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteSanyoPatch": {
+    "id": "0x927c",
+    "name": "MakerNoteSanyoPatch",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteSigma": {
+    "id": "0x927c",
+    "name": "MakerNoteSigma",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteSony": {
+    "id": "0x927c",
+    "name": "MakerNoteSony",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteSony2": {
+    "id": "0x927c",
+    "name": "MakerNoteSony2",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteSony3": {
+    "id": "0x927c",
+    "name": "MakerNoteSony3",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteSony4": {
+    "id": "0x927c",
+    "name": "MakerNoteSony4",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteSony5": {
+    "id": "0x927c",
+    "name": "MakerNoteSony5",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteSonyEricsson": {
+    "id": "0x927c",
+    "name": "MakerNoteSonyEricsson",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteSonySRF": {
+    "id": "0x927c",
+    "name": "MakerNoteSonySRF",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteUnknownText": {
+    "id": "0x927c",
+    "name": "MakerNoteUnknownText",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteUnknownBinary": {
+    "id": "0x927c",
+    "name": "MakerNoteUnknownBinary",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "MakerNoteUnknown": {
+    "id": "0x927c",
+    "name": "MakerNoteUnknown",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "UserComment": {
+    "id": "0x9286",
+    "name": "UserComment",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "SubSecTime": {
+    "id": "0x9290",
+    "name": "SubSecTime",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "SubSecTimeOriginal": {
+    "id": "0x9291",
+    "name": "SubSecTimeOriginal",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "SubSecTimeDigitized": {
+    "id": "0x9292",
+    "name": "SubSecTimeDigitized",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "MSDocumentText": {
+    "id": "0x932f",
+    "name": "MSDocumentText",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "MSPropertySetStorage": {
+    "id": "0x9330",
+    "name": "MSPropertySetStorage",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "MSDocumentTextPosition": {
+    "id": "0x9331",
+    "name": "MSDocumentTextPosition",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "ImageSourceData": {
+    "id": "0x935c",
+    "name": "ImageSourceData",
+    "group": "IFD0"
+  },
+  "AmbientTemperature": {
+    "id": "0x9400",
+    "name": "AmbientTemperature",
+    "group": "ExifIFD"
+  },
+  "Humidity": {
+    "id": "0x9401",
+    "name": "Humidity",
+    "group": "ExifIFD"
+  },
+  "Pressure": {
+    "id": "0x9402",
+    "name": "Pressure",
+    "group": "ExifIFD"
+  },
+  "WaterDepth": {
+    "id": "0x9403",
+    "name": "WaterDepth",
+    "group": "ExifIFD"
+  },
+  "Acceleration": {
+    "id": "0x9404",
+    "name": "Acceleration",
+    "group": "ExifIFD"
+  },
+  "CameraElevationAngle": {
+    "id": "0x9405",
+    "name": "CameraElevationAngle",
+    "group": "ExifIFD"
+  },
+  "XPTitle": {
+    "id": "0x9c9b",
+    "name": "XPTitle",
+    "group": "IFD0"
+  },
+  "XPComment": {
+    "id": "0x9c9c",
+    "name": "XPComment",
+    "group": "IFD0"
+  },
+  "XPAuthor": {
+    "id": "0x9c9d",
+    "name": "XPAuthor",
+    "group": "IFD0"
+  },
+  "XPKeywords": {
+    "id": "0x9c9e",
+    "name": "XPKeywords",
+    "group": "IFD0"
+  },
+  "XPSubject": {
+    "id": "0x9c9f",
+    "name": "XPSubject",
+    "group": "IFD0"
+  },
+  "FlashpixVersion": {
+    "id": "0xa000",
+    "name": "FlashpixVersion",
+    "group": "ExifIFD"
+  },
+  "ColorSpace": {
+    "id": "0xa001",
+    "name": "ColorSpace",
+    "group": "ExifIFD"
+  },
+  "ExifImageWidth": {
+    "id": "0xa002",
+    "name": "ExifImageWidth",
+    "group": "ExifIFD"
+  },
+  "ExifImageHeight": {
+    "id": "0xa003",
+    "name": "ExifImageHeight",
+    "group": "ExifIFD"
+  },
+  "RelatedSoundFile": {
+    "id": "0xa004",
+    "name": "RelatedSoundFile",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "InteropOffset": {
+    "id": "0xa005",
+    "name": "InteropOffset",
+    "group": "-"
+  },
+  "SamsungRawPointersOffset": {
+    "id": "0xa010",
+    "name": "SamsungRawPointersOffset",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "SamsungRawPointersLength": {
+    "id": "0xa011",
+    "name": "SamsungRawPointersLength",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "SamsungRawByteOrder": {
+    "id": "0xa101",
+    "name": "SamsungRawByteOrder",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "SamsungRawUnknown?": {
+    "id": "0xa102",
+    "name": "SamsungRawUnknown?",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "SubjectLocation": {
+    "id": "0xa214",
+    "name": "SubjectLocation",
+    "type": {
+      "type": "number",
+      "bit": 16,
+      "signed": false,
+      "length": 2,
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "FileSource": {
+    "id": "0xa300",
+    "name": "FileSource",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "SceneType": {
+    "id": "0xa301",
+    "name": "SceneType",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "CFAPattern": {
+    "id": "0xa302",
+    "name": "CFAPattern",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "CustomRendered": {
+    "id": "0xa401",
+    "name": "CustomRendered",
+    "group": "ExifIFD"
+  },
+  "ExposureMode": {
+    "id": "0xa402",
+    "name": "ExposureMode",
+    "group": "ExifIFD"
+  },
+  "WhiteBalance": {
+    "id": "0xfe4e",
+    "name": "WhiteBalance",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "DigitalZoomRatio": {
+    "id": "0xa404",
+    "name": "DigitalZoomRatio",
+    "group": "ExifIFD"
+  },
+  "FocalLengthIn35mmFormat": {
+    "id": "0xa405",
+    "name": "FocalLengthIn35mmFormat",
+    "group": "ExifIFD"
+  },
+  "SceneCaptureType": {
+    "id": "0xa406",
+    "name": "SceneCaptureType",
+    "group": "ExifIFD"
+  },
+  "GainControl": {
+    "id": "0xa407",
+    "name": "GainControl",
+    "group": "ExifIFD"
+  },
+  "Contrast": {
+    "id": "0xfe54",
+    "name": "Contrast",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "Saturation": {
+    "id": "0xfe55",
+    "name": "Saturation",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "Sharpness": {
+    "id": "0xfe56",
+    "name": "Sharpness",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "DeviceSettingDescription": {
+    "id": "0xa40b",
+    "name": "DeviceSettingDescription",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "SubjectDistanceRange": {
+    "id": "0xa40c",
+    "name": "SubjectDistanceRange",
+    "group": "ExifIFD"
+  },
+  "ImageUniqueID": {
+    "id": "0xa420",
+    "name": "ImageUniqueID",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "OwnerName": {
+    "id": "0xfde8",
+    "name": "OwnerName",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "SerialNumber": {
+    "id": "0xfde9",
+    "name": "SerialNumber",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "LensInfo": {
+    "id": "0xa432",
+    "name": "LensInfo",
+    "type": {
+      "type": "number",
+      "bit": 64,
+      "signed": false,
+      "length": 4,
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "LensMake": {
+    "id": "0xa433",
+    "name": "LensMake",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "LensModel": {
+    "id": "0xa434",
+    "name": "LensModel",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "LensSerialNumber": {
+    "id": "0xa435",
+    "name": "LensSerialNumber",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "Title": {
+    "id": "0xa436",
+    "name": "Title",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "Photographer": {
+    "id": "0xa437",
+    "name": "Photographer",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "ImageEditor": {
+    "id": "0xa438",
+    "name": "ImageEditor",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "CameraFirmware": {
+    "id": "0xa439",
+    "name": "CameraFirmware",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "RAWDevelopingSoftware": {
+    "id": "0xa43a",
+    "name": "RAWDevelopingSoftware",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "ImageEditingSoftware": {
+    "id": "0xa43b",
+    "name": "ImageEditingSoftware",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "MetadataEditingSoftware": {
+    "id": "0xa43c",
+    "name": "MetadataEditingSoftware",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "CompositeImage": {
+    "id": "0xa460",
+    "name": "CompositeImage",
+    "group": "ExifIFD"
+  },
+  "CompositeImageCount": {
+    "id": "0xa461",
+    "name": "CompositeImageCount",
+    "type": {
+      "type": "number",
+      "bit": 16,
+      "signed": false,
+      "length": 2,
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "CompositeImageExposureTimes": {
+    "id": "0xa462",
+    "name": "CompositeImageExposureTimes",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "ExifIFD"
+  },
+  "GDALMetadata": {
+    "id": "0xa480",
+    "name": "GDALMetadata",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "IFD0"
+  },
+  "GDALNoData": {
+    "id": "0xa481",
+    "name": "GDALNoData",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "IFD0"
+  },
+  "Gamma": {
+    "id": "0xa500",
+    "name": "Gamma",
+    "group": "ExifIFD"
+  },
+  "ExpandSoftware": {
+    "id": "0xafc0",
+    "name": "ExpandSoftware",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "ExpandLens": {
+    "id": "0xafc1",
+    "name": "ExpandLens",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "ExpandFilm": {
+    "id": "0xafc2",
+    "name": "ExpandFilm",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "ExpandFilterLens": {
+    "id": "0xafc3",
+    "name": "ExpandFilterLens",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "ExpandScanner": {
+    "id": "0xafc4",
+    "name": "ExpandScanner",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "ExpandFlashLamp": {
+    "id": "0xafc5",
+    "name": "ExpandFlashLamp",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "HasselbladRawImage": {
+    "id": "0xb4c3",
+    "name": "HasselbladRawImage",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "PixelFormat": {
+    "id": "0xbc01",
+    "name": "PixelFormat",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "Transformation": {
+    "id": "0xbc02",
+    "name": "Transformation",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "Uncompressed": {
+    "id": "0xbc03",
+    "name": "Uncompressed",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "ImageType": {
+    "id": "0xbc04",
+    "name": "ImageType",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "WidthResolution": {
+    "id": "0xbc82",
+    "name": "WidthResolution",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "HeightResolution": {
+    "id": "0xbc83",
+    "name": "HeightResolution",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "ImageOffset": {
+    "id": "0xbcc0",
+    "name": "ImageOffset",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "ImageByteCount": {
+    "id": "0xbcc1",
+    "name": "ImageByteCount",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "AlphaOffset": {
+    "id": "0xbcc2",
+    "name": "AlphaOffset",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "AlphaByteCount": {
+    "id": "0xbcc3",
+    "name": "AlphaByteCount",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "ImageDataDiscard": {
+    "id": "0xbcc4",
+    "name": "ImageDataDiscard",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "AlphaDataDiscard": {
+    "id": "0xbcc5",
+    "name": "AlphaDataDiscard",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "OceScanjobDesc": {
+    "id": "0xc427",
+    "name": "OceScanjobDesc",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "OceApplicationSelector": {
+    "id": "0xc428",
+    "name": "OceApplicationSelector",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "OceIDNumber": {
+    "id": "0xc429",
+    "name": "OceIDNumber",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "OceImageLogic": {
+    "id": "0xc42a",
+    "name": "OceImageLogic",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "Annotations": {
+    "id": "0xc44f",
+    "name": "Annotations",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "PrintIM": {
+    "id": "0xc4a5",
+    "name": "PrintIM",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "HasselbladXML": {
+    "id": "0xc519",
+    "name": "HasselbladXML",
+    "group": "-"
+  },
+  "HasselbladExif": {
+    "id": "0xc51b",
+    "name": "HasselbladExif",
+    "group": "-"
+  },
+  "OriginalFileName": {
+    "id": "0xc573",
+    "name": "OriginalFileName",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "USPTOOriginalContentType": {
+    "id": "0xc580",
+    "name": "USPTOOriginalContentType",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "CR2CFAPattern": {
+    "id": "0xc5e0",
+    "name": "CR2CFAPattern",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "DNGVersion": {
+    "id": "0xc612",
+    "name": "DNGVersion",
+    "type": {
+      "type": "number",
+      "bit": 8,
+      "signed": false,
+      "length": 4,
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "DNGBackwardVersion": {
+    "id": "0xc613",
+    "name": "DNGBackwardVersion",
+    "type": {
+      "type": "number",
+      "bit": 8,
+      "signed": false,
+      "length": 4,
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "UniqueCameraModel": {
+    "id": "0xc614",
+    "name": "UniqueCameraModel",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "IFD0"
+  },
+  "LocalizedCameraModel": {
+    "id": "0xc615",
+    "name": "LocalizedCameraModel",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "IFD0"
+  },
+  "CFAPlaneColor": {
+    "id": "0xc616",
+    "name": "CFAPlaneColor",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "SubIFD"
+  },
+  "CFALayout": {
+    "id": "0xc617",
+    "name": "CFALayout",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "SubIFD"
+  },
+  "LinearizationTable": {
+    "id": "0xc618",
+    "name": "LinearizationTable",
+    "group": "SubIFD"
+  },
+  "BlackLevelRepeatDim": {
+    "id": "0xc619",
+    "name": "BlackLevelRepeatDim",
+    "type": {
+      "type": "number",
+      "bit": 16,
+      "signed": false,
+      "length": 2,
+      "required": false,
+      "writable": false
+    },
+    "group": "SubIFD"
+  },
+  "BlackLevelDeltaH": {
+    "id": "0xc61b",
+    "name": "BlackLevelDeltaH",
+    "group": "SubIFD"
+  },
+  "BlackLevelDeltaV": {
+    "id": "0xc61c",
+    "name": "BlackLevelDeltaV",
+    "group": "SubIFD"
+  },
+  "WhiteLevel": {
+    "id": "0xc61d",
+    "name": "WhiteLevel",
+    "group": "SubIFD"
+  },
+  "DefaultScale": {
+    "id": "0xc61e",
+    "name": "DefaultScale",
+    "type": {
+      "type": "number",
+      "bit": 64,
+      "signed": false,
+      "length": 2,
+      "required": false,
+      "writable": false
+    },
+    "group": "SubIFD"
+  },
+  "DefaultCropOrigin": {
+    "id": "0xc61f",
+    "name": "DefaultCropOrigin",
+    "type": {
+      "type": "number",
+      "bit": 32,
+      "signed": false,
+      "length": 2,
+      "required": false,
+      "writable": false
+    },
+    "group": "SubIFD"
+  },
+  "DefaultCropSize": {
+    "id": "0xc620",
+    "name": "DefaultCropSize",
+    "type": {
+      "type": "number",
+      "bit": 32,
+      "signed": false,
+      "length": 2,
+      "required": false,
+      "writable": false
+    },
+    "group": "SubIFD"
+  },
+  "ColorMatrix1": {
+    "id": "0xc621",
+    "name": "ColorMatrix1",
+    "group": "IFD0"
+  },
+  "ColorMatrix2": {
+    "id": "0xc622",
+    "name": "ColorMatrix2",
+    "group": "IFD0"
+  },
+  "CameraCalibration1": {
+    "id": "0xc623",
+    "name": "CameraCalibration1",
+    "group": "IFD0"
+  },
+  "CameraCalibration2": {
+    "id": "0xc624",
+    "name": "CameraCalibration2",
+    "group": "IFD0"
+  },
+  "ReductionMatrix1": {
+    "id": "0xc625",
+    "name": "ReductionMatrix1",
+    "group": "IFD0"
+  },
+  "ReductionMatrix2": {
+    "id": "0xc626",
+    "name": "ReductionMatrix2",
+    "group": "IFD0"
+  },
+  "AnalogBalance": {
+    "id": "0xc627",
+    "name": "AnalogBalance",
+    "group": "IFD0"
+  },
+  "AsShotNeutral": {
+    "id": "0xc628",
+    "name": "AsShotNeutral",
+    "group": "IFD0"
+  },
+  "AsShotWhiteXY": {
+    "id": "0xc629",
+    "name": "AsShotWhiteXY",
+    "type": {
+      "type": "number",
+      "bit": 64,
+      "signed": false,
+      "length": 2,
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "BaselineExposure": {
+    "id": "0xc62a",
+    "name": "BaselineExposure",
+    "group": "IFD0"
+  },
+  "BaselineNoise": {
+    "id": "0xc62b",
+    "name": "BaselineNoise",
+    "group": "IFD0"
+  },
+  "BaselineSharpness": {
+    "id": "0xc62c",
+    "name": "BaselineSharpness",
+    "group": "IFD0"
+  },
+  "BayerGreenSplit": {
+    "id": "0xc62d",
+    "name": "BayerGreenSplit",
+    "group": "SubIFD"
+  },
+  "LinearResponseLimit": {
+    "id": "0xc62e",
+    "name": "LinearResponseLimit",
+    "group": "IFD0"
+  },
+  "CameraSerialNumber": {
+    "id": "0xc62f",
+    "name": "CameraSerialNumber",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "IFD0"
+  },
+  "DNGLensInfo": {
+    "id": "0xc630",
+    "name": "DNGLensInfo",
+    "type": {
+      "type": "number",
+      "bit": 64,
+      "signed": false,
+      "length": 4,
+      "required": false,
+      "writable": true
+    },
+    "group": "IFD0"
+  },
+  "ChromaBlurRadius": {
+    "id": "0xc631",
+    "name": "ChromaBlurRadius",
+    "group": "SubIFD"
+  },
+  "AntiAliasStrength": {
+    "id": "0xc632",
+    "name": "AntiAliasStrength",
+    "group": "SubIFD"
+  },
+  "ShadowScale": {
+    "id": "0xc633",
+    "name": "ShadowScale",
+    "group": "IFD0"
+  },
+  "SR2Private": {
+    "id": "0xc634",
+    "name": "SR2Private",
+    "group": "IFD0"
+  },
+  "DNGAdobeData": {
+    "id": "0xc634",
+    "name": "DNGAdobeData",
+    "group": "IFD0"
+  },
+  "DNGPrivateData": {
+    "id": "0xc634",
+    "name": "DNGPrivateData",
+    "group": "IFD0"
+  },
+  "MakerNoteSafety": {
+    "id": "0xc635",
+    "name": "MakerNoteSafety",
+    "group": "IFD0"
+  },
+  "RawImageSegmentation": {
+    "id": "0xc640",
+    "name": "RawImageSegmentation",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "CalibrationIlluminant1": {
+    "id": "0xc65a",
+    "name": "CalibrationIlluminant1",
+    "group": "IFD0"
+  },
+  "CalibrationIlluminant2": {
+    "id": "0xc65b",
+    "name": "CalibrationIlluminant2",
+    "group": "IFD0"
+  },
+  "BestQualityScale": {
+    "id": "0xc65c",
+    "name": "BestQualityScale",
+    "group": "SubIFD"
+  },
+  "RawDataUniqueID": {
+    "id": "0xc65d",
+    "name": "RawDataUniqueID",
+    "type": {
+      "type": "number",
+      "bit": 8,
+      "signed": false,
+      "length": 16,
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "AliasLayerMetadata": {
+    "id": "0xc660",
+    "name": "AliasLayerMetadata",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "OriginalRawFileName": {
+    "id": "0xc68b",
+    "name": "OriginalRawFileName",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "OriginalRawFileData": {
+    "id": "0xc68c",
+    "name": "OriginalRawFileData",
+    "group": "IFD0"
+  },
+  "ActiveArea": {
+    "id": "0xc68d",
+    "name": "ActiveArea",
+    "type": {
+      "type": "number",
+      "bit": 32,
+      "signed": false,
+      "length": 4,
+      "required": false,
+      "writable": false
+    },
+    "group": "SubIFD"
+  },
+  "MaskedAreas": {
+    "id": "0xc68e",
+    "name": "MaskedAreas",
+    "group": "SubIFD"
+  },
+  "AsShotICCProfile": {
+    "id": "0xc68f",
+    "name": "AsShotICCProfile",
+    "group": "IFD0"
+  },
+  "AsShotPreProfileMatrix": {
+    "id": "0xc690",
+    "name": "AsShotPreProfileMatrix",
+    "group": "IFD0"
+  },
+  "CurrentICCProfile": {
+    "id": "0xc691",
+    "name": "CurrentICCProfile",
+    "group": "IFD0"
+  },
+  "CurrentPreProfileMatrix": {
+    "id": "0xc692",
+    "name": "CurrentPreProfileMatrix",
+    "group": "IFD0"
+  },
+  "ColorimetricReference": {
+    "id": "0xc6bf",
+    "name": "ColorimetricReference",
+    "group": "IFD0"
+  },
+  "SRawType": {
+    "id": "0xc6c5",
+    "name": "SRawType",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "PanasonicTitle": {
+    "id": "0xc6d2",
+    "name": "PanasonicTitle",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "PanasonicTitle2": {
+    "id": "0xc6d3",
+    "name": "PanasonicTitle2",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "CameraCalibrationSig": {
+    "id": "0xc6f3",
+    "name": "CameraCalibrationSig",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "ProfileCalibrationSig": {
+    "id": "0xc6f4",
+    "name": "ProfileCalibrationSig",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "ProfileIFD": {
+    "id": "0xc6f5",
+    "name": "ProfileIFD",
+    "group": "IFD0"
+  },
+  "AsShotProfileName": {
+    "id": "0xc6f6",
+    "name": "AsShotProfileName",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "NoiseReductionApplied": {
+    "id": "0xc6f7",
+    "name": "NoiseReductionApplied",
+    "group": "SubIFD"
+  },
+  "ProfileName": {
+    "id": "0xc6f8",
+    "name": "ProfileName",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "ProfileHueSatMapDims": {
+    "id": "0xc6f9",
+    "name": "ProfileHueSatMapDims",
+    "type": {
+      "type": "number",
+      "bit": 32,
+      "signed": false,
+      "length": 3,
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "ProfileHueSatMapData1": {
+    "id": "0xc6fa",
+    "name": "ProfileHueSatMapData1",
+    "group": "IFD0"
+  },
+  "ProfileHueSatMapData2": {
+    "id": "0xc6fb",
+    "name": "ProfileHueSatMapData2",
+    "group": "IFD0"
+  },
+  "ProfileToneCurve": {
+    "id": "0xc6fc",
+    "name": "ProfileToneCurve",
+    "group": "IFD0"
+  },
+  "ProfileEmbedPolicy": {
+    "id": "0xc6fd",
+    "name": "ProfileEmbedPolicy",
+    "group": "IFD0"
+  },
+  "ProfileCopyright": {
+    "id": "0xc6fe",
+    "name": "ProfileCopyright",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "ForwardMatrix1": {
+    "id": "0xc714",
+    "name": "ForwardMatrix1",
+    "group": "IFD0"
+  },
+  "ForwardMatrix2": {
+    "id": "0xc715",
+    "name": "ForwardMatrix2",
+    "group": "IFD0"
+  },
+  "PreviewApplicationName": {
+    "id": "0xc716",
+    "name": "PreviewApplicationName",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "PreviewApplicationVersion": {
+    "id": "0xc717",
+    "name": "PreviewApplicationVersion",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "PreviewSettingsName": {
+    "id": "0xc718",
+    "name": "PreviewSettingsName",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "PreviewSettingsDigest": {
+    "id": "0xc719",
+    "name": "PreviewSettingsDigest",
+    "group": "IFD0"
+  },
+  "PreviewColorSpace": {
+    "id": "0xc71a",
+    "name": "PreviewColorSpace",
+    "group": "IFD0"
+  },
+  "PreviewDateTime": {
+    "id": "0xc71b",
+    "name": "PreviewDateTime",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "RawImageDigest": {
+    "id": "0xc71c",
+    "name": "RawImageDigest",
+    "type": {
+      "type": "number",
+      "bit": 8,
+      "signed": false,
+      "length": 16,
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "OriginalRawFileDigest": {
+    "id": "0xc71d",
+    "name": "OriginalRawFileDigest",
+    "type": {
+      "type": "number",
+      "bit": 8,
+      "signed": false,
+      "length": 16,
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "SubTileBlockSize": {
+    "id": "0xc71e",
+    "name": "SubTileBlockSize",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "RowInterleaveFactor": {
+    "id": "0xc71f",
+    "name": "RowInterleaveFactor",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "-"
+  },
+  "ProfileLookTableDims": {
+    "id": "0xc725",
+    "name": "ProfileLookTableDims",
+    "type": {
+      "type": "number",
+      "bit": 32,
+      "signed": false,
+      "length": 3,
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "ProfileLookTableData": {
+    "id": "0xc726",
+    "name": "ProfileLookTableData",
+    "group": "IFD0"
+  },
+  "OpcodeList1": {
+    "id": "0xc740",
+    "name": "OpcodeList1",
+    "group": "SubIFD"
+  },
+  "OpcodeList2": {
+    "id": "0xc741",
+    "name": "OpcodeList2",
+    "group": "SubIFD"
+  },
+  "OpcodeList3": {
+    "id": "0xc74e",
+    "name": "OpcodeList3",
+    "group": "SubIFD"
+  },
+  "NoiseProfile": {
+    "id": "0xc761",
+    "name": "NoiseProfile",
+    "group": "SubIFD"
+  },
+  "TimeCodes": {
+    "id": "0xc763",
+    "name": "TimeCodes",
+    "group": "IFD0"
+  },
+  "FrameRate": {
+    "id": "0xc764",
+    "name": "FrameRate",
+    "group": "IFD0"
+  },
+  "TStop": {
+    "id": "0xc772",
+    "name": "TStop",
+    "group": "IFD0"
+  },
+  "ReelName": {
+    "id": "0xc789",
+    "name": "ReelName",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "IFD0"
+  },
+  "OriginalDefaultFinalSize": {
+    "id": "0xc791",
+    "name": "OriginalDefaultFinalSize",
+    "type": {
+      "type": "number",
+      "bit": 32,
+      "signed": false,
+      "length": 2,
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "OriginalBestQualitySize": {
+    "id": "0xc792",
+    "name": "OriginalBestQualitySize",
+    "type": {
+      "type": "number",
+      "bit": 32,
+      "signed": false,
+      "length": 2,
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "OriginalDefaultCropSize": {
+    "id": "0xc793",
+    "name": "OriginalDefaultCropSize",
+    "type": {
+      "type": "number",
+      "bit": 64,
+      "signed": false,
+      "length": 2,
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "CameraLabel": {
+    "id": "0xc7a1",
+    "name": "CameraLabel",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "IFD0"
+  },
+  "ProfileHueSatMapEncoding": {
+    "id": "0xc7a3",
+    "name": "ProfileHueSatMapEncoding",
+    "group": "IFD0"
+  },
+  "ProfileLookTableEncoding": {
+    "id": "0xc7a4",
+    "name": "ProfileLookTableEncoding",
+    "group": "IFD0"
+  },
+  "BaselineExposureOffset": {
+    "id": "0xc7a5",
+    "name": "BaselineExposureOffset",
+    "group": "IFD0"
+  },
+  "DefaultBlackRender": {
+    "id": "0xc7a6",
+    "name": "DefaultBlackRender",
+    "group": "IFD0"
+  },
+  "NewRawImageDigest": {
+    "id": "0xc7a7",
+    "name": "NewRawImageDigest",
+    "type": {
+      "type": "number",
+      "bit": 8,
+      "signed": false,
+      "length": 16,
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "RawToPreviewGain": {
+    "id": "0xc7a8",
+    "name": "RawToPreviewGain",
+    "group": "IFD0"
+  },
+  "CacheVersion": {
+    "id": "0xc7aa",
+    "name": "CacheVersion",
+    "group": "SubIFD2"
+  },
+  "DefaultUserCrop": {
+    "id": "0xc7b5",
+    "name": "DefaultUserCrop",
+    "type": {
+      "type": "number",
+      "bit": 64,
+      "signed": false,
+      "length": 4,
+      "required": false,
+      "writable": false
+    },
+    "group": "SubIFD"
+  },
+  "NikonNEFInfo": {
+    "id": "0xc7d5",
+    "name": "NikonNEFInfo",
+    "group": "-"
+  },
+  "DepthFormat": {
+    "id": "0xc7e9",
+    "name": "DepthFormat",
+    "group": "IFD0"
+  },
+  "DepthNear": {
+    "id": "0xc7ea",
+    "name": "DepthNear",
+    "group": "IFD0"
+  },
+  "DepthFar": {
+    "id": "0xc7eb",
+    "name": "DepthFar",
+    "group": "IFD0"
+  },
+  "DepthUnits": {
+    "id": "0xc7ec",
+    "name": "DepthUnits",
+    "group": "IFD0"
+  },
+  "DepthMeasureType": {
+    "id": "0xc7ed",
+    "name": "DepthMeasureType",
+    "group": "IFD0"
+  },
+  "EnhanceParams": {
+    "id": "0xc7ee",
+    "name": "EnhanceParams",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "ProfileGainTableMap": {
+    "id": "0xcd2d",
+    "name": "ProfileGainTableMap",
+    "group": "SubIFD"
+  },
+  "SemanticName": {
+    "id": "0xcd2e",
+    "name": "SemanticName",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "SubIFD"
+  },
+  "SemanticInstanceID": {
+    "id": "0xcd30",
+    "name": "SemanticInstanceID",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "SubIFD"
+  },
+  "CalibrationIlluminant3": {
+    "id": "0xcd31",
+    "name": "CalibrationIlluminant3",
+    "group": "IFD0"
+  },
+  "CameraCalibration3": {
+    "id": "0xcd32",
+    "name": "CameraCalibration3",
+    "group": "IFD0"
+  },
+  "ColorMatrix3": {
+    "id": "0xcd33",
+    "name": "ColorMatrix3",
+    "group": "IFD0"
+  },
+  "ForwardMatrix3": {
+    "id": "0xcd34",
+    "name": "ForwardMatrix3",
+    "group": "IFD0"
+  },
+  "IlluminantData1": {
+    "id": "0xcd35",
+    "name": "IlluminantData1",
+    "group": "IFD0"
+  },
+  "IlluminantData2": {
+    "id": "0xcd36",
+    "name": "IlluminantData2",
+    "group": "IFD0"
+  },
+  "IlluminantData3": {
+    "id": "0xcd37",
+    "name": "IlluminantData3",
+    "group": "IFD0"
+  },
+  "MaskSubArea": {
+    "id": "0xcd38",
+    "name": "MaskSubArea",
+    "type": {
+      "type": "no",
+      "required": false,
+      "writable": false
+    },
+    "group": "SubIFD"
+  },
+  "ProfileHueSatMapData3": {
+    "id": "0xcd39",
+    "name": "ProfileHueSatMapData3",
+    "group": "IFD0"
+  },
+  "ReductionMatrix3": {
+    "id": "0xcd3a",
+    "name": "ReductionMatrix3",
+    "group": "IFD0"
+  },
+  "RGBTables": {
+    "id": "0xcd3b",
+    "name": "RGBTables",
+    "group": "IFD0"
+  },
+  "ProfileGainTableMap2": {
+    "id": "0xcd40",
+    "name": "ProfileGainTableMap2",
+    "group": "IFD0"
+  },
+  "ColumnInterleaveFactor": {
+    "id": "0xcd43",
+    "name": "ColumnInterleaveFactor",
+    "group": "SubIFD"
+  },
+  "ImageSequenceInfo": {
+    "id": "0xcd44",
+    "name": "ImageSequenceInfo",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "ImageStats": {
+    "id": "0xcd46",
+    "name": "ImageStats",
+    "group": "IFD0"
+  },
+  "ProfileDynamicRange": {
+    "id": "0xcd47",
+    "name": "ProfileDynamicRange",
+    "type": {
+      "type": "undef",
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "ProfileGroupName": {
+    "id": "0xcd48",
+    "name": "ProfileGroupName",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": false
+    },
+    "group": "IFD0"
+  },
+  "Padding": {
+    "id": "0xea1c",
+    "name": "Padding",
+    "group": "ExifIFD"
+  },
+  "OffsetSchema": {
+    "id": "0xea1d",
+    "name": "OffsetSchema",
+    "group": "ExifIFD"
+  },
+  "Lens": {
+    "id": "0xfdea",
+    "name": "Lens",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "KDC_IFD": {
+    "id": "0xfe00",
+    "name": "KDC_IFD",
+    "group": "-"
+  },
+  "RawFile": {
+    "id": "0xfe4c",
+    "name": "RawFile",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "Converter": {
+    "id": "0xfe4d",
+    "name": "Converter",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "Exposure": {
+    "id": "0xfe51",
+    "name": "Exposure",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "Shadows": {
+    "id": "0xfe52",
+    "name": "Shadows",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "Brightness": {
+    "id": "0xfe53",
+    "name": "Brightness",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "Smoothness": {
+    "id": "0xfe57",
+    "name": "Smoothness",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  },
+  "MoireFilter": {
+    "id": "0xfe58",
+    "name": "MoireFilter",
+    "type": {
+      "type": "string",
+      "required": false,
+      "writable": true
+    },
+    "group": "ExifIFD"
+  }
+}

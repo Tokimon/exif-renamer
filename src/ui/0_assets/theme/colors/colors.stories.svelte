@@ -1,13 +1,12 @@
 <script lang="ts" context="module">
   import { Story } from '@storybook/addon-svelte-csf';
-
   import Section from '~/ui/1_globals/story-helpers/Section.svelte';
   import Color from './Color.svelte';
 
   export const meta = {
-    title: "Theme/Colors",
-    component: Color
-  }
+    title: 'Theme/Colors',
+    component: Color,
+  };
 </script>
 
 <Story name="Default">

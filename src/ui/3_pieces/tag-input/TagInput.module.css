@@ -1,0 +1,44 @@
+.tag {
+  padding: 0 1rem;
+  background: oklch(from var(--primary) 0.9 0.1 h);
+  flex: 0 1 fit-content;
+  white-space: nowrap;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+
+  &:hover .remove {
+    display: flex;
+  }
+}
+
+.remove:global(.button) {
+  position: absolute;
+  inset: 0;
+  height: auto;
+  display: none;
+  backdrop-filter: blur(2px);
+  cursor: pointer;
+  background: transparent;
+
+  &:global(.trigger) {
+    background: oklch(from var(--danger) l c h / 0.5);
+    transition: background-color 0.8s linear;
+  }
+
+  & > :global(.svg-icon) {
+    height: 80%;
+    width: auto;
+    margin: auto;
+    filter: drop-shadow(0 0 6px var(--text));
+  }
+}
+
+.input {
+  flex: 1 1 0;
+  min-width: 10rem;
+}

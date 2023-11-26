@@ -1,38 +1,52 @@
 <script lang="ts">
-  import { createEventDispatcher } from 'svelte';
-  import classnames from 'classnames';
-
-  import Overlay from '~/ui/2_base/overlay/Overlay.svelte';
   import TinyButton from '~/ui/3_pieces/tiny-button/TinyButton.svelte';
 
   export let style = '';
   export let className = '';
 
-  const dispatch = createEventDispatcher();
-
-  const onClose = () => dispatch('close');
+  export let modal: HTMLDialogElement | undefined;
 </script>
 
 <style>
-  .window {
-    position: relative;
+  .modal {
     background: white;
-    width: 300px;
-    height: 300px;
-    border-radius: 2rem;
-    box-shadow: 0 0.5rem 1rem rgba(25, 25, 25, 0.3);
+    width: auto;
+    height: auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 0 20px -5px black;
+    padding: 0;
+
+    &::backdrop {
+      background: rgb(10 10 10 / 80%);
+      backdrop-filter: blur(8px);
+    }
 
     & .close-button {
       position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
+      z-index: 9;
+      top: 1rem;
+      right: 1rem;
     }
+
+    &[open] > .content {
+      display: block;
+    }
+  }
+
+  .content {
+    padding: 1rem;
+    padding-top: 3rem;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    box-sizing: border-box;
   }
 </style>
 
-<Overlay on:click="{onClose}">
-  <div class="window {className}" {style} role="dialog">
-    <TinyButton color="secondary" icon="close" className="close-button" on:click="{onClose}" />
-    <slot />
-  </div>
-</Overlay>
+<!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
+<dialog bind:this="{modal}" class="modal {className}" {style} on:close on:click|self="{() => modal?.close()}">
+  <TinyButton color="secondary" icon="close" className="close-button" on:click="{() => modal?.close()}" />
+  <div class="content"><slot /></div>
+</dialog>

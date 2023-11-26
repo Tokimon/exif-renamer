@@ -6,11 +6,17 @@
     title: 'Components/FileTile',
     component: FileTile,
   };
+
+  const baseArgs = {
+    name: 'Some long file name.png',
+    count: 1,
+    selected: false,
+  };
 </script>
 
 <Template let:args>
-  <FileTile {...args} on:change />
+  <FileTile {...args} style="width: 100px" on:click />
 </Template>
 
-<Story name="No Thumbnail" args="{{ name: 'Some long file name.png' }}" />
-<Story name="With Thumbnail" args="{{ name: 'Some long file name.png', thumbnail: 'https://placekitten.com/100/100' }}" />
+<Story name="No Thumbnail" args="{{ ...baseArgs }}" />
+<Story name="With Thumbnail" args="{{ ...baseArgs, thumbnail: 'https://placekitten.com/100/100' }}" />

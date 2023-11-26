@@ -1,17 +1,19 @@
 <script lang="ts" context="module">
   import { Story } from '@storybook/addon-svelte-csf';
+  import mockFiles from '~/ui/1_globals/story-helpers/mock-files';
   import FilesPage from './FilesPage.svelte';
-
-  import createFileInfoList from '~/ui/1_globals/story-helpers/createFileInfoList';
 
   export const meta = {
     title: 'Pages/FilesPage',
     component: FilesPage,
+    parameters: {
+      layout: 'fullscreen',
+    },
   };
 
-  const files = createFileInfoList();
+  mockFiles();
 </script>
 
 <Story name="Default">
-  <FilesPage {files} />
+  <FilesPage />
 </Story>

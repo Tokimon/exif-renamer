@@ -1,9 +1,10 @@
 <script lang="ts">
   export let className: string = '';
+  export let style: string = '';
 </script>
 
 <style>
-  .container {
+  .focus-dot {
     font-size: 1rem;
     border-radius: 0.8rem;
     height: 1.6rem;
@@ -20,6 +21,6 @@
   }
 </style>
 
-<div class="container {className}">
+<div class="focus-dot {className}" {style}>
   <slot />
 </div>

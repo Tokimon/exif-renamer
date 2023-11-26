@@ -1,20 +1,31 @@
 .icon {
-  width: 1em;
-  height: 1em;
-  padding: 0.2em 0 0 0.5em;
+  width: auto;
   flex: 0 0 auto;
   display: block;
   fill: var(--primary);
+  grid-area: icon;
+  padding: 0.5rem;
+}
+
+.counter {
+  grid-area: icon;
+  color: var(--primary) !important;
+  background: white !important;
+  place-self: center;
+  translate: 0 2px;
 }
 
 .folder {
-  flex: 1 1 auto;
+  grid-area: folder;
+  padding: 0 0.3rem;
 }
 
 .display {
-  display: flex;
-  margin: 0;
+  display: grid;
+  grid-template-columns: 4.3rem 1fr;
+  grid-template-areas: 'icon folder';
   align-items: center;
+  margin: 0;
   overflow: hidden;
   background: none;
   border: none;

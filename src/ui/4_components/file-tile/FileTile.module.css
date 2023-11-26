@@ -1,66 +1,59 @@
 .dot {
   position: absolute;
-  right: 6px;
-  top: 75px;
+  right: 4cqw;
+  bottom: 22cqw;
   z-index: 1;
   background: var(--highlight-color);
+  font-size: 13cqw;
 }
 
-.file-image {
+.name {
+  font-size: max(1.2rem, 13cqw);
+  max-width: 100%;
+}
+
+.image {
   width: 100%;
-  height: 100px;
   border-radius: 4px;
   overflow: hidden;
-  display: flex;
-
-  & > * {
-    flex: 1;
-  }
-}
-
-.checkbox {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  opacity: 0;
+  aspect-ratio: 1;
 }
 
 .file-tile {
   --highlight-color: var(--text);
 
   position: relative;
-  width: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
   box-shadow: none;
   border-radius: 0.3rem;
-  padding: 0.3rem;
+  padding: 0.5rem;
   transition: box-shadow 0.2s;
+  box-sizing: border-box;
+  background: white;
+  container-type: inline-size;
 
   &:hover,
-  &:has(:checked) {
-    box-shadow: 0 0 5px var(--highlight-color);
-  }
+  &[aria-selected='true'] {
+    background-color: color-mix(in srgb, var(--highlight-color) 36%, white);
 
-  &:has(:checked) {
-    --highlight-color: var(--secondary);
-
-    .file-image {
-      background-color: var(--highlight-color);
-
-      & :global(.image) {
+    .image {
+      &:global(.image) {
         filter: grayscale(0.5);
         opacity: 0.6;
       }
 
-      & :global(.no-image) {
+      &:global(.no-image) {
         color: var(--highlight-color);
         background-color: rgba(255, 255, 255, 0.8);
       }
     }
+  }
+
+  &[aria-selected='true'] {
+    --highlight-color: var(--secondary);
   }
 
   &:hover {

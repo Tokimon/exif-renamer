@@ -1,5 +1,7 @@
 <script lang="ts" context="module">
-  import { Story, Template } from '@storybook/addon-svelte-csf';
+  import { Story } from '@storybook/addon-svelte-csf';
+  import Section from '~/ui/1_globals/story-helpers/Section.svelte';
+  import { iconNames } from '~/ui/0_assets/svg/icons';
   import SvgIcon from './SvgIcon.svelte';
 
   export const meta = {
@@ -8,8 +10,29 @@
   };
 </script>
 
-<Template let:args>
-  <SvgIcon style="width: 5rem; height: 5rem;" {...args} />
-</Template>
+<style>
+  .icon {
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    box-shadow: 0 0 2px var(--text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
 
-<Story name="Default" args="{{ svg: 'book' }}" />
+  :global(.icon-example) {
+    width: 2rem;
+  }
+</style>
+
+<Story name="All Icons">
+  <Section gridMin="{130}">
+    {#each iconNames as name}
+      <div class="icon">
+        <SvgIcon svg="{name}" className="icon-example" />
+        {name}
+      </div>
+    {/each}
+  </Section>
+</Story>

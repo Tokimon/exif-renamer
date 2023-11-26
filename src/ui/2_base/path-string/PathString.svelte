@@ -14,10 +14,9 @@
 </script>
 
 <style>
-  .container {
+  .path-string {
     white-space: nowrap;
     display: flex;
-    padding: 0.3em 0.5em;
     box-sizing: border-box;
     overflow: hidden;
 
@@ -36,7 +35,7 @@
   }
 </style>
 
-<span class="container {className}" class:empty="{!endStr}" {style}>
+<span class="path-string {className}" class:empty="{!endStr}" {style}>
   {#if beginStr}<span class="beginning">{beginStr}</span>{/if}
   <span class="end">{endStr ? separator + endStr : placeholder}</span>
 </span>
