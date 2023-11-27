@@ -1,10 +1,17 @@
 <script lang="ts" context="module">
   import { Story, Template } from '@storybook/addon-svelte-csf';
+  import { iconNames } from '~/ui/0_assets/svg/icons';
   import Button from './Button.svelte';
 
   export const meta = {
     title: 'Base/Button',
     component: Button,
+    argTypes: {
+      icon: {
+        options: iconNames,
+        control: { type: 'select' },
+      },
+    },
   };
 </script>
 
@@ -15,9 +22,7 @@
 </style>
 
 <Template let:args>
-  <Button {...args} target="{args.href && '_blank'}" on:click>
-    {args.text ?? ''}
-  </Button>
+  <Button {...args} target="{args.href && '_blank'}" on:click>{args.text ?? ''}</Button>
 </Template>
 
 <Story name="Default" args="{{ text: 'Default Button' }}" />

@@ -7,6 +7,7 @@ import type { FileInfo } from '~/types/file';
 
 export const fileInfoStore = writable<FileInfo[]>([]);
 export const selectedFileStore = writable<Set<string>>(new Set());
+export const deletedFileStore = writable<Set<string>>(new Set());
 
 // export default derived(pathsStore, (paths: string[], set: (value: FileInfo[]) => void) => {
 //   set(groupByFileName(paths));

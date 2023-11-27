@@ -24,8 +24,17 @@
 
 <style>
   .bg {
+    --w: 60px;
+    --h: 14px;
+
     translate: 0 0;
-    grid-area: 1 / 2;
+    display: grid;
+    width: var(--w);
+
+    &::after,
+    input {
+      grid-area: 1 / 1;
+    }
 
     &::after {
       content: '';
@@ -41,12 +50,11 @@
   input {
     appearance: none;
     margin: 0;
-    grid-area: 1 / 2;
+    width: 100%;
 
     &::-webkit-slider-thumb {
       width: 8px;
       height: var(--h);
-      /* background: oklch(from var(--secondary) 0.9 0.09 h); */
       background: white;
       border-radius: 2px;
       cursor: pointer;
@@ -61,37 +69,17 @@
   }
 
   .zoom-level {
-    --w: 60px;
-    --h: 14px;
-
     align-self: center;
-    display: grid;
-    grid-template-columns: 6px var(--w) 8px;
-    grid-template-rows: var(--h);
-    gap: 4px;
-    align-items: end;
-
-    &::before,
-    &::after {
-      content: '';
-      background: lightgray;
-      border-radius: 2px;
-      box-shadow: 0 0 0 1px gray;
-    }
-
-    &::before {
-      grid-area: 1 / 1;
-      aspect-ratio: 1 / 1;
-    }
-
-    &::after {
-      grid-area: 1 / 3;
-      height: var(--h);
-    }
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-end;
   }
 </style>
 
 <div class="zoom-level">
-  <span class="bg"></span>
-  <input type="range" min="{pctMin}" max="{pctMax}" step="1" bind:value="{$zoomStore}" />
+  <span class="bg">
+    <input type="range" min="{pctMin}" max="{pctMax}" step="1" bind:value="{$zoomStore}" />
+  </span>
+
+  <b>{$zoomStore} %</b>
 </div>

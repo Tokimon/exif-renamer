@@ -15,5 +15,5 @@
 </script>
 
 <Story name="Default">
-  <FilesPage />
+  <FilesPage on:click />
 </Story>

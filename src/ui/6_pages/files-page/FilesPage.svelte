@@ -3,8 +3,9 @@
   import type { FileInfo } from '~/types/file';
   import { fileInfoStore, selectedFileStore } from '~/ui/1_globals/stores/fileInfoStore';
   import Button from '~/ui/2_base/button/Button.svelte';
-  import FocusDot from '~/ui/2_base/focus-dot/FocusDot.svelte';
   import DirectoryDisplay from '~/ui/3_pieces/directory-display/DirectoryDisplay.svelte';
+  import NavButton from '~/ui/3_pieces/nav-button/NavButton.svelte';
+  import TrashButton from '~/ui/3_pieces/trash-button/TrashButton.svelte';
   import FileList from '~/ui/4_components/file-list/FileList.svelte';
   import ZoomLevel from '~/ui/4_components/zoom-level/ZoomLevel.svelte';
 
@@ -83,8 +84,10 @@
     grid-area: actions;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-    padding: 1.3rem;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding: 1.3rem 0.5rem;
     background: #efefef;
   }
 
@@ -93,20 +96,6 @@
     grid-area: footer;
     display: grid;
     grid-template-columns: subgrid;
-  }
-
-  .trash {
-    grid-column: 3;
-    display: grid;
-
-    & > * {
-      grid-area: 1 / 1;
-    }
-  }
-
-  :global(.dir) {
-    font-size: 2rem;
-    grid-column: span 2 / 1;
   }
 
   :global(.action.button) {
@@ -135,9 +124,6 @@
   <main>
     <menu class="toolbar">
       <ZoomLevel />
-
-      <Button icon="edit" color="valid" />
-      <Button icon="trash" color="danger" />
     </menu>
 
     <FileList />
@@ -157,39 +143,19 @@
   </aside>
 
   <nav>
-    <Button icon="folder" className="action" color="text" />
-    <Button icon="calendar" className="action" color="text" />
-    <Button icon="filter" className="action" color="text" />
-    <Button icon="play" className="action" color="text" />
+    <NavButton icon="play">Actions</NavButton>
+    <NavButton icon="folder">Albums</NavButton>
+    <NavButton icon="filter">Filter results</NavButton>
   </nav>
 
   <footer>
     <DirectoryDisplay
-      className="dir"
+      style="font-size: 2rem; grid-column: span 2 / 1;"
       path="path/to/some/strange/image/folder"
       count="{$fileInfoStore.length}"
       on:click="{() => dispatch('dir-click')}"
     />
 
-    <div class="trash">
-      <Button icon="trash" className="action" color="text" disabled="{!deleteCount}" style="padding: 1.5rem;" />
-      {#if deleteCount}
-        <FocusDot className="trash-count" style="z-index: 1; place-self: end start; translate: 50% -50%;">
-          {deleteCount}
-        </FocusDot>
-      {/if}
-    </div>
+    <TrashButton style="grid-column: 3; margin: 0.5rem;" />
   </footer>
-
-  <!-- <FileFilterBar style="grid-column: 1" />
-
-  <FileList style="grid-column: 1" />
-
-  <aside>
-    {#if selectedFiles.length}
-      <div class="drawer" transition:slide="{{ axis: 'x', duration: 200 }}">
-        <FileEditPanel files="{selectedFiles}" style="flex: 0 0 auto; width: 28rem;" />
-      </div>
-    {/if}
-  </aside> -->
 </div>
