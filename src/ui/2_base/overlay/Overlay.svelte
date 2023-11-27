@@ -1,30 +1,27 @@
+<script lang="ts">
+  export let overlay: HTMLDivElement | undefined;
+  export let style = '';
+  export let className = '';
+
+  const nonNativeProps: { popover?: boolean | 'manual' | 'auto' } = {
+    popover: true,
+  };
+</script>
+
 <style>
   .overlay {
-    position: fixed;
-    inset: 0;
-    z-index: 9;
-    padding: 1rem;
-    display: grid;
-    grid-template:
-      [overlay-start] 2rem [content-start] 1fr [content-end] 2rem [overlay-end] /
-      [overlay-start] 2rem [content-start] 1fr [content-end] 2rem [overlay-end];
-    place-items: center;
-    place-content: center;
-  }
-
-  .bg {
-    background: oklch(from var(--text) l c h / 0.7);
-    grid-area: overlay;
-    width: 100%;
+    box-sizing: border-box;
     height: 100%;
-  }
+    width: 100%;
+    background: rgb(10 10 10 / 80%);
+    backdrop-filter: blur(8px);
 
-  .content {
-    grid-area: content;
+    &:popover-open {
+      display: flex;
+    }
   }
 </style>
 
-<div class="overlay">
-  <div class="bg" on:click|self role="modal"></div>
-  <div class="content"><slot /></div>
+<div bind:this="{overlay}" class="overlay {className}" {style} {...nonNativeProps}>
+  <slot />
 </div>

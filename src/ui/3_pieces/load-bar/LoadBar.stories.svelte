@@ -3,7 +3,7 @@
   import LoadBar from './LoadBar.svelte';
 
   export const meta = {
-    title: 'Generics/Load Bar',
+    title: 'Pieces/LoadBar',
     component: LoadBar,
     argTypes: {
       value: {

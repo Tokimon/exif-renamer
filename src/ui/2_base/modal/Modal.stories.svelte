@@ -4,7 +4,7 @@
   import Modal from './Modal.svelte';
 
   export const meta = {
-    title: 'Components/Modal',
+    title: 'Base/Modal',
     argTypes: {
       width: {
         control: {

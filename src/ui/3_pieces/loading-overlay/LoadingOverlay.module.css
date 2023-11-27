@@ -1,0 +1,15 @@
+.loading-overlay {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.6rem;
+  color: white;
+
+  & svg {
+    width: 70px;
+    height: 70px;
+    fill: white;
+    margin: 10px;
+  }
+}

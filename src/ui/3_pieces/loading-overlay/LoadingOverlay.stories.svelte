@@ -4,7 +4,7 @@
   import { onMount } from 'svelte';
 
   export const meta = {
-    title: 'Generics/LoadingOverlay',
+    title: 'Pieces/LoadingOverlay',
     component: LoadingOverlay,
     argTypes: {
       text: { control: 'text' },
