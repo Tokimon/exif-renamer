@@ -1,7 +1,8 @@
 <script lang="ts" context="module">
-  import type { Colors } from '~/ui/0_assets/theme/colors/types';
-  import SvgIcon from '~/ui/2_base/svg-icon/SvgIcon.svelte';
   import type { ComponentProps } from 'svelte';
+  import type { Colors } from '~/ui/0_assets/theme/colors/types';
+  import { longPress } from '~/ui/1_globals/actions/long-press';
+  import SvgIcon from '~/ui/2_base/svg-icon/SvgIcon.svelte';
 </script>
 
 <script lang="ts">
@@ -12,11 +13,15 @@
   export let disabled = false;
   export let noHover = false;
   export let color: Colors = 'primary';
+  export let hoverColor: Colors | '' = '';
   export let href = '';
   export let target = '';
   export let title = '';
+  export let longpress = 0;
   export let className = '';
   export let style = '';
+
+  const [longPressAction, longPressDuration] = longpress ? [longPress, longpress] : [() => {}, 0];
 
   let canHover = true;
   $: canHover = !disabled && !noHover && !_static;
@@ -26,6 +31,8 @@
   .button {
     --color: var(--initial-color);
 
+    appearance: none;
+    overflow: hidden;
     padding: 0.5em;
     line-height: 1.4;
     display: inline-flex;
@@ -42,19 +49,23 @@
     transition-property: all;
     transition-duration: 0.2s;
     transition-timing-function: ease;
-    will-change: background-color, opacity;
     background: var(--color);
 
     &.disabled {
-      --color: color-mix(in oklch, var(--initial-color) 60%, white);
+      opacity: 0.7;
     }
 
     &:focus {
       outline: none;
     }
 
-    & .content:empty {
-      display: none;
+    & .content {
+      display: block;
+      overflow: hidden;
+
+      &:empty {
+        display: none;
+      }
     }
 
     & .svg-icon {
@@ -67,7 +78,7 @@
 
       &:hover,
       &:focus {
-        --color: color-mix(in oklch, var(--initial-color) 85%, black);
+        --color: var(--hover-color, color-mix(in oklch, var(--initial-color) 85%, black));
       }
     }
   }
@@ -80,6 +91,7 @@
     class:disabled
     class:no-hover="{!canHover}"
     style:--initial-color="{`var(--${color})`}"
+    style:--hover-color="{hoverColor ? `var(--${hoverColor})` : ''}"
     {style}
     {title}
   >
@@ -87,7 +99,24 @@
     <span class="content"><slot /></span>
   </span>
 {:else if href}
-  <a {href} {target} style:--color="{`var(--${color})`}" {style} on:click class="button {className}" {title}>
+  <a
+    class="button {className}"
+    class:no-hover="{!canHover}"
+    style:--initial-color="{`var(--${color})`}"
+    style:--hover-color="{hoverColor ? `var(--${hoverColor})` : ''}"
+    use:longPressAction="{longPressDuration}"
+    {href}
+    {target}
+    {style}
+    {title}
+    on:click
+    on:mousedown
+    on:mouseup
+    on:mouseenter
+    on:mouseleave
+    on:dblclick
+    on:longpress
+  >
     {#if icon}<SvgIcon svg="{icon}" />{/if}
     <span class="content"><slot /></span>
   </a>
@@ -95,17 +124,22 @@
   <!-- svelte-ignore component-name-lowercase -->
   <button
     type="button"
+    class="button {className}"
+    class:no-hover="{!canHover}"
     style:--initial-color="{`var(--${color})`}"
+    style:--hover-color="{hoverColor ? `var(--${hoverColor})` : ''}"
+    use:longPressAction="{longPressDuration}"
     {style}
+    {title}
     on:click
     on:mousedown
     on:mouseup
+    on:mouseenter
     on:mouseleave
-    class="button {className}"
-    class:no-hover="{!canHover}"
-    {title}
+    on:dblclick
+    on:longpress
   >
-    {#if icon}<SvgIcon svg="{icon}" />{/if}
+    {#if icon}<SvgIcon className="button-icon" svg="{icon}" />{/if}
     <span class="content"><slot /></span>
   </button>
 {/if}

@@ -1,27 +1,19 @@
-.nav-button.nav-button {
+.nav-button:global(.nav-button) {
   flex-direction: row-reverse;
   gap: 0;
-  color: var(--text);
-  background: transparent;
-
-  & :global(.svg-icon) {
-    width: 3.5rem;
-  }
+  font-size: 2rem;
 
   & :global(.content) {
-    display: block;
-    overflow: hidden;
     width: 0;
   }
 
-  &:hover,
-  &:focus {
-    color: white;
-    background: var(--color);
-
-    & :global(.content) {
-      width: auto;
-      padding: 0 2rem 0 1rem;
+  &:not(:global(.no-hover)) {
+    &:hover,
+    &:focus {
+      & :global(.content) {
+        width: auto;
+        padding: 0 2rem 0 1rem;
+      }
     }
   }
 }

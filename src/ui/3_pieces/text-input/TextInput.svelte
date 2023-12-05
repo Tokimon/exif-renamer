@@ -5,8 +5,10 @@
   export let name = '';
   export let value = '';
   export let placeholder = '';
+  export let className = '';
+  export let style = '';
 </script>
 
-<InputWrap {title}>
-  <input {name} bind:value {placeholder} type="text" style="flex: 1 1 100%;" on:input on:change />
+<InputWrap {title} {style} {className}>
+  <input {name} bind:value {placeholder} type="text" style="flex: 1 1 100%;" on:input on:change on:keydown on:keyup on:focus on:blur />
 </InputWrap>

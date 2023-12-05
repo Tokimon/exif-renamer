@@ -1,16 +1,15 @@
 <script lang="ts">
+  import { omitBy } from 'lodash';
   import type { ComponentProps } from 'svelte';
-  import Button from '~/ui/2_base/button/Button.svelte';
+  import HollowButton from '~/ui/2_base/hollow-button/HollowButton.svelte';
 
   import classNames from './NavButton.module.css';
 
-  export let icon: ComponentProps<Button>['icon'];
-  export let color: ComponentProps<Button>['color'] = 'primary';
-  export let disabled: ComponentProps<Button>['disabled'] = false;
-  export let style = '';
-  export let className = '';
+  type $$Props = ComponentProps<HollowButton>;
+
+  const { className = '', color = 'primary', ...rest } = omitBy($$props, (_, key) => key.startsWith('event_'));
 </script>
 
-<Button {icon} className="{classNames['nav-button']} {className}" {color} {disabled} {style} on:click>
+<HollowButton className="nav-button {classNames['nav-button']} {className}" color="text" hoverColor="{color}" {...rest} on:click>
   <slot />
-</Button>
+</HollowButton>

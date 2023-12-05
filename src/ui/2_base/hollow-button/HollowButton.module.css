@@ -1,0 +1,12 @@
+.hollow-button.hollow-button {
+  color: var(--color);
+  background: transparent;
+
+  &:not(:global(.no-hover)) {
+    &:hover,
+    &:focus {
+      color: white;
+      background: var(--color);
+    }
+  }
+}

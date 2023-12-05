@@ -12,10 +12,7 @@
 <script lang="ts">
   let overlay: HTMLDivElement | undefined;
 
-  const toggleOverlay = () => {
-    console.log('toggle', overlay);
-    overlay?.togglePopover();
-  };
+  const toggleOverlay = () => overlay?.togglePopover();
 
   onMount(toggleOverlay);
 </script>

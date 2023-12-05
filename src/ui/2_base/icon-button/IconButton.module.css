@@ -1,0 +1,6 @@
+.icon-button.icon-button {
+  color: var(--color);
+  background: transparent;
+  padding: 0.25rem;
+  aspect-ratio: 1;
+}

@@ -17,6 +17,7 @@ export const iconNames = [
   'edit',
   'filter',
   'folder',
+  'folder-add',
   'font',
   'gear',
   'image-search',

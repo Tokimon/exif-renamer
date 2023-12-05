@@ -1,0 +1,31 @@
+@keyframes longpressCover {
+  0% {
+    right: 100%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  90%,
+  100% {
+    right: 0;
+  }
+}
+
+.long-press {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    background: rgb(0 0 0 / 0.3);
+    position: absolute;
+    inset: 0;
+    right: 100%;
+    will-change: right;
+    animation: longpressCover var(--duration, 1000ms) linear;
+  }
+}

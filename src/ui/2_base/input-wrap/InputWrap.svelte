@@ -1,6 +1,7 @@
 <script lang="ts">
   export let title = '';
   export let className = '';
+  export let style = '';
 </script>
 
 <style>
@@ -15,6 +16,7 @@
       border: 1px solid lightgray;
       border-radius: 0.4rem;
       height: 1.8rem;
+      font-size: inherit;
 
       &:focus {
         outline: none;
@@ -31,7 +33,7 @@
   }
 </style>
 
-<label class="{className}">
+<label class="{className}" {style}>
   {#if title}<p class="input-title">{title}</p>{/if}
   <slot />
 </label>

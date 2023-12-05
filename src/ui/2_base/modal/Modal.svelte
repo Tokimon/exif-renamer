@@ -1,5 +1,5 @@
 <script lang="ts">
-  import TinyButton from '~/ui/3_pieces/tiny-button/TinyButton.svelte';
+  import TinyButton from '~/ui/2_base/tiny-button/TinyButton.svelte';
 
   export let style = '';
   export let className = '';
