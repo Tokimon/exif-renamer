@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><symbol viewBox="0 0 14 24" id="angle-left">
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><symbol viewBox="0 0 24 24" id="add">
+  <path fill="none" d="M0 0h24v24H0z"/>
+  <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+</symbol><symbol viewBox="0 0 14 24" id="angle-left">
   <path d="M13.379.628a2.118 2.14 0 0 0-2.998 0l-9.76 9.858a2.118 2.14 0 0 0 0 3.029l9.76 9.858a2.12 2.141 0 1 0 2.998-3.029l-8.25-8.354 8.25-8.334c.808-.837.808-2.212 0-3.028z"/>
 </symbol><symbol viewBox="0 0 14 24" id="angle-right">
   <path fill="none" d="M0 0h24v24H0z"/>

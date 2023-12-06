@@ -22,6 +22,10 @@
         outline: none;
         border-color: var(--primary);
       }
+
+      &:invalid {
+        border-color: var(--danger);
+      }
     }
   }
 

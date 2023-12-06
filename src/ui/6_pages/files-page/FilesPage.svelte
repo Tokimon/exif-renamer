@@ -8,6 +8,7 @@
   import TrashButton from '~/ui/3_pieces/trash-button/TrashButton.svelte';
   import FileList from '~/ui/4_components/file-list/FileList.svelte';
   import ZoomLevel from '~/ui/4_components/zoom-level/ZoomLevel.svelte';
+  import PanelAlbums from '~/ui/5_page-parts/panel-albums/PanelAlbums.svelte';
 
   const dispatch = createEventDispatcher();
 
@@ -78,6 +79,11 @@
     width: 250px;
     background: darkgray;
     box-shadow: inset 3px 1px 6px #979797;
+    box-sizing: border-box;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 
   nav {
@@ -110,14 +116,6 @@
       flex: 1 1 auto;
     }
   }
-
-  .albums {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 45px);
-    gap: 1rem;
-    padding: 1rem;
-    justify-content: center;
-  }
 </style>
 
 <div class="page">
@@ -130,16 +128,7 @@
   </main>
 
   <aside>
-    <div class="albums">
-      <h2 style="grid-area: 1 / span 4;">Albums</h2>
-      <Button icon="folder" className="action" color="text" />
-      <Button icon="folder" className="action" color="text" />
-      <Button icon="folder" className="action" color="text" />
-      <Button icon="folder" className="action" color="text" />
-      <Button icon="folder" className="action" color="text" />
-      <Button icon="folder" className="action" color="text" />
-      <Button icon="folder" className="action" color="text" />
-    </div>
+    <PanelAlbums />
   </aside>
 
   <nav>

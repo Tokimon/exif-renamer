@@ -1,4 +1,5 @@
 export const iconNames = [
+  'add',
   'angle-left',
   'angle-right',
   'archive',

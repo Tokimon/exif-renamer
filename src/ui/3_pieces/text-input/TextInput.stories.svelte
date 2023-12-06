@@ -1,6 +1,7 @@
 <script lang="ts" context="module">
   import { Story, Template } from '@storybook/addon-svelte-csf';
   import Output from '~/ui/1_globals/story-helpers/Output.svelte';
+  import { omitEvents } from '~/ui/1_globals/utils/omitEvents';
   import TextInput from './TextInput.svelte';
 
   export const meta = {
@@ -14,7 +15,7 @@
 </script>
 
 <Template let:args>
-  <TextInput {...args} bind:value on:input />
+  <TextInput {...omitEvents(args)} bind:value on:input />
   <Output>{value}</Output>
 </Template>
 
