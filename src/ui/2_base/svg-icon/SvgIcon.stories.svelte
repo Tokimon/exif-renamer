@@ -14,7 +14,7 @@
   .icon {
     padding: 0.5rem;
     border-radius: 0.2rem;
-    box-shadow: 0 0 2px var(--text);
+    box-shadow: 0 0 2px var(--light-text);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,6 +23,10 @@
 
   :global(.icon-example) {
     width: 2rem;
+  }
+
+  :global(.svg-icon) {
+    fill: var(--light-text);
   }
 </style>
 

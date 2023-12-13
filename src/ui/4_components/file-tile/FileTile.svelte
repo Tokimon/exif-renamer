@@ -20,7 +20,9 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events a11y-no-static-element-interactions -->
 <div class="{classNames['file-tile']} {className}" aria-selected="{selected}" title="{name}" {style} on:click>
-  <Image src="{thumbnail}" className="{classNames.image}" {extension} noImageIcon="{extensionToIcon(extension)}" />
+  <div class="{classNames['image-area']}">
+    <Image src="{thumbnail}" className="{classNames.image}" {extension} noImageIcon="{extensionToIcon(extension)}" />
+  </div>
 
   {#if count > 1}
     <FocusDot className="{classNames.dot}">{count}</FocusDot>

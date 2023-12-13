@@ -14,10 +14,11 @@
 
   h2 {
     flex: 1 1 100%;
+    color: var(--light-text);
   }
 </style>
 
 <header>
   <h2>Albums</h2>
-  <HollowButton icon="add" color="text" hoverColor="primary" style="font-size: 2rem; padding: 0.2em;" on:click="{onAdd}" />
+  <HollowButton icon="add" color="light-text" hoverColor="primary" style="font-size: 2rem; padding: 0.2em;" on:click="{onAdd}" />
 </header>

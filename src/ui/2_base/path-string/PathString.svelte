@@ -21,7 +21,7 @@
     overflow: hidden;
 
     &.empty {
-      color: color-mix(in oklch, var(--text) 25% white);
+      color: var(--light-text);
     }
   }
 
@@ -35,7 +35,8 @@
   }
 </style>
 
-<span class="path-string {className}" class:empty="{!endStr}" {style}>
+<span class="path-string {className}" class:empty="{!endStr && !beginStr}" {style}>
   {#if beginStr}<span class="beginning">{beginStr}</span>{/if}
-  <span class="end">{endStr ? separator + endStr : placeholder}</span>
+  {#if endStr}<span class="end">{separator + endStr}</span>{/if}
+  {#if !endStr && !beginStr}<span class="end">{placeholder}</span>{/if}
 </span>

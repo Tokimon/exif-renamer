@@ -2,7 +2,6 @@
   import { createEventDispatcher } from 'svelte';
   import type { FileInfo } from '~/types/file';
   import { fileInfoStore, selectedFileStore } from '~/ui/1_globals/stores/fileInfoStore';
-  import Button from '~/ui/2_base/button/Button.svelte';
   import DirectoryDisplay from '~/ui/3_pieces/directory-display/DirectoryDisplay.svelte';
   import NavButton from '~/ui/3_pieces/nav-button/NavButton.svelte';
   import TrashButton from '~/ui/3_pieces/trash-button/TrashButton.svelte';
@@ -29,10 +28,11 @@
     grid-template-areas:
       'content panel actions'
       'footer footer footer';
+    background: var(--background-color);
   }
 
   .toolbar {
-    --bg: #fff;
+    --bg: var(--light-background);
 
     position: sticky;
     inset: 0 auto auto 0;
@@ -45,7 +45,7 @@
     width: fit-content;
     border-radius: 0 0 1.5rem 0;
     transition: filter 1s ease-out;
-    filter: drop-shadow(0 0 6px lightgray);
+    /* filter: drop-shadow(0 0 6px lightgray); */
 
     &::after {
       content: '';
@@ -71,14 +71,12 @@
     grid-area: content;
     overflow: auto;
     position: relative;
-    background: #cdcdcd;
   }
 
   aside {
     grid-area: panel;
     width: 250px;
-    background: darkgray;
-    box-shadow: inset 3px 1px 6px #979797;
+    background: var(--aside-color);
     box-sizing: border-box;
     padding: 1rem;
     display: flex;
@@ -94,14 +92,14 @@
     justify-content: flex-start;
     gap: 2rem;
     padding: 1.3rem 0.5rem;
-    background: #efefef;
+    background: var(--panel-color);
   }
 
   footer {
-    border-top: 1px solid #d7d7d7;
     grid-area: footer;
     display: grid;
     grid-template-columns: subgrid;
+    background: var(--panel-color);
   }
 
   :global(.action.button) {
@@ -132,19 +130,19 @@
   </aside>
 
   <nav>
-    <NavButton icon="play">Actions</NavButton>
-    <NavButton icon="folder">Albums</NavButton>
-    <NavButton icon="filter">Filter results</NavButton>
+    <NavButton icon="play" title="Actions" />
+    <NavButton icon="folder" title="Albums" />
+    <NavButton icon="filter" title="Filter results" />
   </nav>
 
   <footer>
     <DirectoryDisplay
-      style="font-size: 2rem; grid-column: span 2 / 1;"
+      style="grid-column: span 2 / 1;"
       path="path/to/some/strange/image/folder"
       count="{$fileInfoStore.length}"
       on:click="{() => dispatch('dir-click')}"
     />
 
-    <TrashButton style="grid-column: 3; margin: 0.5rem;" />
+    <TrashButton style="grid-column: 3; margin: 0.5rem; place-self: center;" />
   </footer>
 </div>

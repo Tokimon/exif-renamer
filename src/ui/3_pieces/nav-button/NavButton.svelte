@@ -10,6 +10,6 @@
   const { className = '', color = 'primary', ...rest } = omitBy($$props, (_, key) => key.startsWith('event_'));
 </script>
 
-<HollowButton className="nav-button {classNames['nav-button']} {className}" color="text" hoverColor="{color}" {...rest} on:click>
+<HollowButton className="nav-button {classNames['nav-button']} {className}" color="light-text" hoverColor="{color}" {...rest} on:click>
   <slot />
 </HollowButton>

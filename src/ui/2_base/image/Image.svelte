@@ -31,8 +31,7 @@
   }
 
   .no-image {
-    background: color-mix(in oklch, var(--text) 13%, white);
-    color: color-mix(in oklch, var(--text) 70%, white);
+    color: var(--light-text);
     display: grid;
     align-items: center;
     container-type: inline-size;

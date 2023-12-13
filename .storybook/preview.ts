@@ -12,7 +12,7 @@ export default {
       },
     },
     backgrounds: {
-      default: 'light',
+      default: 'dark',
       values: [
         {
           name: 'light',
@@ -20,7 +20,7 @@ export default {
         },
         {
           name: 'dark',
-          value: '#434547',
+          value: '#353941',
         },
       ],
     },

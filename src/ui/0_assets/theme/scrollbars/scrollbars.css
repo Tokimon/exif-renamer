@@ -13,6 +13,6 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  border-radius: 7px;
+  border-radius: 2px;
   background: var(--scrollbar);
 }

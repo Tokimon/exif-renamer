@@ -14,13 +14,21 @@
 
 .image {
   width: 100%;
-  border-radius: 4px;
-  overflow: hidden;
   aspect-ratio: 1;
 }
 
+.image-area {
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+
+  &:has(:global(.image)) {
+    background-color: var(--highlight-color);
+  }
+}
+
 .file-tile {
-  --highlight-color: var(--text);
+  --highlight-color: var(--light-text);
 
   position: relative;
   display: flex;
@@ -32,22 +40,26 @@
   padding: 0.5rem;
   transition: box-shadow 0.2s;
   box-sizing: border-box;
-  background: white;
   container-type: inline-size;
+  color: var(--light-text);
 
-  &:hover,
+  .image {
+    &:global(.image) {
+      transition: opacity 0.2s ease;
+    }
+
+    &:global(.no-image) {
+      color: var(--highlight-color);
+      transition: color 0.2s ease;
+    }
+  }
+
   &[aria-selected='true'] {
-    background-color: color-mix(in srgb, var(--highlight-color) 36%, white);
-
+    background: rgb(from var(--primary) r g b / 15%);
     .image {
       &:global(.image) {
         filter: grayscale(0.5);
-        opacity: 0.6;
-      }
-
-      &:global(.no-image) {
-        color: var(--highlight-color);
-        background-color: rgba(255, 255, 255, 0.8);
+        opacity: 0.8;
       }
     }
   }
@@ -57,6 +69,6 @@
   }
 
   &:hover {
-    --highlight-color: var(--primary);
+    background: rgb(255 255 255 / 15%);
   }
 }

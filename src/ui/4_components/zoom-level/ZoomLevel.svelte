@@ -42,7 +42,7 @@
       width: 0;
       height: 0;
       border: 0 solid transparent;
-      border-bottom-color: gray;
+      border-bottom-color: var(--panel-color);
       border-width: 0 0 var(--h) var(--w);
     }
   }
@@ -51,16 +51,17 @@
     appearance: none;
     margin: 0;
     width: 100%;
+    background: none;
 
     &::-webkit-slider-thumb {
       width: 8px;
       height: var(--h);
-      background: white;
+      background: var(--light-text);
       border-radius: 2px;
       cursor: pointer;
       appearance: none;
       translate: 0 0;
-      box-shadow: 0 0 0 1px oklch(from var(--secondary) 0.6 c h);
+      box-shadow: 0 0 0 1px var(--dark-text);
     }
 
     &::-webkit-slider-runnable-track {
@@ -73,6 +74,7 @@
     display: flex;
     gap: 0.5rem;
     align-items: flex-end;
+    color: var(--dark-text);
   }
 </style>
 

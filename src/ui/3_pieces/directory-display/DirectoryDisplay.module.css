@@ -1,4 +1,4 @@
-.icon {
+.icon.icon {
   width: auto;
   flex: 0 0 auto;
   display: block;
@@ -7,10 +7,10 @@
   padding: 0.5rem;
 }
 
-.counter {
+.counter.counter {
   grid-area: icon;
-  color: var(--primary) !important;
-  background: white !important;
+  color: var(--secondary);
+  background: rgb(255 255 255 / 85%);
   place-self: center;
   translate: 0 2px;
 }
@@ -30,4 +30,6 @@
   background: none;
   border: none;
   cursor: pointer;
+  color: var(--light-text);
+  font-size: 2rem;
 }

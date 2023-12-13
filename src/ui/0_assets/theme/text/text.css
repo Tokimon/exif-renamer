@@ -7,7 +7,7 @@ input,
 button {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   font-size: 1.2rem;
-  color: var(--text);
+  color: var(--light-text);
 }
 
 h1,
@@ -38,4 +38,8 @@ h4 {
 
 h5 {
   font-size: 1.2rem;
+}
+
+::selection {
+  background: oklch(from var(--primary) l c h / 30%);
 }
