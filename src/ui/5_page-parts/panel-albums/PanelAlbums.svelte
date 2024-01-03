@@ -32,12 +32,22 @@
   }
 </script>
 
+<style>
+  .albums {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+</style>
+
 <AlbumListHeader on:add-album="{onAddAlbum}" />
 
 {#if newEntry}
   <NameInput bind:input="{newAlbumInput}" on:change="{onSaveAlbum}" names="{albums}" placeholder="Give album a unique name" />
 {/if}
 
-{#each albums.sort() as album}
-  <AlbumListItem name="{album}" on:name-update="{updateAlbumName}" on:delete="{removeAlbum}" />
-{/each}
+<div class="albums">
+  {#each albums.sort() as albumName}
+    <AlbumListItem name="{albumName}" on:name-update="{updateAlbumName}" on:delete="{removeAlbum}" />
+  {/each}
+</div>

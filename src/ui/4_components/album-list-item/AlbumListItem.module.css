@@ -1,0 +1,15 @@
+.album.album {
+  padding: 0.25em 0.5em;
+  text-transform: none;
+  font-size: 1.8rem;
+  justify-content: flex-start;
+
+  /* flex-direction: column;
+  text-transform: none;
+  text-wrap: pretty;
+  text-align: left;
+
+  & :global(.svg-icon) {
+    width: 4rem;
+  } */
+}

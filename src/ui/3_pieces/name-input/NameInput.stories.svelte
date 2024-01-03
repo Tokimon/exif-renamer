@@ -16,7 +16,7 @@
 </script>
 
 <Template let:args>
-  <NameInput {...omitEvents(args)} on:change="{onChange}" on:change on:input />
+  <NameInput {...omitEvents(args)} {value} on:change="{onChange}" on:change on:input />
   <Output>{value}</Output>
 </Template>
 

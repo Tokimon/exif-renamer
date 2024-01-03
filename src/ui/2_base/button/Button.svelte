@@ -17,11 +17,11 @@
   export let href = '';
   export let target = '';
   export let title = '';
-  export let longpress = 0;
+  export let longpress: boolean | number = false;
   export let className = '';
   export let style = '';
 
-  const [longPressAction, longPressDuration] = longpress ? [longPress, longpress] : [() => {}, 0];
+  const [longPressAction, longPressDuration] = longpress ? [longPress, longpress === true ? 600 : longpress] : [() => {}, 0];
 
   let canHover = true;
   $: canHover = !disabled && !noHover && !_static;

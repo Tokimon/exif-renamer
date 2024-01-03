@@ -1,13 +1,17 @@
 <script lang="ts">
-  import { createEventDispatcher } from 'svelte';
+  import { createEventDispatcher, type ComponentProps } from 'svelte';
+  import { omitEvents } from '~/ui/1_globals/utils/omitEvents';
   import TextInput from '~/ui/3_pieces/text-input/TextInput.svelte';
 
-  export let placeholder = '';
-  export let className = '';
-  export let names: string[] = [];
-  export let value = '';
-  export let title = '';
-  export let input: HTMLInputElement | null = null;
+  type $$Props = ComponentProps<TextInput> & {
+    input?: HTMLInputElement | null;
+    names?: string[];
+  };
+
+  let { value = '', input = null, names = [], ...rest } = omitEvents<$$Props>($$restProps);
+
+  let oldName: string;
+  $: oldName = value;
 
   let lowerCaseNames: string[] = [];
   $: lowerCaseNames = names.map((name) => name.toLowerCase());
@@ -33,18 +37,20 @@
     if (error) {
       input.setCustomValidity(error);
       input.reportValidity();
-    } else dispatch('change', { name, oldName: value, input });
+    } else {
+      dispatch('change', { name, oldName, input });
+      oldName = name;
+      input.blur();
+    }
   }
+
+  const handleEscape = (e: KeyboardEvent) => {
+    if (e.key === 'Escape') {
+      const input = e.target as HTMLInputElement;
+      input.value = oldName;
+      input.blur();
+    }
+  };
 </script>
 
-<TextInput
-  bind:input
-  {title}
-  {value}
-  {className}
-  {placeholder}
-  on:change="{onChange}"
-  on:input="{resetValidityMessage}"
-  on:keydown
-  on:blur
-/>
+<TextInput bind:input {value} {...rest} on:change="{onChange}" on:input="{resetValidityMessage}" on:keydown="{handleEscape}" on:blur />

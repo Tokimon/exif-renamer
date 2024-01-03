@@ -7,7 +7,7 @@
 
   type $$Props = ComponentProps<Button>;
 
-  const { className = '', ...rest } = omitEvents<$$Props>($$props);
+  const { className = '', ...rest } = omitEvents<$$Props>($$restProps);
 </script>
 
 <Button

@@ -12,11 +12,14 @@
     gap: 0.5rem;
 
     & > input {
-      padding: 0.5rem 1rem;
-      border: 1px solid lightgray;
-      border-radius: 0.4rem;
+      /* padding: 0.5rem 1rem; */
+      padding: 0.5rem;
+      border: solid lightgray;
+      border-width: 0 0 1px 0;
+      /* border-radius: 0.4rem; */
       height: 1.8rem;
       font-size: inherit;
+      background: var(--background-color);
 
       &:focus {
         outline: none;

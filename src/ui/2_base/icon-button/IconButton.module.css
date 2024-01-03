@@ -1,6 +1,13 @@
 .icon-button.icon-button {
   color: var(--color);
   background: transparent;
-  padding: 0.25rem;
+  padding: 0.5em;
   aspect-ratio: 1;
+
+  &:not(.no-hover) {
+    &:hover,
+    &:focus {
+      background: var(--faded-light-background);
+    }
+  }
 }
